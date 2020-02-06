@@ -10,9 +10,9 @@
 		          class="q-py-sm"
 		          v-model="to"/>
 		<q-file :accept="from.value === 'bbb' ? '.txt' : '.json'"
-		       :label="$t('home.convert.fileInput')"
-		       v-if="isFile(from.value)"
-		       v-model="fromFile"/>
+		        :label="$t('home.convert.fileInput')"
+		        v-if="isFile(from.value)"
+		        v-model="fromFile"/>
 		<q-input
 			:label="$t('home.play.local.mapSource')"
 			class="q-py-sm"

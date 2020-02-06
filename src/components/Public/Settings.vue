@@ -191,7 +191,14 @@
 				}
 			};
 		},
-		methods: {},
+		watch: {
+			settings: {
+				deep: true,
+				handler: function () {
+					this.$q.localStorage.set('settings', this.settings);
+				}
+			}
+		},
 		computed: {
 			dialog: {
 				get () {
@@ -200,6 +207,12 @@
 				set (val) {
 					this.$emit('change', val);
 				}
+			}
+		},
+		beforeMount () {
+			let settings = this.$q.localStorage.getItem('settings');
+			if (settings) {
+				this.settings = settings;
 			}
 		}
 	};

@@ -1,9 +1,12 @@
+import { LocalStorage } from 'quasar';
+
 export function accurateFloat (num, precision = 15) {
 	return parseFloat(num.toPrecision(precision));
 }
 
 export function changeLanguage ($, lang) {
 	$.$i18n.locale = lang;
+	LocalStorage.set('lang', lang);
 }
 
 let languages = [

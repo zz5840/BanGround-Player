@@ -6,8 +6,7 @@
 					:options="[{label: $t('home.play.bestdori.title'), value: 'bestdori'}, {label: $t('home.play.local.title'), value: 'local'}]"
 					color="primary"
 					inline
-					v-model="form.from"
-				/>
+					v-model="form.from"/>
 			</template>
 		</q-field>
 		<template v-if="form.from === 'bestdori'">
@@ -20,21 +19,19 @@
 						:options="[{label: $t('home.play.local.type.bbb'), value: 'bbb'}, {label: $t('home.play.local.type.bd'), value: 'bd'}]"
 						color="primary"
 						inline
-						v-model="form.local.type"
-					/>
+						v-model="form.local.type"/>
 				</template>
 			</q-field>
 			<q-file :label="$t('home.play.local.mapFile')"
 			        accept=".txt"
 			        v-if="form.local.type === 'bbb'"
 			        v-model="form.local.mapFile"/>
-			<q-input
-				:label="$t('home.play.local.mapSource')"
-				outlined
-				rows="5"
-				type="textarea"
-				v-if="form.local.type === 'bd'"
-				v-model="form.local.mapSource"/>
+			<q-input :label="$t('home.play.local.mapSource')"
+			         outlined
+			         rows="5"
+			         type="textarea"
+			         v-if="form.local.type === 'bd'"
+			         v-model="form.local.mapSource"/>
 			<q-file :label="$t('home.play.local.musicFile')"
 			        accept=".mp3"
 			        v-model="form.local.music"/>

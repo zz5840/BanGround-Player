@@ -31,7 +31,7 @@
 			return {
 				showLanguage: false,
 				showSettings: false,
-				showGuide: true
+				showGuide: false
 			};
 		},
 		methods: {
@@ -40,6 +40,14 @@
 			},
 			settings (cb) {
 				this.showSettings = true;
+			}
+		},
+		beforeMount () {
+			let lang = this.$q.localStorage.getItem('lang');
+			if (!lang) {
+				this.showGuide = true;
+			} else {
+				this.$i18n.locale = lang;
 			}
 		}
 	};
