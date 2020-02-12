@@ -1,9 +1,9 @@
-import enUS from './en-us';
-import zhCN from './zh-cn';
-import jaJP from './ja-jp';
+import en from './en';
+import zh from './zh';
+import ja from './ja';
 
 export default {
-	'en-us': enUS,
-	'zh-cn': zhCN,
-	'ja-jp': jaJP
+	en,
+	zh,
+	ja
 };

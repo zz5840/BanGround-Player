@@ -9,13 +9,12 @@
 				<q-btn @click="settings" color="white" flat icon="mdi-settings" round/>
 			</q-toolbar>
 		</q-header>
-
 		<q-page-container class="q-px-sm" style="max-width: 1280px; margin: auto">
 			<router-view/>
 		</q-page-container>
 		<select-language v-model="showLanguage"/>
-		<settings v-model="showSettings"/>
-		<guide :show-settings="showSettings" @settings="settings" v-if="showGuide"/>
+		<settings v-if="ifShowSettings" v-model="showSettings"/>
+		<guide v-if="showGuide"/>
 	</q-layout>
 </template>
 
@@ -23,6 +22,7 @@
 	import SelectLanguage from 'components/Public/SelectLanguage';
 	import Settings from 'components/Public/Settings';
 	import Guide from 'components/Public/Guide';
+	import { mapMutations, mapState } from 'vuex';
 
 	export default {
 		name: 'Layout',
@@ -30,16 +30,31 @@
 		data () {
 			return {
 				showLanguage: false,
-				showSettings: false,
-				showGuide: false
+				showGuide: false,
+				ifShowSettings: false
 			};
+		},
+		watch: {
+			showSettings (val) {
+				// 解决v-if为false时元素会直接消失 没有动画的问题
+				let time = this.ifShowSettings ? 300 : 0;
+				setTimeout(() => {
+					this.ifShowSettings = val;
+				}, time);
+			}
 		},
 		methods: {
 			language () {
 				this.showLanguage = true;
 			},
-			settings (cb) {
-				this.showSettings = true;
+			...mapMutations({
+				settings: 'openSettings'
+			})
+		},
+		computed: {
+			showSettings: {
+				...mapState({ get: 'showSettings' }),
+				...mapMutations({ set: 'setSettings' })
 			}
 		},
 		beforeMount () {

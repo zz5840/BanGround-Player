@@ -7,7 +7,6 @@ export default {
 		language: '语言',
 		inputValue: '请输入数值',
 		fullscreen: {
-			title: '全屏',
 			succeeded: '翻转屏幕获得最佳体验～',
 			failed: '没能进入全屏QAQ，主人要好好检查权限哦',
 			unsupported: '主人的浏览器不支持全屏哦'
@@ -42,20 +41,21 @@ export default {
 			mapSource: '谱面来源',
 			bestdori: {
 				title: 'Bestdori',
-				mapId: 'Map ID',
+				mapId: '谱面ID',
+				songId: '歌曲ID',
+				type: {
+					title: '谱面类型',
+					official: '官方',
+					community: '社区'
+				},
 				info: {
 					name: '歌曲名',
-					singer: '歌曲作者',
+					band: '乐队',
+					singer: '歌手',
 					difficulty: '难度',
 					level: '等级',
-					author: '谱面作者',
-					difficultyText: {
-						0: 'Easy',
-						1: 'Normal',
-						2: 'Hard',
-						3: 'Expert',
-						4: 'Special'
-					}
+					notes: '物量',
+					author: '谱面作者'
 				}
 			},
 			local: {
@@ -85,6 +85,8 @@ export default {
 			fileInput: '谱面文件',
 			noInput: '您还没有选择任何谱面呢',
 			convertResult: '转换结果',
+			convert: '转换',
+			succeeded: '转换成功，请复制或下载保存',
 			download: '下载',
 			serious: '你是沙雕吗？'
 		},

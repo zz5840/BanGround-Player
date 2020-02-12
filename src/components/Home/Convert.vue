@@ -9,9 +9,9 @@
 		          behavior="menu"
 		          class="q-py-sm"
 		          v-model="to"/>
-		<q-file :accept="from.value === 'bbb' ? '.txt' : '.json'"
-		        :label="$t('home.convert.fileInput')"
-		        v-if="isFile(from.value)"
+		<q-file :label="$t('home.convert.fileInput')"
+		        accept=".txt"
+		        v-if="from.value === 'bbb'"
 		        v-model="fromFile"/>
 		<q-input
 			:label="$t('home.play.local.mapSource')"
@@ -19,31 +19,44 @@
 			outlined
 			rows="5"
 			type="textarea"
-			v-if="!isFile(from.value)"
+			v-if="from.value === 'bd'"
 			v-model="fromText"/>
 		<q-field :label="$t('home.convert.convertResult')"
 		         @focus="selectText"
-		         class="q-py-sm"
+		         class="q-pt-md"
 		         outlined
 		         stack-label
-		         v-if="!isFile(to.value)">
+		         v-if="to.value === 'bd' && converted">
 			<template v-slot:control>
-				<textarea class="readonly-textarea"
+				<textarea :value="toData || $t('home.convert.noInput')"
+				          class="readonly-textarea"
 				          readonly
 				          ref="result"
-				          rows="5"
-				          v-model="convertResult"/>
+				          rows="5"/>
 			</template>
 		</q-field>
-		<p class="q-my-none text-negative" v-if="from.value === to.value">{{ $t('home.convert.serious') }}</p>
-		<q-btn :label="$t('home.convert.download')"
-		       class="full-width q-mt-sm"
+		<p class="q-my-sm text-negative" v-if="from.value === to.value">{{ $t('home.convert.serious') }}</p>
+		<q-btn :label="$t('home.convert.convert')"
+		       @click="convert"
+		       class="full-width q-mt-md"
 		       color="primary"
-		       v-if="isFile(to.value)"/>
+		       unelevated
+		       v-if="from.value === 'bd' && !converted"/>
+		<q-btn :label="$t('home.convert.download')"
+		       @click="download"
+		       class="full-width q-mt-md"
+		       color="primary"
+		       unelevated
+		       v-else/>
 	</div>
 </template>
 
 <script>
+	import bestdori2bbb from 'src/lib/bestdori2bbb';
+	import bbb2bestdori from 'src/lib/bbb2bestdori';
+	import { readFile } from 'src/lib/Utils';
+	import FileSaver from 'file-saver';
+
 	export default {
 		name: 'Convert',
 		data: function () {
@@ -56,10 +69,6 @@
 					{
 						label: 'Bestdori',
 						value: 'bd'
-					},
-					{
-						label: 'BanGround',
-						value: 'bg'
 					}
 				],
 				from: {
@@ -70,18 +79,56 @@
 					label: 'Bestdori',
 					value: 'bd'
 				},
+				converted: false,
 				fromFile: null,
 				fromText: '',
-				toData: '',
-				convertResult: this.$t('home.convert.noInput')
+				toData: ''
 			};
 		},
-		methods: {
-			isFile (type) {
-				return ['bbb', 'bg'].includes(type);
+		watch: {
+			fromText () {
+				this.converted = false;
 			},
+			fromFile () {
+				this.bbb2bd();
+			},
+			'to.value' () {
+				if (this.from.value === 'bbb') {
+					this.bbb2bd();
+				} else {
+					this.converted = false;
+				}
+			}
+		},
+		methods: {
 			selectText () {
 				this.$refs.result.select();
+			},
+			download () {
+				let blob = new Blob([this.toData], {
+					type: 'text/plain;charset=utf-8'
+				});
+				FileSaver.saveAs(blob, 'map.' + (this.to.value === 'bbb' ? 'txt' : 'json'));
+			},
+			convert () {
+				if (this.to.value === 'bbb') {
+					this.toData = bestdori2bbb(JSON.parse(this.fromText));
+				} else {
+					this.toData = this.fromText;
+				}
+				this.$q.notify({
+					message: this.$t('home.convert.succeeded')
+				});
+				this.converted = true;
+			},
+			async bbb2bd () {
+				if (!this.fromFile) return;
+				let text = await readFile(this.fromFile, 'text');
+				if (this.to.value === 'bd') {
+					this.toData = bbb2bestdori(text);
+				} else {
+					this.toData = text;
+				}
 			}
 		}
 	};

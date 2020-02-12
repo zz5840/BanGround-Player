@@ -213,6 +213,8 @@
 			let settings = this.$q.localStorage.getItem('settings');
 			if (settings) {
 				this.settings = settings;
+			} else {
+				this.$q.localStorage.set('settings', this.settings);
 			}
 		}
 	};

@@ -15,6 +15,8 @@
 </template>
 
 <script>
+	import { changeLanguage, languages } from 'src/lib/Utils';
+
 	export default {
 		name: 'SelectLanguage',
 		model: {
@@ -28,24 +30,11 @@
 			}
 		},
 		data: () => ({
-			list: [
-				{
-					label: 'English',
-					name: 'en-us'
-				},
-				{
-					label: '简体中文',
-					name: 'zh-cn'
-				},
-				{
-					label: '日本語',
-					name: 'ja-jp'
-				}
-			]
+			list: languages
 		}),
 		methods: {
 			changeLanguage (val) {
-				this.$i18n.locale = val;
+				changeLanguage(this, val);
 				this.dialog = false;
 			}
 		},

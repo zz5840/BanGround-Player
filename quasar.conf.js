@@ -55,13 +55,16 @@ module.exports = function (ctx) {
 				'QItem',
 				'QItemSection',
 				'QItemLabel',
-				'QFile'
+				'QFile',
+				'QMarkupTable',
+				'QSpinnerFacebook'
 			],
 			directives: [],
 
 			// Quasar plugins
 			plugins: [
 				'Dialog',
+				'Notify',
 				'LocalStorage'
 			]
 		},
@@ -98,6 +101,12 @@ module.exports = function (ctx) {
 		devServer: {
 			https: false,
 			port: 8080,
+			proxy: {
+				'/api': {
+					target: 'http://localhost:3000/',
+					changeOrigin: true
+				}
+			},
 			open: true // opens browser window automatically
 		},
 

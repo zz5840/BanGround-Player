@@ -64,11 +64,11 @@
 </template>
 
 <script>
-	import { changeLanguage, languages } from '../../lib/Utils';
+	import { changeLanguage, languages } from 'src/lib/Utils';
+	import { mapMutations } from 'vuex';
 
 	export default {
 		name: 'Guide',
-		props: ['showSettings'],
 		data: () => ({
 			language: true,
 			languageList: languages,
@@ -79,11 +79,12 @@
 				changeLanguage(this, lang);
 			},
 			settings () {
-				this.$emit('settings');
+				this.openSettings();
 				setTimeout(() => {
 					this.step += 1;
 				}, 300);
-			}
+			},
+			...mapMutations(['openSettings'])
 		}
 	};
 </script>

@@ -43,11 +43,19 @@ export default {
 			bestdori: {
 				title: 'Bestdori',
 				mapId: 'Map ID',
+				songId: 'Song ID',
+				type: {
+					title: 'Map Type',
+					official: 'Official',
+					community: 'Community'
+				},
 				info: {
 					name: 'Song Name',
+					band: 'Band',
 					singer: 'Artists',
 					difficulty: 'Difficulty',
 					level: 'Level',
+					notes: 'Notes',
 					author: 'Map Author',
 					difficultyText: {
 						0: 'Easy',

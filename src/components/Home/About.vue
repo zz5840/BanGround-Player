@@ -2,7 +2,7 @@
 	<div>
 		<h6 class="text-h6 q-mt-none q-mb-md">BanGround Player</h6>
 		<p class="text-body2">Open Sourced on
-			<a class="link" href="https://github.com/BanGround/Player"
+			<a class="link" href="https://github.com/BanGround/BanGround-Player"
 			   target="_blank">
 				<q-icon name="mdi-github-circle"/>
 				Github</a>
@@ -22,10 +22,14 @@
 			<a class="link" href="https://github.com/fz6m"
 			   target="_blank">fz6m</a>
 		</p>
+		<p class="text-body2">You can contribute translations on
+			<a class="link" href="https://crowdin.com/project/banground"
+			   target="_blank">Crowdin</a>
+		</p>
 		<p class="text-body2">Special Thanks to
 			<a class="link"
-			   href="https://github.com/Burrito"
-			   target="_blank">Burrito</a>
+			   href="https://bestdori.com/"
+			   target="_blank">Bestdori!</a>
 		</p>
 	</div>
 </template>
