@@ -71,9 +71,9 @@ module.exports = function (ctx) {
 
 		// https://quasar.dev/quasar-cli/cli-documentation/supporting-ie
 		supportIE: false,
-
 		// Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
 		build: {
+			distDir: ctx.mode.spa ? 'public' : null,
 			scopeHoisting: true,
 			vueRouterMode: 'history', // available values: 'hash', 'history'
 			showProgress: true,

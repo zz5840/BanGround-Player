@@ -8,7 +8,8 @@
 	"scripts": {
 		"lint": "eslint --ext .js,.vue src",
 		"test": "echo \"No test specified\" && exit 0",
-		"now-build": "quasar build -m spa"
+		"build": "quasar build",
+		"deploy": "now"
 	},
 	"dependencies": {
 		"@quasar/extras": "^1.5.0",
