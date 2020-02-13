@@ -130,7 +130,7 @@ module.exports = function (ctx) {
 				display: 'fullscreen',
 				orientation: 'landscape',
 				background_color: '#ffffff',
-				theme_color: '#00897B',
+				theme_color: '#2DAAE4',
 				icons: [
 					{
 						'src': 'statics/icons/icon-128x128.png',
