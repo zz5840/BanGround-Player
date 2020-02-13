@@ -24,7 +24,8 @@ export default {
 			showSimLine: '同时点击线',
 			beatNote: '节奏的色觉辅助',
 			mirror: '镜像',
-			laneEffect: '轨道特效'
+			laneEffect: '轨道特效',
+			resolution: '高分辨率'
 		},
 		guide: {
 			title: '欢迎',

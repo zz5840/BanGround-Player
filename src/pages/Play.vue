@@ -6,7 +6,7 @@
 
 <script>
 	import * as BangGame from 'bangbangboom-game';
-	import screenfull from 'screenfull';
+	import { fullscreen } from 'src/lib/Utils';
 
 	let game = null;
 	let canvas = null;
@@ -17,23 +17,10 @@
 			let GameLoadConfig = this.$store.state.GameLoadConfig;
 			let { game: GameConfig, ui } = this.$q.localStorage.getItem('settings');
 			if (ui.autoFullscreen) {
-				if (screenfull.isEnabled) {
-					screenfull.request().then(() => {
-						this.$q.notify({
-							message: this.$t('public.fullscreen.succeeded')
-						});
-					}).catch(() => {
-						this.$q.notify({
-							message: this.$t('public.fullscreen.failed')
-						});
-					});
-				} else {
-					this.$q.notify({
-						message: this.$t('public.fullscreen.unsupported')
-					});
-				}
+				fullscreen(this);
 			}
 			if (!GameLoadConfig) return;
+			GameConfig.resolution = GameConfig.resolution ? 2 : 1;
 			let div = this.$refs.div;
 			canvas = document.createElement('canvas');
 			canvas.id = 'game';

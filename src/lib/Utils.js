@@ -1,4 +1,5 @@
 import { LocalStorage } from 'quasar';
+import screenfull from 'screenfull';
 
 export function accurateFloat (num, precision = 15) {
 	return parseFloat(num.toPrecision(precision));
@@ -7,6 +8,24 @@ export function accurateFloat (num, precision = 15) {
 export function changeLanguage ($, lang) {
 	$.$i18n.locale = lang;
 	LocalStorage.set('lang', lang);
+}
+
+export function fullscreen ($this) {
+	if (screenfull.isEnabled) {
+		screenfull.request().then(() => {
+			$this.$q.notify({
+				message: $this.$t('public.fullscreen.succeeded')
+			});
+		}).catch(() => {
+			$this.$q.notify({
+				message: $this.$t('public.fullscreen.failed')
+			});
+		});
+	} else {
+		$this.$q.notify({
+			message: $this.$t('public.fullscreen.unsupported')
+		});
+	}
 }
 
 /**

@@ -144,6 +144,19 @@
 					              unelevated
 					              v-model="settings.game.laneEffect"/>
 				</q-item>
+				<q-item-label header>
+					{{ $t('public.settings.resolution') }}
+				</q-item-label>
+				<q-item dense>
+					<q-btn-toggle :options="radioOptions"
+					              class="border-toggle"
+					              no-caps
+					              spread
+					              text-color="primary"
+					              toggle-color="primary"
+					              unelevated
+					              v-model="settings.game.resolution"/>
+				</q-item>
 			</q-card-section>
 		</q-card>
 	</q-dialog>
@@ -183,7 +196,8 @@
 						showSimLine: true,
 						beatNote: false,
 						mirror: false,
-						laneEffect: false
+						laneEffect: false,
+						resolution: false
 					},
 					ui: {
 						autoFullscreen: false
