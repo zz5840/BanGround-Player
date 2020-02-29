@@ -90,7 +90,12 @@ export default {
             succeeded: '변환에 성공했습니다.',
             download: '다운로드',
             serious: '정말로요?',
-            convert: '변환'
+            convert: '변환',
+            error: {
+                multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。',
+                laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用',
+                noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
+            }
         },
         space: {
             title: '싱크 계산',
