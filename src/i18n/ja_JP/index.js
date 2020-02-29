@@ -90,7 +90,12 @@ export default {
             succeeded: 'ダウンロード',
             download: 'この操作がファイルに無効、真面目に進行するか',
             serious: '你是沙雕吗？',
-            convert: '转换'
+            convert: '转换',
+            error: {
+                multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。',
+                laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用',
+                noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
+            }
         },
         space: {
             title: '計算機能',
