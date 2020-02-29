@@ -265,7 +265,7 @@
 							// bestdori
 							map = bestdori2bbb(JSON.parse(this.form.local.mapSource));
 						}
-						GameLoadConfig.musicSrc = await readFile(this.config.local.music, 'dataurl');
+						GameLoadConfig.musicSrc = await readFile(this.form.local.music, 'dataurl');
 						GameLoadConfig.songName = this.form.local.songName;
 					}
 					GameLoadConfig.mapSrc = URL.createObjectURL(new Blob([map]));
