@@ -1,6 +1,6 @@
 <template>
 	<q-btn-group outline style="width: 100%">
-		<q-btn @click="changeValue( '-', bigStep)"
+		<q-btn @click="changeValue('-', bigStep)"
 		       color="primary"
 		       icon="mdi-chevron-left"
 		       style="width: 36px;"/>

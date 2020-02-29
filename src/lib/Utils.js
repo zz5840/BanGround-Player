@@ -57,15 +57,23 @@ export function readFile (file, type = 'text') {
 let languages = [
 	{
 		label: 'English',
-		name: 'en'
+		value: 'en'
 	},
 	{
 		label: '简体中文',
-		name: 'zh'
+		value: 'zh'
+	},
+	{
+		label: '繁體中文',
+		value: 'zht'
 	},
 	{
 		label: '日本語',
-		name: 'ja'
+		value: 'ja'
+	},
+	{
+		label: '한국어',
+		value: 'ko'
 	}
 ];
 

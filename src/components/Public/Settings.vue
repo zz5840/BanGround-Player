@@ -132,6 +132,19 @@
 					              v-model="settings.game.beatNote"/>
 				</q-item>
 				<q-item-label header>
+					{{ $t('public.settings.mirror') }}
+				</q-item-label>
+				<q-item dense>
+					<q-btn-toggle :options="radioOptions"
+					              class="border-toggle"
+					              no-caps
+					              spread
+					              text-color="primary"
+					              toggle-color="primary"
+					              unelevated
+					              v-model="settings.game.mirror"/>
+				</q-item>
+				<q-item-label header>
 					{{ $t('public.settings.laneEffect') }}
 				</q-item-label>
 				<q-item dense>

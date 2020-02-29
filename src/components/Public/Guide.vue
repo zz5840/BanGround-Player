@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<q-dialog persistent v-if="step === 1" v-model="language">
+		<q-dialog persistent v-if="step === 1" v-model="guide">
 			<q-card>
 				<q-card-section>
 					<div class="text-h6">{{ $t('public.guide.title') }}</div>
@@ -9,12 +9,15 @@
 					{{ $t('public.guide.selectLanguage') }}
 				</q-card-section>
 				<q-card-actions align="left" class="float-left">
-					<q-btn :key="i"
-					       :label="lang.label"
-					       @click="changeLanguage(lang.name)"
-					       color="primary"
-					       flat
-					       v-for="(lang, i) in languageList"/>
+					<q-select :label="$t('public.language')"
+					          :options="languageList"
+					          @input="val => changeLanguage(val)"
+					          class="q-pl-sm"
+					          dense
+					          emit-value
+					          map-options
+					          style="width: 120px"
+					          v-model="lang"/>
 				</q-card-actions>
 				<q-card-actions align="right">
 					<q-btn :label="$t('public.guide.next')"
@@ -24,7 +27,7 @@
 				</q-card-actions>
 			</q-card>
 		</q-dialog>
-		<q-dialog persistent v-if="step === 2" v-model="language">
+		<q-dialog persistent v-if="step === 2" v-model="guide">
 			<q-card>
 				<q-card-section>
 					<div class="text-h6">{{ $t('public.guide.title') }}</div>
@@ -44,7 +47,7 @@
 				</q-card-actions>
 			</q-card>
 		</q-dialog>
-		<q-dialog persistent v-if="step === 3" v-model="language">
+		<q-dialog persistent v-if="step === 3" v-model="guide">
 			<q-card>
 				<q-card-section>
 					<div class="text-h6">{{ $t('public.guide.title') }}</div>
@@ -70,12 +73,14 @@
 	export default {
 		name: 'Guide',
 		data: () => ({
-			language: true,
+			lang: 'en',
+			guide: true,
 			languageList: languages,
 			step: 1
 		}),
 		methods: {
 			changeLanguage (lang) {
+				console.log(lang);
 				changeLanguage(this, lang);
 			},
 			settings () {
@@ -85,6 +90,9 @@
 				}, 300);
 			},
 			...mapMutations(['openSettings'])
+		},
+		mounted () {
+			this.changeLanguage('en');
 		}
 	};
 </script>

@@ -7,6 +7,7 @@ export default {
 		language: '语言',
 		inputValue: '请输入数值',
 		fullscreen: {
+			title: '全屏',
 			succeeded: '翻转屏幕获得最佳体验～',
 			failed: '没能进入全屏QAQ，主人要好好检查权限哦',
 			unsupported: '主人的浏览器不支持全屏哦'
@@ -86,10 +87,10 @@ export default {
 			fileInput: '谱面文件',
 			noInput: '您还没有选择任何谱面呢',
 			convertResult: '转换结果',
-			convert: '转换',
 			succeeded: '转换成功，请复制或下载保存',
 			download: '下载',
-			serious: '你是沙雕吗？'
+			serious: '你是沙雕吗？',
+			convert: '转换'
 		},
 		space: {
 			title: '计算留白',

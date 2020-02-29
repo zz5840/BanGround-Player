@@ -4,9 +4,10 @@
 			<q-item-label header>{{ $t('public.language') }}</q-item-label>
 			<q-item
 				:key="i"
-				@click="changeLanguage(item.name)"
+				@click="changeLanguage(item.value)"
 				clickable
 				v-for="(item, i) in list"
+				v-model="lang"
 				v-ripple>
 				<q-item-section>{{ item.label }}</q-item-section>
 			</q-item>
@@ -30,7 +31,8 @@
 			}
 		},
 		data: () => ({
-			list: languages
+			list: languages,
+			lang: 'en'
 		}),
 		methods: {
 			changeLanguage (val) {
