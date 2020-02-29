@@ -73,7 +73,12 @@ export default function bbb2bestdori (bbb) {
 					} else if (!slides.b) {
 						slidePos = 'b';
 					} else {
-						throw new Error(`在${calculateTime(startPartFrom + i, firstNote.beat, bpms, true)}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。`);
+						throw new Error(JSON.stringify({
+							key: 'multiTap',
+							data: {
+								time: calculateTime(startPartFrom + i, firstNote.beat, bpms, true)
+							}
+						}));
 					}
 					slides[slidePos] = {
 						from: firstNote.beat,

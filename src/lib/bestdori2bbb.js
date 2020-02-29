@@ -44,7 +44,13 @@ export default function bestdori2bbb (bestdori) {
 						// 99.9999999999%不会出现的错误
 						if (long[lane]) {
 							let errorTime = calculateTime(e.beat, bpms, true);
-							throw new Error(`滑条转换出错：${errorTime} 轨道${lane}已被占用`);
+							throw new Error(JSON.stringify({
+								key: 'laneInvalid',
+								data: {
+									time: errorTime,
+									lane
+								}
+							}));
 						}
 						long[lane] = {
 							type: 'slide',
@@ -69,7 +75,13 @@ export default function bestdori2bbb (bestdori) {
 						// 99.9999999999%不会出现的错误
 						if (slides[pos]) {
 							let errorTime = calculateTime(e.beat, bpms, true);
-							throw new Error(`滑条转换出错：${errorTime} 轨道${pos}已被占用`);
+							throw new Error(JSON.stringify({
+								key: 'laneInvalid',
+								data: {
+									time: errorTime,
+									lane: pos
+								}
+							}));
 						}
 						slides[pos] = {
 							type: 'slide',
@@ -91,7 +103,12 @@ export default function bestdori2bbb (bestdori) {
 							break;
 						}
 						let errorTime = calculateTime(e.beat, bpms, true);
-						throw new Error(`滑条转换出错：${errorTime} 没有滑条起始note`);
+						throw new Error(JSON.stringify({
+							key: 'noStart',
+							data: {
+								time: errorTime
+							}
+						}));
 					}
 					slides[pos].notes.push({
 						beat,

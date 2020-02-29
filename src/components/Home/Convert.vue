@@ -101,6 +101,12 @@
 			}
 		},
 		methods: {
+			showError (e) {
+				let error = JSON.parse(e.message);
+				this.$q.notify({
+					message: this.$t('home.convert.error.' + error.key, error.data)
+				});
+			},
 			selectText () {
 				this.$refs.result.select();
 			},
@@ -112,7 +118,12 @@
 			},
 			convert () {
 				if (this.to.value === 'bbb') {
-					this.toData = bestdori2bbb(JSON.parse(this.fromText));
+					try {
+						this.toData = bestdori2bbb(JSON.parse(this.fromText));
+					} catch (e) {
+						this.showError(e);
+						return;
+					}
 				} else {
 					this.toData = this.fromText;
 				}
@@ -125,7 +136,11 @@
 				if (!this.fromFile) return;
 				let text = await readFile(this.fromFile, 'text');
 				if (this.to.value === 'bd') {
-					this.toData = bbb2bestdori(text);
+					try {
+						this.toData = bbb2bestdori(text);
+					} catch (e) {
+						this.showError(e);
+					}
 				} else {
 					this.toData = text;
 				}
