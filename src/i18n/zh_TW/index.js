@@ -90,7 +90,12 @@ export default {
             succeeded: '轉換成功，請複製或下載保存',
             download: '下載',
             serious: '你是沙雕嗎？',
-            convert: '轉換'
+            convert: '轉換',
+            error: {
+                multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。',
+                laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用',
+                noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
+            }
         },
         space: {
             title: '計算留白',
