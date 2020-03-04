@@ -33,8 +33,8 @@ export default {
             selectLanguage: 'このサイトへのアクセスは初めてなので、自分に合った言語を選択してください。また、ページの右上にある言語設定⚙️で変更できます。',
             changeSettings: 'ここでは、ライブ設定ができます。もし早くプレイしたい場合、これをスキップして後で設定することも可能です。',
             complete: 'お疲れさまでした、すべての初期設定が完了しました。お楽しみください！',
-            next: '下一步',
-            skip: '跳过'
+            next: '次へ',
+            skip: 'スキップ'
         }
     },
     home: {
@@ -46,7 +46,7 @@ export default {
                 mapId: '譜面ID',
                 songId: '楽曲ID',
                 type: {
-                    title: '谱面类型',
+                    title: '譜面のタイプ',
                     official: '本家',
                     community: 'オリジナル'
                 },
