@@ -5,7 +5,7 @@ export default {
         cancel: 'キャンセル',
         ok: 'オーケー',
         language: '言語',
-        inputValue: '値が不可欠、入力してください。',
+        inputValue: '数値を記入してください。',
         fullscreen: {
             title: 'フルスクリーン',
             succeeded: '画面縦向きのロックをオフにして、最高のゲーム体験を楽しむ為に携帯電話を縦に保持してください',
@@ -44,18 +44,18 @@ export default {
             bestdori: {
                 title: 'Bestdori',
                 mapId: '譜面ID',
-                songId: '歌曲ID',
+                songId: '楽曲ID',
                 type: {
                     title: '谱面类型',
                     official: '本家',
                     community: 'オリジナル'
                 },
                 info: {
-                    name: '歌曲名',
-                    band: '乐队',
-                    singer: '歌手',
+                    name: 'タイトル',
+                    band: 'バンド',
+                    singer: 'アーティスト',
                     difficulty: '楽曲レベル',
-                    level: '等级',
+                    level: 'レベル',
                     notes: 'ノーツ数',
                     author: '譜面の製作者'
                 }
@@ -90,7 +90,7 @@ export default {
             succeeded: 'ダウンロード',
             download: 'この操作がファイルに無効、真面目に進行するか',
             serious: '你是沙雕吗？',
-            convert: '转换',
+            convert: '変換',
             error: {
                 multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。',
                 laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用',
@@ -103,6 +103,6 @@ export default {
             offset: '最初部分の偏移量',
             result: '曲の先頭に{0}無音を追加する、或いは音楽の先頭から{1}無音を削除する'
         },
-        about: { title: 'について' }
+        about: { title: '本アプリついて' }
     }
 };
