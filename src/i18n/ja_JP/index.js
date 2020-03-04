@@ -16,7 +16,7 @@ export default {
             title: '設置',
             autoFullscreen: '自動フルスクリーン',
             speed: 'リズムアイコンの速さ',
-            noteScale: 'アイコンの大きさ',
+            noteScale: 'リズムアイコンの大きさ',
             judgeOffset: '判定偏移',
             visualOffset: '視覚偏移',
             barOpacity: '長押しラインの濃さ',
@@ -30,9 +30,9 @@ export default {
         },
         guide: {
             title: 'ようこそ',
-            selectLanguage: '初めてサイトにおアクセスされますので。自分に必要な言語を選択してください。他はページの右上にある言語設置で変更もできます。',
-            changeSettings: 'これから、ゲームの中に様々な演奏設置を適切に設定することを通して、自分の習慣に合うようになります。もし早めにゲームを楽しむなら、この節をスキップして後で設定することもできます。',
-            complete: 'やりますね！ すべての初期設定が完了しました。お楽しみください！',
+            selectLanguage: 'このサイトへのアクセスは初めてなので、自分に合った言語を選択してください。また、ページの右上にある言語設定⚙️で変更できます。',
+            changeSettings: 'ここでは、ライブ設定ができます。もし早くプレイしたい場合、これをスキップして後で設定することも可能です。',
+            complete: 'お疲れさまでした、すべての初期設定が完了しました。お楽しみください！',
             next: '下一步',
             skip: '跳过'
         }
@@ -47,8 +47,8 @@ export default {
                 songId: '歌曲ID',
                 type: {
                     title: '谱面类型',
-                    official: '官方',
-                    community: '社区'
+                    official: '本家',
+                    community: 'オリジナル'
                 },
                 info: {
                     name: '歌曲名',
