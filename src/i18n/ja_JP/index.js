@@ -39,7 +39,7 @@ export default {
     },
     home: {
         play: {
-            title: '開始',
+            title: 'プレイする',
             mapSource: '譜面ソース',
             bestdori: {
                 title: 'Bestdori',
@@ -78,7 +78,7 @@ export default {
             },
             start: 'スタート',
             load: '譜面をロード',
-            loadFailed: '譜面はロードが失敗した、もう一度お試しください'
+            loadFailed: '譜面のロードが失敗したので、もう一度お試しください。'
         },
         convert: {
             title: '転換する',
