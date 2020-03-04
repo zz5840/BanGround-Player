@@ -8,15 +8,15 @@ export default {
         inputValue: '請輸入數值',
         fullscreen: {
             title: '全屏',
-            succeeded: '翻轉屏幕以獲得最佳體驗',
-            failed: '進入全屏失敗，請檢查權限',
-            unsupported: '該瀏覽器不支持全屏'
+            succeeded: '翻轉螢幕以獲得最佳體驗',
+            failed: '進入全螢幕失敗，請檢查權限',
+            unsupported: '你的瀏覽器不支持全螢幕喔'
         },
         settings: {
-            title: '設置',
-            autoFullscreen: '自動全屏',
-            speed: '節奏圖標的速度',
-            noteScale: '節奏圖標的大小',
+            title: '設定',
+            autoFullscreen: '自動全螢幕',
+            speed: '節奏圖示的速度',
+            noteScale: '節奏圖示的大小',
             judgeOffset: '判定偏移',
             visualOffset: '視覺偏移',
             barOpacity: '長按按條透明度',
