@@ -13,7 +13,7 @@ export default {
             unsupported: '今のブラウザはフルスクリーンモードをサポートしないので、他のブラウザを使ってください'
         },
         settings: {
-            title: '設置',
+            title: '設定',
             autoFullscreen: '自動フルスクリーン',
             speed: 'リズムアイコンの速さ',
             noteScale: 'リズムアイコンの大きさ',
@@ -26,7 +26,7 @@ export default {
             beatNote: 'リズムサポート',
             mirror: 'ミラー',
             laneEffect: 'レーンエフェクト',
-            resolution: '高分辨率'
+            resolution: '高画質'
         },
         guide: {
             title: 'ようこそ',
@@ -54,10 +54,10 @@ export default {
                     name: '歌曲名',
                     band: '乐队',
                     singer: '歌手',
-                    difficulty: '难度',
+                    difficulty: '楽曲レベル',
                     level: '等级',
-                    notes: '物量',
-                    author: '谱面作者'
+                    notes: 'ノーツ数',
+                    author: '譜面の製作者'
                 }
             },
             local: {
