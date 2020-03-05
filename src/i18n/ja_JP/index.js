@@ -3,7 +3,7 @@ export default {
         radioOn: 'オン',
         radioOff: 'オフ',
         cancel: 'キャンセル',
-        ok: 'オーケー',
+        ok: 'OK',
         language: '言語',
         inputValue: '数値を記入してください。',
         fullscreen: {
