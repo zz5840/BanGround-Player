@@ -17,7 +17,7 @@ export default {
             autoFullscreen: '自動フルスクリーン',
             speed: 'リズムアイコンの速さ',
             noteScale: 'リズムアイコンの大きさ',
-            judgeOffset: '判定偏移',
+            judgeOffset: '判定調整',
             visualOffset: '視覚偏移',
             barOpacity: '長押しラインの濃さ',
             effectVolume: 'SE音量',
