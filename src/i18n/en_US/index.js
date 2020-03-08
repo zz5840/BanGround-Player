@@ -87,10 +87,10 @@ export default {
             fileInput: 'Map File',
             noInput: 'Please select file or input map first',
             convertResult: 'Convert Result',
-            succeeded: 'Download',
-            download: 'Are you serious?',
+            succeeded: 'Chart has been successfully converted, please copy or download',
+            download: 'Download',
             serious: '你是沙雕吗？',
-            convert: '转换',
+            convert: 'Convert',
             error: {
                 multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。',
                 laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用',
