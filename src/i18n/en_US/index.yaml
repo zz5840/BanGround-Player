@@ -34,13 +34,13 @@ public:
     next: Next
     skip: Skip
   favourite:
-    title: Favorite
+    title: Favourite
     history: History
     empty: 'Your {name} is empty now'
-    faved: '歌曲 {name} 已收藏'
-    deleted: '歌曲 {name} 已取消收藏'
-    slideRight: 右滑可以取消收藏哦
-    showLimit: 仅显示最近100条记录
+    faved: 'Song {name} has been add to favourite'
+    deleted: 'Song {name} has been delete fromfavourite'
+    slideRight: Slide right to delete from favourite
+    showLimit: Only recent 100 records will be shown
 home:
   play:
     title: Play
