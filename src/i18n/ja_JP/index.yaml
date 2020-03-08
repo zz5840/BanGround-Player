@@ -34,7 +34,7 @@ public:
     next: 次へ
     skip: スキップ
   favourite:
-    title: 收藏夹
+    title: お気に入り
     history: 浏览记录
     empty: '您的{name}暂时还为空哦'
     faved: '歌曲 {name} 已收藏'
