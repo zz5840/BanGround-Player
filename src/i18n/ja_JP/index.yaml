@@ -85,7 +85,7 @@ home:
     noInput: ファイルまたは譜面がない、一つを選択してください
     convertResult: 転換の結果
     succeeded: ダウンロード
-    download: この操作がファイルに無効、真面目に進行するか
+    download: ダウンロード
     serious: 冗談ですか？
     convert: 変換
     error:
