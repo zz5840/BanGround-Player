@@ -1,0 +1,92 @@
+public:
+    radioOn: On
+    radioOff: Off
+    cancel: Cancel
+    ok: OK
+    language: Language
+    inputValue: Please Input Value
+    fullscreen:
+        title: Full Screen
+        succeeded: 'Please turn on Auto Rotate and hold the phone horizontally for the best experience'
+        failed: 'Failed to enter full screen mode, please check the permission'
+        unsupported: Your browser doesn't support fullscreen
+    settings:
+        title: Settings
+        autoFullscreen: Auto Fullscreen
+        speed: Note Speed
+        noteScale: Note Size
+        judgeOffset: Judge Offset
+        visualOffset: Visual Offset
+        barOpacity: Long Note Transparency
+        effectVolume: Note SE Volume
+        backgroundDim: Background Image Transparency
+        showSimLine: Dual Tap Line
+        beatNote: Off-Beat Coloring
+        mirror: Mirror
+        laneEffect: Lane Effects
+        resolution: High Resulotion
+    guide:
+        title: Welcome
+        selectLanguage: "It seems that it's you first time to visit the site, please select you preferred language. You can change it later by tapping the select-language button on the top right of the page."
+        changeSettings: 'Now, may be you need change some settings to make it fit your playing habits. Of course, you can change them later as well.'
+        complete: 'Nice! You have done all the initial settings, enjoy yourself please!'
+        next: Next
+        skip: Skip
+home:
+    play:
+        title: Play
+        mapSource: Map Source
+        bestdori:
+            title: Bestdori
+            mapId: Map ID
+            songId: Song ID
+            type:
+                title: Map Type
+                official: Official
+                community: Community
+            info:
+                name: Song Name
+                band: Band
+                singer: Artists
+                difficulty: Difficulty
+                level: Level
+                notes: Notes
+                author: Map Author
+        local:
+            title: Local
+            type:
+                title: Map Type
+                bbb: bangbangboom
+                bd: Bestdori
+            mapFile: Map File
+            mapSource: Map Source Code
+            mapCover: Map Cover
+            songName:
+                title: Song Name
+                default: Test Map
+            musicFile: Music File
+        start: Start
+        load: Load Map Info
+        loadFailed: 'Failed to load map info, please try again'
+    convert:
+        title: Convert
+        from: Original Map Format
+        to: Target Map Format
+        fileInput: Map File
+        noInput: Please select file or input map first
+        convertResult: Convert Result
+        succeeded: 'Chart has been successfully converted, please copy or download'
+        download: Download
+        serious: 'Are you serious?'
+        convert: Convert
+        error:
+            multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。'
+            laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用'
+            noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
+    space:
+        title: Calc
+        bpm: BPM Of First Part
+        offset: Offset Of First Part (s)
+        result: 'You can add {0} silence to the beginning of song or remove {1} silence from the beginning of music'
+    about:
+        title: About

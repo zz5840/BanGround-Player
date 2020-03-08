@@ -1,0 +1,100 @@
+public:
+    radioOn: 开
+    radioOff: 关
+    cancel: 取消
+    ok: 确认
+    language: 语言
+    inputValue: 请输入数值
+    fullscreen:
+        title: 全屏
+        succeeded: 翻转屏幕获得最佳体验～
+        failed: 没能进入全屏QAQ，主人要好好检查权限哦
+        unsupported: 主人的浏览器不支持全屏哦
+    settings:
+        title: 设置
+        autoFullscreen: 自动全屏
+        speed: 节奏图标的速度
+        noteScale: 节奏图标的大小
+        judgeOffset: 判定偏移
+        visualOffset: 视觉偏移
+        barOpacity: 长按按条透明度
+        effectVolume: 效果音音量
+        backgroundDim: 背景图片透明度
+        showSimLine: 同时点击线
+        beatNote: 节奏的色觉辅助
+        mirror: 镜像
+        laneEffect: 轨道特效
+        resolution: 高分辨率
+    guide:
+        title: 欢迎
+        selectLanguage: 主人这是第一次访问我呢，请选择你喜欢的语言，稍后可以在右上角的选择语言里自由更改的w
+        changeSettings: 第一次需要设置一下才能适合主人来游玩，主人也可以在之后的设置里随时修改呢
+        complete: 太好了主人，你已经调教好了，接下来请尽情享受吧（
+        next: 下一步
+        skip: 跳过
+    favourite:
+        title: 收藏夹
+        history: 浏览记录
+        empty: '您的{name}暂时还为空哦'
+        faved: '歌曲 {name} 已收藏'
+        deleted: '歌曲 {name} 已取消收藏'
+        slideRight: 右滑可以取消收藏哦
+        showLimit: 仅显示最近100条记录
+home:
+    play:
+        title: 游玩谱面
+        mapSource: 谱面来源
+        bestdori:
+            title: Bestdori
+            mapId: 谱面ID
+            songId: 歌曲ID
+            type:
+                title: 谱面类型
+                official: 官方
+                community: 社区
+            info:
+                name: 歌曲名
+                band: 乐队
+                singer: 歌手
+                difficulty: 难度
+                level: 等级
+                notes: 物量
+                author: 谱面作者
+        local:
+            title: 本地
+            type:
+                title: 谱面类型
+                bbb: bangbangboom
+                bd: Bestdori
+            mapFile: 谱面文件
+            mapSource: 谱面代码
+            mapCover: 封面
+            songName:
+                title: 歌曲名
+                default: 测试谱面
+            musicFile: 音乐文件
+        start: 开始
+        load: 载入信息
+        loadFailed: 载入失败，请重试
+    convert:
+        title: 转换谱面
+        from: 源谱面格式
+        to: 输出谱面格式
+        fileInput: 谱面文件
+        noInput: 您还没有选择任何谱面呢
+        convertResult: 转换结果
+        succeeded: 转换成功，请复制或下载保存
+        download: 下载
+        serious: 你是沙雕吗？
+        convert: 转换
+        error:
+            multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。'
+            laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用'
+            noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
+    space:
+        title: 计算留白
+        bpm: 第一段BPM
+        offset: 第一段Offset（秒）
+        result: '请添加 {0} 空白到歌曲开头或从歌曲开头删除 {1} 空白'
+    about:
+        title: 关于

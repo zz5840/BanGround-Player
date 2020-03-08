@@ -16,10 +16,13 @@
 		"axios": "^0.19.2",
 		"bangbangboom-game": "https://github.com/K024/bangbangboom-game.git",
 		"file-saver": "^2.0.2",
+		"json-loader": "^0.5.7",
 		"lodash": "^4.17.15",
 		"quasar": "^1.8.3",
 		"screenfull": "^5.0.1",
-		"vue-i18n": "^8.0.0"
+		"vue-i18n": "^8.0.0",
+		"vuex-persistedstate": "^2.7.1",
+		"yaml-loader": "^0.5.0"
 	},
 	"devDependencies": {
 		"@quasar/app": "^1.0.0",

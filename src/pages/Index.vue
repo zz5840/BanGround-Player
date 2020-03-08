@@ -48,8 +48,15 @@
 	export default {
 		name: 'PageIndex',
 		components: { Play, Space, Convert, About },
-		data: () => ({
-			tab: 'play'
-		})
+		computed: {
+			tab: {
+				get () {
+					return this.$store.state.tab;
+				},
+				set (val) {
+					this.$store.commit('updateTab', val);
+				}
+			}
+		}
 	};
 </script>

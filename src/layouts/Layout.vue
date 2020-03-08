@@ -5,6 +5,7 @@
 				<q-toolbar-title>
 					<span class="non-selectable" style="font-size: 16px;">BanGround Player</span>
 				</q-toolbar-title>
+				<q-btn @click="fav" class="q-mr-sm" color="white" flat icon="mdi-heart" round/>
 				<q-btn @click="language" class="q-mr-sm" color="white" flat icon="mdi-translate" round/>
 				<q-btn @click="settings" class="q-mr-sm" color="white" flat icon="mdi-settings" round/>
 				<q-btn @click="fullscreen" color="white" flat icon="mdi-fullscreen" round/>
@@ -13,8 +14,9 @@
 		<q-page-container class="q-px-sm" style="max-width: 1280px; margin: auto">
 			<router-view/>
 		</q-page-container>
+		<favourite v-model="showFav"/>
 		<select-language v-model="showLanguage"/>
-		<settings v-if="ifShowSettings" v-model="showSettings"/>
+		<settings v-model="showSettings"/>
 		<guide v-if="showGuide"/>
 	</q-layout>
 </template>
@@ -23,29 +25,25 @@
 	import SelectLanguage from 'components/Public/SelectLanguage';
 	import Settings from 'components/Public/Settings';
 	import Guide from 'components/Public/Guide';
+	import Favourite from 'components/Public/Favourite';
 	import { mapMutations, mapState } from 'vuex';
 	import { fullscreen } from 'src/lib/Utils';
 
 	export default {
 		name: 'Layout',
-		components: { SelectLanguage, Settings, Guide },
+		components: { SelectLanguage, Settings, Guide, Favourite },
 		data () {
 			return {
 				showLanguage: false,
 				showGuide: false,
-				ifShowSettings: false
+				ifShowSettings: false,
+				showFav: false
 			};
 		},
-		watch: {
-			showSettings (val) {
-				// 解决v-if为false时元素会直接消失 没有动画的问题
-				let time = this.ifShowSettings ? 300 : 0;
-				setTimeout(() => {
-					this.ifShowSettings = val;
-				}, time);
-			}
-		},
 		methods: {
+			fav () {
+				this.showFav = true;
+			},
 			language () {
 				this.showLanguage = true;
 			},

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import createPersistedState from 'vuex-persistedstate';
 
 import module from './module';
 
@@ -19,7 +20,18 @@ export default function (/* { ssrContext } */) {
 		...module,
 		// enable strict mode (adds overhead!)
 		// for dev mode only
-		strict: process.env.DEV
+		strict: process.env.DEV,
+		plugins: [createPersistedState({
+			reducer (state) {
+				return {
+					favList: state.favList,
+					historyList: state.historyList,
+					playData: {
+						bestdori: state.playData.bestdori
+					}
+				};
+			}
+		})]
 	});
 
 	return Store;

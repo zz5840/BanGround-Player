@@ -8,7 +8,7 @@
 				<q-btn dense flat icon="mdi-close" round v-close-popup/>
 			</q-card-section>
 			<q-separator/>
-			<q-card-section class="scroll q-pa-none q-pb-md" style="max-height: calc(100vh - 191px)">
+			<q-card-section class="scroll q-pa-none q-pb-md" style="max-height: calc(100vh - 200px)">
 				<q-item-label header>
 					{{ $t('public.settings.autoFullscreen') }}
 				</q-item-label>
@@ -193,10 +193,6 @@
 		},
 		data: function () {
 			return {
-				radioOptions: [
-					{ label: this.$t('public.radioOff'), value: false },
-					{ label: this.$t('public.radioOn'), value: true }
-				],
 				settings: {
 					game: {
 						speed: 10,
@@ -227,6 +223,12 @@
 			}
 		},
 		computed: {
+			radioOptions () {
+				return [
+					{ label: this.$t('public.radioOff'), value: false },
+					{ label: this.$t('public.radioOn'), value: true }
+				];
+			},
 			dialog: {
 				get () {
 					return this.show;

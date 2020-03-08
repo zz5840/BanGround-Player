@@ -35,9 +35,8 @@
 			};
 		},
 		beforeDestroy () {
-			game.ondestroyed = null;
-			this.$refs.div.removeChild(canvas);
 			game.destroy();
+			game.ondestroyed = null;
 		}
 	};
 </script>

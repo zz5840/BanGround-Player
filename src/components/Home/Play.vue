@@ -5,9 +5,10 @@
 			<template v-slot:control>
 				<q-option-group
 					:options="[{label: $t('home.play.bestdori.title'), value: 'bestdori'}, {label: $t('home.play.local.title'), value: 'local'}]"
+					:value="form.from"
+					@input="updatePlayDataFrom"
 					color="primary"
-					inline
-					v-model="form.from"/>
+					inline/>
 			</template>
 		</q-field>
 		<!-- Bestdori -->
@@ -16,15 +17,17 @@
 				<template v-slot:control>
 					<q-option-group
 						:options="[{label: $t('home.play.bestdori.type.official'), value: 'official'}, {label: $t('home.play.bestdori.type.community'), value: 'community'}]"
+						:value="form.bestdori.mapType"
+						@input="updatePlayDataBestdoriMapType"
 						color="primary"
-						inline
-						v-model="form.bestdori.mapType"/>
+						inline/>
 				</template>
 			</q-field>
 			<q-input :label="$t('home.play.bestdori.' + (form.bestdori.mapType === 'official' ? 'songId' : 'mapId'))"
+			         :value="form.bestdori.id"
+			         @input="updatePlayDataBestdoriId"
 			         @keypress.enter="$refs.loadBtn.click()"
-			         type="number"
-			         v-model="form.bestdori.id"/>
+			         type="number"/>
 			<q-markup-table class="q-mt-md bg-transparent"
 			                flat
 			                separator="horizontal"
@@ -118,12 +121,13 @@
 				</q-markup-table>
 				<q-btn-toggle
 					:options="difficulty"
+					:value="form.bestdori.difficulty"
+					@input="updatePlayDataBestdoriDifficulty"
 					class="q-mt-md difficulty-select"
 					spread
 					text-color="primary"
 					toggle-color="primary"
-					unelevated
-					v-model="form.bestdori.difficulty"/>
+					unelevated/>
 			</template>
 		</template>
 		<!-- 本地 -->
@@ -132,29 +136,34 @@
 				<template v-slot:control>
 					<q-option-group
 						:options="[{label: $t('home.play.local.type.bbb'), value: 'bbb'}, {label: $t('home.play.local.type.bd'), value: 'bd'}]"
+						:value="form.local.type"
+						@input="updatePlayDataLocalType"
 						color="primary"
-						inline
-						v-model="form.local.type"/>
+						inline/>
 				</template>
 			</q-field>
 			<q-file :label="$t('home.play.local.mapFile')"
+			        :value="form.local.mapFile"
+			        @input="updatePlayDataLocalMapFile"
 			        accept=".txt"
-			        v-if="form.local.type === 'bbb'"
-			        v-model="form.local.mapFile"/>
+			        v-if="form.local.type === 'bbb'"/>
 			<q-input :label="$t('home.play.local.mapSource')"
+			         :value="form.local.mapSource"
+			         @input="updatePlayDataLocalMapSource"
 			         class="q-mt-md"
 			         outlined
 			         rows="5"
 			         type="textarea"
-			         v-if="form.local.type === 'bd'"
-			         v-model="form.local.mapSource"/>
+			         v-if="form.local.type === 'bd'"/>
 			<q-file :label="$t('home.play.local.musicFile')"
+			        :value="form.local.music"
+			        @input="updatePlayDataLocalMusic"
 			        accept=".mp3"
-			        class="q-mt-md"
-			        v-model="form.local.music"/>
+			        class="q-mt-md"/>
 			<q-input :label="$t('home.play.local.songName.title')"
-			         class="q-mt-md"
-			         v-model="form.local.songName"/>
+			         :value="form.local.songName"
+			         @input="updatePlayDataLocalSongName"
+			         class="q-mt-md"/>
 		</template>
 		<!-- 加载按钮 -->
 		<q-btn :disable="loading"
@@ -169,12 +178,17 @@
 				<q-spinner-facebook/>
 			</template>
 		</q-btn>
+		<q-page-sticky :offset="[30, 30]" position="bottom-right"
+		               v-if="isStart && form.from === 'bestdori'">
+			<q-btn :icon="isFaved ? 'mdi-heart' : 'mdi-heart-outline'"
+			       @click="fav(isFaved ? 'del' : 'add')" color="orange-9" fab/>
+		</q-page-sticky>
 	</div>
 </template>
 
 <script>
 	import _ from 'lodash';
-	import { mapMutations } from 'vuex';
+	import { mapMutations, mapState } from 'vuex';
 	import { difficultyText, readFile } from 'src/lib/Utils';
 	import bestdori2bbb from 'src/lib/bestdori2bbb';
 
@@ -185,21 +199,6 @@
 				showInfo: false,
 				loading: false,
 				difficultyText,
-				form: {
-					from: 'bestdori',
-					bestdori: {
-						id: 128,
-						mapType: 'official',
-						difficulty: 'easy'
-					},
-					local: {
-						type: 'bbb',
-						mapFile: null,
-						mapSource: '',
-						music: null,
-						songName: this.$t('home.play.local.songName.default')
-					}
-				},
 				info: null
 			};
 		},
@@ -228,10 +227,17 @@
 							// 谱面
 							let { data } = await this.$a.get(`/api/bestdori/official/map/${this.form.bestdori.id}/${this.form.bestdori.difficulty}`);
 							if (!data.result) throw new Error();
-							map = bestdori2bbb(data.data);
+							try {
+								map = bestdori2bbb(data.data);
+							} catch (e) {
+								let error = JSON.parse(e.message);
+								this.$q.notify({
+									message: this.$t('home.convert.error.' + error.key, error.data)
+								});
+							}
 							// 音乐
 							GameLoadConfig.musicSrc = await this.getOfficialMusic(this.form.bestdori.id);
-							GameLoadConfig.songName = this.info.name;
+							GameLoadConfig.songName = this.info.name + ' - ' + this.info.band;
 						} else {
 							// 社区谱：1.获取音乐
 							map = bestdori2bbb(this.info.notes);
@@ -269,8 +275,6 @@
 						GameLoadConfig.songName = this.form.local.songName;
 					}
 					GameLoadConfig.mapSrc = URL.createObjectURL(new Blob([map]));
-					// TODO 开始游戏
-					console.log(map);
 					this.$store.commit('setGameLoadConfig', GameLoadConfig);
 					this.$router.push('/play');
 				} catch (e) {
@@ -286,13 +290,18 @@
 				this.loading = true;
 				let id = this.form.bestdori.id;
 				let lang = this.$i18n.locale;
-				let url = this.form.bestdori.mapType === 'official'
-					? `/api/bestdori/official/info/${id}/${lang}` : `/api/bestdori/community/${id}`;
+				let url = (this.form.bestdori.mapType === 'official'
+					? `/api/bestdori/official/info/${id}/${lang}` : `/api/bestdori/community/${id}`);
 				try {
 					let { data } = await this.$a.get(url);
 					if (data.result) {
 						this.info = data.data;
 						this.showInfo = true;
+						this.$store.commit('addHistory', {
+							id: this.form.bestdori.id,
+							type: this.form.bestdori.mapType,
+							name: this.songName
+						});
 					} else {
 						throw new Error();
 					}
@@ -308,17 +317,73 @@
 				let { data } = await this.$a.get(`/api/bestdori/official/music/${id}`);
 				if (!data.result) throw new Error();
 				return data.data;
+			},
+			fav (action) {
+				this.$store.commit(action === 'add' ? 'addFav' : 'delFavById', {
+					id: this.form.bestdori.id,
+					type: this.form.bestdori.mapType,
+					name: this.songName
+				});
+				this.$q.notify({
+					message: this.$t(action === 'add'
+						? 'public.favourite.faved'
+						: 'public.favourite.deleted', { name: this.songName })
+				});
+			},
+			updatePlayDataFrom (val) {
+				this.$store.commit('updatePlayDataFrom', val);
+			},
+			updatePlayDataBestdoriId (val) {
+				this.$store.commit('updatePlayDataBestdoriId', parseInt(val) || '');
+			},
+			updatePlayDataBestdoriMapType (val) {
+				this.$store.commit('updatePlayDataBestdoriMapType', val);
+			},
+			updatePlayDataBestdoriDifficulty (val) {
+				this.$store.commit('updatePlayDataBestdoriDifficulty', val);
+			},
+			updatePlayDataLocalType (val) {
+				this.$store.commit('updatePlayDataLocalType', val);
+			},
+			updatePlayDataLocalMapFile (val) {
+				this.$store.commit('updatePlayDataLocalMapFile', val);
+			},
+			updatePlayDataLocalMapSource (val) {
+				this.$store.commit('updatePlayDataLocalMapSource', val);
+			},
+			updatePlayDataLocalMusic (val) {
+				this.$store.commit('updatePlayDataLocalMusic', val);
+			},
+			updatePlayDataLocalSongName (val) {
+				this.$store.commit('updatePlayDataLocalSongName', val);
 			}
 		},
 		watch: {
-			'form.bestdori.id': function () {
+			'form.bestdori.id': function (val) {
 				this.showInfo = false;
 			},
 			'form.bestdori.mapType': function () {
 				this.showInfo = false;
+			},
+			'form.loadInfo': function (val) {
+				if (val && !this.isStart) {
+					this.$refs.loadBtn.click();
+				}
+				this.$store.commit('updatePlayDataLoadInfo', false);
 			}
 		},
 		computed: {
+			...mapState({
+				form: 'playData'
+			}),
+			songName () {
+				return this.form.bestdori.mapType === 'official'
+					? this.info.name + ' - ' + this.info.band
+					: this.info.name + ' - ' + this.info.artists;
+			},
+			isFaved () {
+				return this.$store.getters.isFaved(this.form.bestdori.id, this.form.bestdori.mapType);
+			},
 			// 判断开始按钮还是加载按钮
 			isStart () {
 				return this.form.from === 'local' || (this.form.from === 'bestdori' && this.showInfo);
@@ -333,19 +398,20 @@
 				});
 			}
 		},
-		beforeMount () {
-			// TODO difficulty
-			let { type, id } = this.$route.query;
+		mounted () {
+			if (this.form.loadInfo && !this.isStart) {
+				this.$refs.loadBtn.click();
+				this.$store.commit('updatePlayDataLoadInfo', false);
+			}
+			let { type, id, autoload } = this.$route.query;
 			id = parseInt(id);
+			autoload = autoload === 'true';
 			if (type !== 'community' && type !== 'official') return;
 			if (isNaN(id)) return;
 			this.form.bestdori.mapType = type;
 			this.form.bestdori.id = id;
-		},
-		mounted () {
-			let { autoload } = this.$route.query;
-			autoload = autoload === 'true';
 			if (autoload) this.$refs.loadBtn.click();
+			this.$router.push('/');
 		}
 	};
 </script>

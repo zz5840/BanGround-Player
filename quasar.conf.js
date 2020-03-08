@@ -59,7 +59,9 @@ module.exports = function (ctx) {
 				'QMarkupTable',
 				'QSpinnerFacebook'
 			],
-			directives: [],
+			directives: [
+				'Ripple'
+			],
 
 			// Quasar plugins
 			plugins: [
@@ -93,6 +95,9 @@ module.exports = function (ctx) {
 					options: {
 						formatter: require('eslint').CLIEngine.getFormatter('stylish')
 					}
+				}, {
+					test: /\.yaml$/,
+					use: ['json-loader', 'yaml-loader']
 				});
 			}
 		},
@@ -103,7 +108,8 @@ module.exports = function (ctx) {
 			port: 8080,
 			proxy: {
 				'/api': {
-					target: 'http://player.banground.fun/',
+					target: 'https://player.banground.fun/',
+					secure: true,
 					changeOrigin: true
 				}
 			},

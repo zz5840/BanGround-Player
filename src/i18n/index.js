@@ -1,8 +1,8 @@
-import en from './en_US';
-import zh from './zh_CN';
-import zht from './zh_TW';
-import ja from './ja_JP';
-import ko from './ko_KR';
+import en from './en_US/index.yaml';
+import zh from './zh_CN/index.yaml';
+import zht from './zh_TW/index.yaml';
+import ja from './ja_JP/index.yaml';
+import ko from './ko_KR/index.yaml';
 
 export default {
 	en,
