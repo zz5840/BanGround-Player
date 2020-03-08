@@ -39,7 +39,7 @@ public:
     empty: 'Your {name} is empty now'
     faved: 'Song {name} has been add to favourite'
     deleted: 'Song {name} has been delete fromfavourite'
-    slideRight: Slide right to delete from favourite
+    slideRight: Slide left to delete from favourite
     showLimit: Only recent 100 records will be shown
 home:
   play:
