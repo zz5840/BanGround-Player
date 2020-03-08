@@ -39,7 +39,7 @@ public:
     empty: 'まだお気に入りはありません。'
     faved: '{name} をお気に入りに登録しました。'
     deleted: '{name} お気に入りから削除しました。'
-    slideRight: お気に入りは右にスワイプすると消去できます。
+    slideRight: お気に入りは左にスワイプすると消去できます。
     showLimit: 履歴は100曲まで記録されます。
 home:
   play:
