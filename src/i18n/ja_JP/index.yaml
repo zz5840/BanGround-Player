@@ -34,13 +34,13 @@ public:
     next: 次へ
     skip: スキップ
   favourite:
-    title: 收藏夹
-    history: 浏览记录
-    empty: '您的{name}暂时还为空哦'
-    faved: '歌曲 {name} 已收藏'
-    deleted: '歌曲 {name} 已取消收藏'
-    slideRight: 右滑可以取消收藏哦
-    showLimit: 仅显示最近100条记录
+    title: お気に入り
+    history: 閲覧履歴
+    empty: 'まだお気に入りはありません。'
+    faved: '{name} をお気に入りに登録しました。'
+    deleted: '{name} お気に入りから削除しました。'
+    slideRight: お気に入りは左にスワイプすると消去できます。
+    showLimit: 履歴は100曲まで記録されます。
 home:
   play:
     title: プレイする
