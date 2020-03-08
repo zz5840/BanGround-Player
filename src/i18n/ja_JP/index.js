@@ -89,7 +89,7 @@ export default {
             convertResult: '転換の結果',
             succeeded: 'ダウンロード',
             download: 'この操作がファイルに無効、真面目に進行するか',
-            serious: '你是沙雕吗？',
+            serious: '冗談ですか？',
             convert: '変換',
             error: {
                 multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。',
