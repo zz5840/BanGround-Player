@@ -39,7 +39,7 @@ public:
     empty: '您的{name}暂时还为空哦'
     faved: '歌曲 {name} 已收藏'
     deleted: '歌曲 {name} 已取消收藏'
-    slideRight: 履歴は右にスワイプすると消去できます。
+    slideRight: お気に入りは右にスワイプすると消去できます。
     showLimit: 履歴は100曲まで記録されます。
 home:
   play:
