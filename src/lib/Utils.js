@@ -10,17 +10,22 @@ export function changeLanguage ($, lang) {
 	LocalStorage.set('lang', lang);
 }
 
-export function fullscreen ($this) {
+export async function fullscreen ($this) {
 	if (screenfull.isEnabled) {
-		screenfull.request().then(() => {
-			$this.$q.notify({
-				message: $this.$t('public.fullscreen.succeeded')
-			});
-		}).catch(() => {
-			$this.$q.notify({
-				message: $this.$t('public.fullscreen.failed')
-			});
-		});
+		if (!screenfull.isFullscreen) {
+			try {
+				await screenfull.request();
+				$this.$q.notify({
+					message: $this.$t('public.fullscreen.succeeded')
+				});
+			} catch {
+				$this.$q.notify({
+					message: $this.$t('public.fullscreen.failed')
+				});
+			}
+		} else {
+			await screenfull.exit();
+		}
 	} else {
 		$this.$q.notify({
 			message: $this.$t('public.fullscreen.unsupported')

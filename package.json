@@ -7,9 +7,7 @@
 	"private": true,
 	"scripts": {
 		"lint": "eslint --ext .js,.vue src",
-		"test": "echo \"No test specified\" && exit 0",
-		"build": "quasar build",
-		"deploy": "now"
+		"test": "echo \"No test specified\" && exit 0"
 	},
 	"dependencies": {
 		"@quasar/extras": "^1.5.0",
@@ -20,6 +18,7 @@
 		"lodash": "^4.17.15",
 		"quasar": "^1.8.3",
 		"screenfull": "^5.0.1",
+		"showdown": "^1.9.1",
 		"vue-i18n": "^8.0.0",
 		"vuex-persistedstate": "^2.7.1",
 		"yaml-loader": "^0.5.0"

@@ -187,7 +187,7 @@
 </template>
 
 <script>
-	import _ from 'lodash';
+	import { keys, map } from 'lodash';
 	import { mapMutations, mapState } from 'vuex';
 	import { difficultyText, readFile } from 'src/lib/Utils';
 	import bestdori2bbb from 'src/lib/bestdori2bbb';
@@ -389,10 +389,10 @@
 				return this.form.from === 'local' || (this.form.from === 'bestdori' && this.showInfo);
 			},
 			colspan () {
-				return _.keys(this.info.difficulty).length;
+				return keys(this.info.difficulty).length;
 			},
 			difficulty () {
-				return _.map(this.info.difficulty, (v, k) => {
+				return map(this.info.difficulty, (v, k) => {
 					let text = difficultyText[k];
 					return { label: text, value: text.toLowerCase() };
 				});

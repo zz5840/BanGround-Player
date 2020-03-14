@@ -7,6 +7,7 @@ export default function () {
 		tab: 'play',
 		favList: [],
 		historyList: [],
+		readNotificationList: [],
 		playData: {
 			from: 'bestdori',
 			loadInfo: false,

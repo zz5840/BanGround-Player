@@ -108,7 +108,7 @@ module.exports = function (ctx) {
 			port: 8080,
 			proxy: {
 				'/api': {
-					target: 'https://player.banground.fun/',
+					target: 'http://localhost:3000/',
 					secure: true,
 					changeOrigin: true
 				}

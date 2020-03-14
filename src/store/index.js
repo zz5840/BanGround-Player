@@ -26,6 +26,7 @@ export default function (/* { ssrContext } */) {
 				return {
 					favList: state.favList,
 					historyList: state.historyList,
+					readNotificationList: state.readNotificationList,
 					playData: {
 						bestdori: state.playData.bestdori
 					}

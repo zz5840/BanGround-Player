@@ -1,3 +1,5 @@
+import { union } from 'lodash';
+
 export function openSettings (state) {
 	state.showSettings = true;
 }
@@ -42,6 +44,10 @@ export function addHistory (state, payload) {
 		name
 	});
 	state.historyList = arr.slice(0, 100);
+}
+
+export function addReadNotification (state, payload) {
+	state.readNotificationList = union(state.readNotificationList, payload);
 }
 
 export function updateTab (state, payload) {
