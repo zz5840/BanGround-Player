@@ -90,8 +90,8 @@ home:
     convert: Convert
     error:
       multiTap: 'Find multi tap at {time}, please modify and try again because Bestdori doesn''t support it at present.'
-      laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用'
-      noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
+      laneInvalid: 'Error when converting slide: lane {pos} has been occupied at {time}.'
+      noStart: 'Error when converting slide: slide (or flick) doesn''t have a start note at {time}.'
   space:
     title: Calc
     bpm: BPM Of First Part
