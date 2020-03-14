@@ -15,7 +15,8 @@
 						size="2em"/>
 				</div>
 				<div v-else>
-					<q-card :key="key" bordered class="link" flat v-for="(item, key) in notifications">
+					<q-card :key="key" bordered class="link q-mb-md" flat
+					        v-for="(item, key) in notifications">
 						<q-card-section>
 							<div class="text-h6">{{ item[$i18n.locale].title || item.en.title }}</div>
 						</q-card-section>
@@ -31,7 +32,7 @@
 						</q-card-actions>
 					</q-card>
 					<q-btn :label="$t('public.notification.all')" @click="readAll"
-					       class="full-width q-mt-md" color="primary" unelevated/>
+					       class="full-width" color="primary" unelevated/>
 				</div>
 			</q-card-section>
 		</q-card>
