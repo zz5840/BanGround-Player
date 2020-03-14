@@ -41,6 +41,10 @@ public:
     deleted: 'Song {name} has been delete fromfavourite'
     slideRight: Slide left to delete from favourite
     showLimit: Only recent 100 records will be shown
+  notification:
+    title: 通知
+    all: 全部已读
+    mark: 标记为已读
 home:
   play:
     title: Play
