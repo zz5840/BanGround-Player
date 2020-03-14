@@ -41,6 +41,10 @@ public:
     deleted: 'Song {name} has been delete fromfavourite'
     slideRight: Slide left to delete from favourite
     showLimit: Only recent 100 records will be shown
+  notification:
+    title: Notification
+    all: Mark all as read
+    mark: Mark as read
 home:
   play:
     title: Play
@@ -89,9 +93,9 @@ home:
     serious: Are you serious?
     convert: Convert
     error:
-      multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。'
-      laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用'
-      noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
+      multiTap: 'Find multi tap at {time}, please modify and try again because Bestdori doesn''t support it at present.'
+      laneInvalid: 'Error when converting slide: lane {pos} has been occupied at {time}.'
+      noStart: 'Error when converting slide: slide (or flick) doesn''t have a start note at {time}.'
   space:
     title: Calc
     bpm: BPM Of First Part

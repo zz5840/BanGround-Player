@@ -41,6 +41,10 @@ public:
     deleted: '{name} お気に入りから削除しました。'
     slideRight: お気に入りは左にスワイプすると消去できます。
     showLimit: 履歴は100曲まで記録されます。
+  notification:
+    title: 通知
+    all: 全部已读
+    mark: 标记为已读
 home:
   play:
     title: プレイする
