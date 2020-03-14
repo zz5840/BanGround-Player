@@ -18,11 +18,11 @@
 					<q-card :key="key" bordered class="link q-mb-md" flat
 					        v-for="(item, key) in notifications">
 						<q-card-section>
-							<div class="text-h6">{{ item[$i18n.locale].title || item.en.title }}</div>
+							<div class="text-h6">{{ item[lang].title }}</div>
 						</q-card-section>
 
 						<q-card-section class="q-pb-none"
-						                v-html="markdown(item[$i18n.locale].content || item.en.content)">
+						                v-html="markdown(item[lang].content)">
 						</q-card-section>
 
 						<q-separator/>
@@ -81,6 +81,9 @@
 			},
 			readNotificationList () {
 				return this.$store.state.readNotificationList;
+			},
+			lang () {
+				return ['zh','en'].includes(this.$i18n.locale) ? this.$i18n.locale :'en';
 			}
 		},
 		async beforeMount () {
