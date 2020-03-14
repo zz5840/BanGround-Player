@@ -41,6 +41,10 @@ public:
     deleted: '歌曲 {name} 已取消收藏'
     slideRight: 右滑可以取消收藏哦
     showLimit: 仅显示最近100条记录
+  notification:
+    title: 通知
+    all: 全部已读
+    mark: 标记为已读
 home:
   play:
     title: 遊玩譜面
