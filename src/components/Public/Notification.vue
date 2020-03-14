@@ -83,7 +83,7 @@
 				return this.$store.state.readNotificationList;
 			},
 			lang () {
-				return ['zh','en'].includes(this.$i18n.locale) ? this.$i18n.locale :'en';
+				return ['zh', 'en'].includes(this.$i18n.locale) ? this.$i18n.locale : 'en';
 			}
 		},
 		async beforeMount () {
