@@ -42,9 +42,9 @@ public:
     slideRight: お気に入りは左にスワイプすると消去できます。
     showLimit: 履歴は100曲まで記録されます。
   notification:
-    title: 通知
-    all: 全部已读
-    mark: 标记为已读
+    title: お知らせ
+    all: すべて読みました
+    mark: 既読としてマーク
 home:
   play:
     title: プレイする
@@ -93,9 +93,9 @@ home:
     serious: 冗談ですか？
     convert: 変換
     error:
-      multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。'
-      laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用'
-      noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
+      multiTap: '{time}で複数の長押を発見しました。これはBestdoriではサポートされていませんので、修正してみてください。'
+      laneInvalid: '長押の変換中にエラーが発生しました：{time}でレーン{pos}が占有されました。'
+      noStart: '長押の変換中にエラーが発生しました：{time}で長押の開始点はない。'
   space:
     title: 計算機能
     bpm: 最初部分のＢＰＭ
