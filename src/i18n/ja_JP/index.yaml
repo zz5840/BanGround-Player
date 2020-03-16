@@ -93,9 +93,9 @@ home:
     serious: 冗談ですか？
     convert: 変換
     error:
-      multiTap: '{time}で複数の長い棒を発見しました。これはBestdoriではサポートされていませんので、修正してみてください。'
-      laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用'
-      noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
+      multiTap: '{time}で複数の長押を発見しました。これはBestdoriではサポートされていませんので、修正してみてください。'
+      laneInvalid: '長押の変換中にエラーが発生しました：{time}でレーン{pos}が占有されました。'
+      noStart: '長押の変換中にエラーが発生しました：{time}で長押の開始点はない。'
   space:
     title: 計算機能
     bpm: 最初部分のＢＰＭ
