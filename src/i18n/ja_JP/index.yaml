@@ -43,8 +43,8 @@ public:
     showLimit: 履歴は100曲まで記録されます。
   notification:
     title: お知らせ
-    all: 全部已读
-    mark: 标记为已读
+    all: すべて読みました
+    mark: 既読としてマーク
 home:
   play:
     title: プレイする
@@ -93,7 +93,7 @@ home:
     serious: 冗談ですか？
     convert: 変換
     error:
-      multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。'
+      multiTap: '{time}で複数の長い棒を発見しました。これはBestdoriではサポートされていませんので、修正してみてください。'
       laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用'
       noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
   space:
