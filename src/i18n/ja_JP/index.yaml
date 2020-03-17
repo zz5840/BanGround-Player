@@ -8,19 +8,19 @@ public:
   inputValue: 数値を記入してください。
   fullscreen:
     title: フルスクリーン
-    succeeded: 画面縦向きのロックをオフにして、最高のゲーム体験を楽しむ為に携帯電話を縦に保持してください
-    failed: 全画面モードが起動出来ない、携帯の権限の許可を確認してください
-    unsupported: 今のブラウザはフルスクリーンモードをサポートしないので、他のブラウザを使ってください
+    succeeded: 最高のゲーム体験を楽しむ為に、画面回転をオンにして端末を横に持ってください。
+    failed: フルスクリーンにできませんでした。端末の権限の許可を確認してください。
+    unsupported: ご利用のブラウザはフルスクリーンをサポートしていません。ほかのブラウザを使用してください。
   settings:
     title: 設定
     autoFullscreen: 自動フルスクリーン
     speed: リズムアイコンの速さ
     noteScale: リズムアイコンの大きさ
     judgeOffset: 判定調整
-    visualOffset: 視覚偏移
+    visualOffset: 譜面調整(オフセット)
     barOpacity: 長押しラインの濃さ
     effectVolume: SE音量
-    backgroundDim: 背景画像の透明性
+    backgroundDim: 背景画像の透明度
     showSimLine: 同時押しライン
     beatNote: リズムサポート
     mirror: ミラー
@@ -28,22 +28,22 @@ public:
     resolution: 高画質
   guide:
     title: ようこそ
-    selectLanguage: このサイトへのアクセスは初めてなので、自分に合った言語を選択してください。また、ページの右上にある言語設定⚙️で変更できます。
-    changeSettings: ここでは、ライブ設定ができます。もし早くプレイしたい場合、これをスキップして後で設定することも可能です。
+    selectLanguage: ご自身の言語を選択してください。なお、ページの右上にある言語設定⚙️で後からでも変更できます。
+    changeSettings: ゲームを開始する前に、ライブの設定ができます。すぐにプレイしたい場合はスキップして後から変更することも可能です。
     complete: お疲れさまでした、すべての初期設定が完了しました。お楽しみください！
     next: 次へ
     skip: スキップ
   favourite:
     title: お気に入り
     history: 閲覧履歴
-    empty: 'まだお気に入りはありません。'
+    empty: 'まだ何もありません。'
     faved: '{name} をお気に入りに登録しました。'
-    deleted: '{name} お気に入りから削除しました。'
+    deleted: '{name} をお気に入りから削除しました。'
     slideRight: お気に入りは左にスワイプすると消去できます。
     showLimit: 履歴は100曲まで記録されます。
   notification:
     title: お知らせ
-    all: すべて読みました
+    all: すべて既読にする
     mark: 既読としてマーク
 home:
   play:
@@ -80,26 +80,26 @@ home:
       musicFile: ミュージックファイル
     start: スタート
     load: 譜面をロード
-    loadFailed: 譜面のロードが失敗したので、もう一度お試しください。
+    loadFailed: 譜面のロードに失敗しました。もう一度お試しください。
   convert:
-    title: 転換する
-    from: 元の譜面パターン
-    to: 転換しての譜面パターン
+    title: 譜面を変換する
+    from: 変換前の譜面フォーマット
+    to: 変換後の譜面フォーマット
     fileInput: 譜面ファイル
-    noInput: ファイルまたは譜面がない、一つを選択してください
-    convertResult: 転換の結果
-    succeeded: ダウンロード
+    noInput: ファイルまたは譜面を選択してください。
+    convertResult: 変換結果
+    succeeded: 正常に変換できました。コピーもしくはダウンロードできます。
     download: ダウンロード
     serious: 冗談ですか？
     convert: 変換
     error:
-      multiTap: '{time}で複数の長押を発見しました。これはBestdoriではサポートされていませんので、修正してみてください。'
-      laneInvalid: '長押の変換中にエラーが発生しました：{time}でレーン{pos}が占有されました。'
-      noStart: '長押の変換中にエラーが発生しました：{time}で長押の開始点はない。'
+      multiTap: '{time} で複数のスライドを発見しました。これはBestdoriではサポートされていませんので、修正してください。'
+      laneInvalid: 'スライドの変換中にエラーが発生しました： {time}でレーン{pos}が占有されました。'
+      noStart: 'スライドの変換中にエラーが発生しました： {time}のスライドの開始点が見つかりません。'
   space:
     title: 計算機能
-    bpm: 最初部分のＢＰＭ
-    offset: 最初部分の偏移量
-    result: '曲の先頭に{0}無音を追加する、或いは音楽の先頭から{1}無音を削除する'
+    bpm: 最初の部分のBPM
+    offset: 最初の部分のオフセット
+    result: '曲の先頭に {0} 無音を追加する、もしくは音楽の先頭から {1} 無音を削除する'
   about:
-    title: 本アプリついて
+    title: 本アプリについて
