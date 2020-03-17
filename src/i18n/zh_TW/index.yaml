@@ -7,7 +7,7 @@ public:
   language: 語言
   inputValue: 請輸入數值
   fullscreen:
-    title: 全屏
+    title: 全螢幕
     succeeded: 翻轉螢幕以獲得最佳體驗
     failed: 進入全螢幕失敗，請檢查權限
     unsupported: 你的瀏覽器不支持全螢幕喔
@@ -34,17 +34,17 @@ public:
     next: 下一步
     skip: 跳過
   favourite:
-    title: 收藏夹
-    history: 浏览记录
+    title: 我的最愛
+    history: 瀏覽紀錄
     empty: '您的{name}暂时还为空哦'
-    faved: '歌曲 {name} 已收藏'
-    deleted: '歌曲 {name} 已取消收藏'
-    slideRight: 右滑可以取消收藏哦
-    showLimit: 仅显示最近100条记录
+    faved: '歌曲 {name} 已加入最愛'
+    deleted: '歌曲 {name} 已從最愛移除'
+    slideRight: 右滑可以刪除最愛哦
+    showLimit: 僅顯示最後100則紀錄
   notification:
     title: 通知
-    all: 全部已读
-    mark: 标记为已读
+    all: 全部已讀
+    mark: 標記為已讀
 home:
   play:
     title: 遊玩譜面
@@ -58,7 +58,7 @@ home:
         official: 官方
         community: 社群
       info:
-        name: 歌曲名
+        name: 歌名
         band: 樂隊
         singer: 歌手
         difficulty: 難度
@@ -66,7 +66,7 @@ home:
         notes: 物量
         author: 譜面作者
     local:
-      title: 本地
+      title: 此裝置
       type:
         title: 譜面類型
         bbb: bangbangboom
@@ -75,7 +75,7 @@ home:
       mapSource: 譜面代碼
       mapCover: 封面
       songName:
-        title: 歌曲名
+        title: 歌名
         default: 測試譜面
       musicFile: 音樂文件
     start: 開始
