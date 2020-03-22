@@ -10,7 +10,7 @@ public:
     title: 全螢幕
     succeeded: 翻轉螢幕以獲得最佳體驗
     failed: 進入全螢幕失敗，請檢查權限
-    unsupported: 你的瀏覽器不支持全螢幕喔
+    unsupported: 你的瀏覽器不支援全螢幕喔
   settings:
     title: 設定
     autoFullscreen: 自動全螢幕
