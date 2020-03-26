@@ -24,7 +24,7 @@ public:
     showSimLine: 동시 입력 라인
     beatNote: 리듬 색각 서포트
     mirror: 반전
-    laneEffect: 게임 이펙트
+    laneEffect: 터치 이펙트
     resolution: 고 해상도
   guide:
     title: 환영합니다!
@@ -47,8 +47,8 @@ public:
     mark: 읽음으로 표시
 home:
   play:
-    title: 채보
-    mapSource: 채보 파일 위치
+    title: 플레이
+    mapSource: 채보 소스
     bestdori:
       title: Bestdori
       mapId: 노래 ID
@@ -66,7 +66,7 @@ home:
         notes: 노트 수
         author: 채보 제작자
     local:
-      title: 파일
+      title: Local
       type:
         title: 채보 종류
         bbb: bangbangboom
@@ -83,8 +83,8 @@ home:
     loadFailed: 불러오기 오류. 다시 시도해주세요
   convert:
     title: 변환
-    from: 파일의 종류
-    to: 변환 하려는 종류
+    from: 변환전 파일의 종류
+    to: 변환후 파일 종류
     fileInput: 채보 파일
     noInput: 채보 파일을 선택해주세요.
     convertResult: 변환 결과
@@ -100,6 +100,6 @@ home:
     title: 싱크 계산
     bpm: 초기 BPM
     offset: 초기 오프셋
-    result: '노래에 {0} 만큼 공백을 더하거나 {1} 만큼 줄이면 됩니다.'
+    result: '곡(曲)의 시작부분에 {0} 만큼 공백을 추가하거나, {1} 만큼 공백을 줄일수있습니다.'
   about:
     title: 정보
