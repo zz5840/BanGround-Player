@@ -35,7 +35,7 @@ public:
     skip: 건너뛰기
   favourite:
     title: 收藏夹
-    history: 浏览记录
+    history: 열람기록
     empty: '您的{name}暂时还为空哦'
     faved: '歌曲 {name} 已收藏'
     deleted: '歌曲 {name} 已取消收藏'
