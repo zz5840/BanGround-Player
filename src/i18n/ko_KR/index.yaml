@@ -36,7 +36,7 @@ public:
   favourite:
     title: 즐겨찾기
     history: 열람기록
-    empty: '您的{name}暂时还为空哦'
+    empty: '아직 추가되지 않았습니다.'
     faved: '곡 {name} 이 즐겨찾기에 추가됨.'
     deleted: '곡 {name} 이 즐겨찾기에서 제거됨.'
     slideRight: 즐겨찾기는 왼쪽으로 밀어서 삭제 가능합니다.
