@@ -34,7 +34,7 @@ public:
     next: 다음
     skip: 건너뛰기
   favourite:
-    title: 收藏夹
+    title: 즐겨찾기
     history: 열람기록
     empty: '您的{name}暂时还为空哦'
     faved: '곡 {name} 이 즐겨찾기에 추가됨.'
@@ -42,9 +42,9 @@ public:
     slideRight: 즐겨찾기는 왼쪽으로 밀어서 삭제 가능합니다.
     showLimit: 열람기록은 100곡까지 저장됩니다.
   notification:
-    title: 通知
+    title: 공지
     all: 모두읽음
-    mark: 标记为已读
+    mark: 읽음으로 표시
 home:
   play:
     title: 채보
@@ -93,9 +93,9 @@ home:
     serious: 정말로요?
     convert: 변환
     error:
-      multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。'
-      laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用'
-      noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
+      multiTap: '{time} 에서 중복의 노트를 발견했습니다. 이것은 Bestdori가 지원하지않는 것이므로 수정해야합니다.'
+      laneInvalid: '슬라이드 변환중 문제가 발생했습니다 ：{time}의 라인 {pos}에서 문제발생.'
+      noStart: '슬라이드 변환중 문제가 발생했습니다 ：{time}의 슬라이드의 시작점이 존재하지 않습니다.'
   space:
     title: 싱크 계산
     bpm: 초기 BPM
