@@ -39,11 +39,11 @@ public:
     empty: '您的{name}暂时还为空哦'
     faved: '곡 {name} 이 즐겨찾기에 추가됨.'
     deleted: '곡 {name} 이 즐겨찾기에서 제거됨.'
-    slideRight: 右滑可以取消收藏哦
-    showLimit: 仅显示最近100条记录
+    slideRight: 즐겨찾기는 왼쪽으로 밀어서 삭제 가능합니다.
+    showLimit: 열람기록은 100곡까지 저장됩니다.
   notification:
     title: 通知
-    all: 全部已读
+    all: 모두읽음
     mark: 标记为已读
 home:
   play:
