@@ -37,8 +37,8 @@ public:
     title: 收藏夹
     history: 열람기록
     empty: '您的{name}暂时还为空哦'
-    faved: '歌曲 {name} 已收藏'
-    deleted: '歌曲 {name} 已取消收藏'
+    faved: '곡 {name} 이 즐겨찾기에 추가됨.'
+    deleted: '곡 {name} 이 즐겨찾기에서 제거됨.'
     slideRight: 右滑可以取消收藏哦
     showLimit: 仅显示最近100条记录
   notification:
