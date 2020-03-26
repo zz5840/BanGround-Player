@@ -93,7 +93,7 @@ home:
     serious: 정말로요?
     convert: 변환
     error:
-      multiTap: '{time} 에서 중복의 노트를 발견했습니다. 이것은 Bestdori가 지원하지않는 것이므로 수정해야합니다.'
+      multiTap: '{time} 에서 중복의 노트를 발견했습니다. 이것은 Bestdori가 지원하지 않는 것이므로 수정해야합니다.'
       laneInvalid: '슬라이드 변환중 문제가 발생했습니다 ：{time}의 라인 {pos}에서 문제발생.'
       noStart: '슬라이드 변환중 문제가 발생했습니다 ：{time}의 슬라이드의 시작점이 존재하지 않습니다.'
   space:
