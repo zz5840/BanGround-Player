@@ -1,7 +1,7 @@
 ---
 public:
-  radioOn: 开
-  radioOff: 关
+  radioOn: "On"
+  radioOff: "Off"
   cancel: 취소
   ok: 확인
   language: 언어
