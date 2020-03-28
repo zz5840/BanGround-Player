@@ -14,14 +14,6 @@
 			<a class="link" href="https://github.com/K024/bangbangboom-game"
 			   target="_blank">K024</a>
 		</p>
-		<p class="text-body2">Chinese Translation By
-			<a class="link" href="https://github.com/AECBanana"
-			   target="_blank">AECBanana</a>
-		</p>
-		<p class="text-body2">Japanese Translation By
-			<a class="link" href="https://github.com/fz6m"
-			   target="_blank">fz6m</a>
-		</p>
 		<p class="text-body2">You can contribute translations on
 			<a class="link" href="https://crowdin.com/project/banground"
 			   target="_blank">Crowdin</a>
