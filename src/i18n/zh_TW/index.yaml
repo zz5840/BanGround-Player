@@ -39,7 +39,7 @@ public:
     empty: '您的{name}暂时还为空哦'
     faved: '歌曲 {name} 已加入最愛'
     deleted: '歌曲 {name} 已從最愛移除'
-    slideRight: 右滑可以刪除最愛哦
+    slideRight: 左滑可以取消收藏哦
     showLimit: 僅顯示最後100則紀錄
   notification:
     title: 通知
@@ -67,10 +67,7 @@ home:
         author: 譜面作者
     local:
       title: 此裝置
-      type:
-        title: 譜面類型
-        bbb: bangbangboom
-        bd: Bestdori
+      type: 谱面类型
       mapFile: 歌曲文件
       mapSource: 譜面代碼
       mapCover: 封面
