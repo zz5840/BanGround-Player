@@ -50,7 +50,6 @@ home:
     title: 遊玩譜面
     mapSource: 譜面來源
     bestdori:
-      title: Bestdori
       mapId: 譜面ID
       songId: 歌曲ID
       type:

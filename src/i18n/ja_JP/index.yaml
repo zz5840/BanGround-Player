@@ -50,7 +50,6 @@ home:
     title: プレイする
     mapSource: 譜面ソース
     bestdori:
-      title: Bestdori
       mapId: 譜面ID
       songId: 楽曲ID
       type:

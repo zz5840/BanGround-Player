@@ -4,7 +4,7 @@
 		<q-field :label="$t('home.play.mapSource')" borderless stack-label>
 			<template v-slot:control>
 				<q-option-group
-					:options="[{label: $t('home.play.bestdori.title'), value: 'bestdori'}, {label: $t('home.play.local.title'), value: 'local'}]"
+					:options="[{label: 'Bestdori', value: 'bestdori'}, {label: $t('home.play.local.title'), value: 'local'}]"
 					:value="form.from"
 					@input="updatePlayDataFrom"
 					color="primary"
@@ -132,10 +132,10 @@
 		</template>
 		<!-- 本地 -->
 		<template v-if="form.from === 'local'">
-			<q-field :label="$t('home.play.local.type.title')" borderless class="q-mb-none" stack-label>
+			<q-field :label="$t('home.play.local.type')" borderless class="q-mb-none" stack-label>
 				<template v-slot:control>
 					<q-option-group
-						:options="[{label: $t('home.play.local.type.bbb'), value: 'bbb'}, {label: $t('home.play.local.type.bd'), value: 'bd'}]"
+						:options="[{label: 'bangbangboom', value: 'bbb'}, {label: 'Bestdori', value: 'bd'}]"
 						:value="form.local.type"
 						@input="updatePlayDataLocalType"
 						color="primary"

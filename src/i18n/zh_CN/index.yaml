@@ -49,7 +49,6 @@ home:
         title: 游玩谱面
         mapSource: 谱面来源
         bestdori:
-            title: Bestdori
             mapId: 谱面ID
             songId: 歌曲ID
             type:

@@ -50,7 +50,6 @@ home:
     title: 플레이
     mapSource: 채보 소스
     bestdori:
-      title: Bestdori
       mapId: 노래 ID
       songId: 채보 ID
       type:
