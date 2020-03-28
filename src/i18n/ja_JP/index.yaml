@@ -39,7 +39,7 @@ public:
     empty: 'まだ何もありません。'
     faved: '{name} をお気に入りに登録しました。'
     deleted: '{name} をお気に入りから削除しました。'
-    slideRight: 左滑可以取消收藏哦
+    slideRight: お気に入りは左にスワイプすると消去できます。
     showLimit: 履歴は100曲まで記録されます。
   notification:
     title: お知らせ
@@ -66,7 +66,7 @@ home:
         author: 譜面の製作者
     local:
       title: ローカル
-      type: 谱面类型
+      type: 譜面のタイプ
       mapFile: 譜面ファイル
       mapSource: 譜面のソースコード
       mapCover: 譜面カバー
