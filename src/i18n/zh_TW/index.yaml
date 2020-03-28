@@ -39,7 +39,7 @@ public:
     empty: '您的{name}暂时还为空哦'
     faved: '歌曲 {name} 已加入最愛'
     deleted: '歌曲 {name} 已從最愛移除'
-    slideRight: 左滑可以取消收藏哦
+    slideRight: 左滑可以刪除最愛哦
     showLimit: 僅顯示最後100則紀錄
   notification:
     title: 通知
@@ -50,7 +50,6 @@ home:
     title: 遊玩譜面
     mapSource: 譜面來源
     bestdori:
-      title: Bestdori
       mapId: 譜面ID
       songId: 歌曲ID
       type:
@@ -67,7 +66,7 @@ home:
         author: 譜面作者
     local:
       title: 此裝置
-      type: 谱面类型
+      type: 譜面類型
       mapFile: 歌曲文件
       mapSource: 譜面代碼
       mapCover: 封面
