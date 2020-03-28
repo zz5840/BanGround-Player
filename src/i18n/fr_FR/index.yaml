@@ -9,7 +9,7 @@ public:
   fullscreen:
     title: Plein Ecran
     succeeded: Veuillez activé Rotation Auto et tenez votre téléphone horizentalement pour une meilleur expérience
-    failed: Echec de rentrer en mode plein écran, pveuillez vérifier la permission
+    failed: Echec de rentrer en mode plein écran, veuillez vérifier la permission
     unsupported: Votre navigateur ne supporte pas plein écran
   settings:
     title: Réglages
