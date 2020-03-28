@@ -67,10 +67,7 @@ home:
         author: Créateur de la Map
     local:
       title: Locale
-      type:
-        title: Type de Map
-        bbb: bangbangboom
-        bd: Bestdori
+      type: Type de Map
       mapFile: Fichier de la Map
       mapSource: Source Code de la Map
       mapCover: Map Cover

@@ -67,10 +67,7 @@ home:
         author: 譜面作者
     local:
       title: 此裝置
-      type:
-        title: 譜面類型
-        bbb: bangbangboom
-        bd: Bestdori
+      type: 譜面類型
       mapFile: 歌曲文件
       mapSource: 譜面代碼
       mapCover: 封面

@@ -67,10 +67,7 @@ home:
         author: 채보 제작자
     local:
       title: 파일
-      type:
-        title: 채보 종류
-        bbb: bangbangboom
-        bd: Bestdori
+      type: 채보 종류
       mapFile: 채보 파일
       mapSource: 채보 코드
       mapCover: 앨범 커버

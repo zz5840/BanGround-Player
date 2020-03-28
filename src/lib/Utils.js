@@ -79,6 +79,10 @@ let languages = [
 	{
 		label: '한국어',
 		value: 'ko'
+	},
+	{
+		label: 'Français',
+		value: 'fr'
 	}
 ];
 

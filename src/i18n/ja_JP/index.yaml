@@ -67,10 +67,7 @@ home:
         author: 譜面の製作者
     local:
       title: ローカル
-      type:
-        title: 譜面タイプ
-        bbb: bangbangboom
-        bd: Bestdori
+      type: 譜面タイプ
       mapFile: 譜面ファイル
       mapSource: 譜面のソースコード
       mapCover: 譜面カバー
