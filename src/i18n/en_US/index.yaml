@@ -50,7 +50,6 @@ home:
     title: Play
     mapSource: Map Source
     bestdori:
-      title: Bestdori
       mapId: Map ID
       songId: Song ID
       type:
