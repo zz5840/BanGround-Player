@@ -39,7 +39,7 @@ public:
     empty: '아직 추가되지 않았습니다.'
     faved: '곡 {name} 이 즐겨찾기에 추가됨.'
     deleted: '곡 {name} 이 즐겨찾기에서 제거됨.'
-    slideRight: 左滑可以取消收藏哦
+    slideRight: 즐겨찾기는 왼쪽으로 밀어서 삭제 가능합니다.
     showLimit: 열람기록은 100곡까지 저장됩니다.
   notification:
     title: 공지
@@ -66,7 +66,7 @@ home:
         author: 채보 제작자
     local:
       title: 파일
-      type: 谱面类型
+      type: 채보 종류
       mapFile: 채보 파일
       mapSource: 채보 코드
       mapCover: 앨범 커버
