@@ -39,7 +39,7 @@ public:
     empty: 'Your {name} is empty now'
     faved: 'Song {name} has been add to favourite'
     deleted: 'Song {name} has been delete fromfavourite'
-    slideRight: Slide left to delete from favourite
+    slideRight: 左滑可以取消收藏哦
     showLimit: Only recent 100 records will be shown
   notification:
     title: Notification
@@ -67,10 +67,7 @@ home:
         author: Map Author
     local:
       title: Local
-      type:
-        title: Map Type
-        bbb: bangbangboom
-        bd: Bestdori
+      type: 谱面类型
       mapFile: Map File
       mapSource: Map Source Code
       mapCover: Map Cover
