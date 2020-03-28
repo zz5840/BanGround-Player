@@ -39,7 +39,7 @@ public:
     empty: 'Your {name} is empty now'
     faved: 'Song {name} has been add to favourite'
     deleted: 'Song {name} has been delete fromfavourite'
-    slideRight: 左滑可以取消收藏哦
+    slideRight: Slide left to delete from favourite
     showLimit: Only recent 100 records will be shown
   notification:
     title: Notification
@@ -66,7 +66,7 @@ home:
         author: Map Author
     local:
       title: Local
-      type: 谱面类型
+      type: Map Type
       mapFile: Map File
       mapSource: Map Source Code
       mapCover: Map Cover
