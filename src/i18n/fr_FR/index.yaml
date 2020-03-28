@@ -39,7 +39,7 @@ public:
     empty: 'Votre nom {name} est vide maintenant'
     faved: 'La chanson {name} est ajouter à vos favoris'
     deleted: 'La chanson {name} est supprimer de vos favoris'
-    slideRight: Glisser vers la gauche pour supprimer de vos favoris
+    slideRight: 左滑可以取消收藏哦
     showLimit: Seulement les 100 records récents vont être exposé
   notification:
     title: Notification
@@ -67,10 +67,7 @@ home:
         author: Créateur de la Map
     local:
       title: Locale
-      type:
-        title: Type de Map
-        bbb: bangbangboom
-        bd: Bestdori
+      type: 谱面类型
       mapFile: Fichier de la Map
       mapSource: Source Code de la Map
       mapCover: Map Cover
