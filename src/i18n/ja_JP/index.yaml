@@ -39,7 +39,7 @@ public:
     empty: 'まだ何もありません。'
     faved: '{name} をお気に入りに登録しました。'
     deleted: '{name} をお気に入りから削除しました。'
-    slideRight: お気に入りは左にスワイプすると消去できます。
+    slideRight: 左滑可以取消收藏哦
     showLimit: 履歴は100曲まで記録されます。
   notification:
     title: お知らせ
@@ -67,10 +67,7 @@ home:
         author: 譜面の製作者
     local:
       title: ローカル
-      type:
-        title: 譜面タイプ
-        bbb: bangbangboom
-        bd: Bestdori
+      type: 谱面类型
       mapFile: 譜面ファイル
       mapSource: 譜面のソースコード
       mapCover: 譜面カバー
