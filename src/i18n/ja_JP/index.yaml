@@ -66,7 +66,7 @@ home:
         author: 譜面の製作者
     local:
       title: ローカル
-      type: 譜面タイプ
+      type: 譜面のタイプ
       mapFile: 譜面ファイル
       mapSource: 譜面のソースコード
       mapCover: 譜面カバー
