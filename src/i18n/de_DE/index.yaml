@@ -1,19 +1,19 @@
 ---
 public:
-  radioOn: 开
-  radioOff: 关
-  cancel: 取消
-  ok: 确认
-  language: 语言
-  inputValue: 请输入数值
+  radioOn: An
+  radioOff: Aus
+  cancel: Abbrechen
+  ok: Ok
+  language: Sprache
+  inputValue: Geben Sie bitte einen numerischen Wert ein
   fullscreen:
-    title: 全屏
-    succeeded: 翻转屏幕获得最佳体验～
-    failed: 没能进入全屏QAQ，主人要好好检查权限哦
-    unsupported: 主人的浏览器不支持全屏哦
+    title: Vollbildschirm
+    succeeded: Bitte schalten Sie die automatische Drehung ein und halten Sie das Telefon waagerecht, um die beste Erfahrung zu erzielen.
+    failed: Kann nicht in den Vollbildmodus wechseln, bitte überprüfen Sie die Berechtigung.
+    unsupported: Ihr Browser unterstützt keine Vollbildansicht.
   settings:
-    title: 设置
-    autoFullscreen: 自动全屏
+    title: Einstellungen
+    autoFullscreen: Auto-Vollbild
     speed: 节奏图标的速度
     noteScale: 节奏图标的大小
     judgeOffset: 判定偏移
