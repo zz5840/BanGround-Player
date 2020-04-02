@@ -60,30 +60,14 @@ export function readFile (file, type = 'text') {
 }
 
 let languages = [
-	{
-		label: 'English',
-		value: 'en'
-	},
-	{
-		label: '简体中文',
-		value: 'zh'
-	},
-	{
-		label: '繁體中文',
-		value: 'zht'
-	},
-	{
-		label: '日本語',
-		value: 'ja'
-	},
-	{
-		label: '한국어',
-		value: 'ko'
-	},
-	{
-		label: 'Français',
-		value: 'fr'
-	}
+	{ label: 'English', value: 'en' },
+	// { label: 'Deutsch', value: 'de' },
+	{ label: 'Français', value: 'fr' },
+	{ label: '日本語', value: 'ja' },
+	{ label: '한국어', value: 'ko' },
+	{ label: 'Русский', value: 'ru' },
+	{ label: '简体中文', value: 'zh' },
+	{ label: '繁體中文', value: 'zht' }
 ];
 
 let difficultyText = {
