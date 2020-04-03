@@ -61,7 +61,7 @@ export function readFile (file, type = 'text') {
 
 let languages = [
 	{ label: 'English', value: 'en' },
-	// { label: 'Deutsch', value: 'de' },
+	{ label: 'Deutsch', value: 'de' },
 	{ label: 'Français', value: 'fr' },
 	{ label: '日本語', value: 'ja' },
 	{ label: '한국어', value: 'ko' },
