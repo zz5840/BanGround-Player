@@ -36,7 +36,6 @@ public:
   favourite:
     title: 我的最愛
     history: 瀏覽紀錄
-    empty: '您的{name}暂时还为空哦'
     faved: '歌曲 {name} 已加入最愛'
     deleted: '歌曲 {name} 已從最愛移除'
     slideRight: 左滑可以刪除最愛哦
