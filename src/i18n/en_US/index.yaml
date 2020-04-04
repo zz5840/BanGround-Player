@@ -25,7 +25,7 @@ public:
     beatNote: Off-Beat Coloring
     mirror: Mirror
     laneEffect: Lane Effects
-    resolution: High Resulotion
+    resolution: High Resolution
   guide:
     title: Welcome
     selectLanguage: It seems that it's you first time to visit the site, please select you preferred language. You can change it later by tapping the select-language button on the top right of the page.
@@ -38,7 +38,7 @@ public:
     history: History
     empty: 'Your {name} is empty now'
     faved: 'Song {name} has been add to favourite'
-    deleted: 'Song {name} has been delete fromfavourite'
+    deleted: 'Song {name} has been delete from favourite'
     slideRight: Slide left to delete from favourite
     showLimit: Only recent 100 records will be shown
   notification:
