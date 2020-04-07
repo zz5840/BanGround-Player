@@ -36,9 +36,10 @@ public:
   favourite:
     title: 我的最愛
     history: 瀏覽紀錄
+    empty: '您暫時還未輸入{name}'
     faved: '歌曲 {name} 已加入最愛'
     deleted: '歌曲 {name} 已從最愛移除'
-    slideRight: 右滑可以從最愛中移除哦
+    slideRight: 左滑可以刪除最愛哦
     showLimit: 僅顯示最後100則紀錄
   notification:
     title: 通知
