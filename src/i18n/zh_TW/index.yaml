@@ -28,7 +28,7 @@ public:
     resolution: 高解析度
   guide:
     title: 歡迎
-    selectLanguage: 考慮到可能是第一次訪問，請選擇你喜歡的語言，稍後可以在右上角的選擇語言裡自由更改
+    selectLanguage: 這是第一次進入遊戲，請選擇要在遊戲中使用的語言，稍後可以在右上角的選擇語言裡自由更改
     changeSettings: 第一次需要設定才能遊玩，也可在之後的設定裡隨時修改
     complete: 設定完成，接下來請盡情享受吧
     next: 下一步
@@ -36,6 +36,7 @@ public:
   favourite:
     title: 我的最愛
     history: 瀏覽紀錄
+    empty: '您暫時還未輸入{name}'
     faved: '歌曲 {name} 已加入最愛'
     deleted: '歌曲 {name} 已從最愛移除'
     slideRight: 左滑可以刪除最愛哦
