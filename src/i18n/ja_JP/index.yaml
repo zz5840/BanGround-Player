@@ -5,7 +5,7 @@ public:
   cancel: キャンセル
   ok: OK
   language: 言語
-  inputValue: 数値を記入してください。
+  inputValue: 数値を入力してください。
   fullscreen:
     title: フルスクリーン
     succeeded: 最高のゲーム体験を楽しむ為に、画面回転をオンにして端末を横に持ってください。
