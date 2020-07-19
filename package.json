@@ -15,7 +15,7 @@
 		"bangbangboom-game": "https://github.com/K024/bangbangboom-game.git",
 		"file-saver": "^2.0.2",
 		"json-loader": "^0.5.7",
-		"lodash": "^4.17.15",
+		"lodash": "^4.17.19",
 		"quasar": "^1.8.3",
 		"screenfull": "^5.0.1",
 		"showdown": "^1.9.1",
