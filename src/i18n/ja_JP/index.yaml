@@ -86,7 +86,7 @@ home:
     convertResult: 変換結果
     succeeded: 正常に変換できました。コピーもしくはダウンロードできます。
     download: ダウンロード
-    serious: 砂の彫刻ですか?
+    serious: 冗談ですか？
     convert: 変換
     error:
       multiTap: '{time} で複数のスライドを発見しました。これはBestdoriではサポートされていませんので、修正してください。'
