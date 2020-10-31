@@ -24,14 +24,17 @@
 				</template>
 			</q-field>
 			<q-input :label="$t('home.play.bestdori.' + (form.bestdori.mapType === 'official' ? 'songId' : 'mapId'))"
-			         :value="form.bestdori.id"
-			         @input="updatePlayDataBestdoriId"
-			         @keypress.enter="$refs.loadBtn.click()"
-			         type="number"/>
-			<q-markup-table class="q-mt-md bg-transparent"
-			                flat
-			                separator="horizontal"
-			                v-if="showInfo && form.bestdori.mapType === 'community'">
+					 :value="form.bestdori.id"
+					 @input="updatePlayDataBestdoriId"
+					 @keypress.enter="$refs.loadBtn.click()"
+					 type="number"/>
+			<p class="q-mt-md" v-if="showInfo">
+				{{ $t('home.play.bestdori.info.shareLink') }}<a :href="playLink" class="link" target="_blank">{{ playLink }}</a>
+			</p>
+			<q-markup-table class=" bg-transparent"
+							flat
+							separator="horizontal"
+							v-if="showInfo && form.bestdori.mapType === 'community'">
 				<tbody>
 				<tr>
 					<td class="text-bold">
@@ -78,8 +81,8 @@
 			</q-markup-table>
 			<template v-if="showInfo && form.bestdori.mapType === 'official'">
 				<q-markup-table class="q-mt-md bg-transparent"
-				                flat
-				                separator="horizontal">
+								flat
+								separator="horizontal">
 					<tbody>
 					<tr>
 						<td class="text-bold">
@@ -143,45 +146,45 @@
 				</template>
 			</q-field>
 			<q-file :label="$t('home.play.local.mapFile')"
-			        :value="form.local.mapFile"
-			        @input="updatePlayDataLocalMapFile"
-			        accept=".txt"
-			        v-if="form.local.type === 'bbb'"/>
+					:value="form.local.mapFile"
+					@input="updatePlayDataLocalMapFile"
+					accept=".txt"
+					v-if="form.local.type === 'bbb'"/>
 			<q-input :label="$t('home.play.local.mapSource')"
-			         :value="form.local.mapSource"
-			         @input="updatePlayDataLocalMapSource"
-			         class="q-mt-md"
-			         outlined
-			         rows="5"
-			         type="textarea"
-			         v-if="form.local.type === 'bd'"/>
+					 :value="form.local.mapSource"
+					 @input="updatePlayDataLocalMapSource"
+					 class="q-mt-md"
+					 outlined
+					 rows="5"
+					 type="textarea"
+					 v-if="form.local.type === 'bd'"/>
 			<q-file :label="$t('home.play.local.musicFile')"
-			        :value="form.local.music"
-			        @input="updatePlayDataLocalMusic"
-			        accept=".mp3"
-			        class="q-mt-md"/>
+					:value="form.local.music"
+					@input="updatePlayDataLocalMusic"
+					accept=".mp3"
+					class="q-mt-md"/>
 			<q-input :label="$t('home.play.local.songName.title')"
-			         :value="form.local.songName"
-			         @input="updatePlayDataLocalSongName"
-			         class="q-mt-md"/>
+					 :value="form.local.songName"
+					 @input="updatePlayDataLocalSongName"
+					 class="q-mt-md"/>
 		</template>
 		<!-- 加载按钮 -->
 		<q-btn :disable="loading"
-		       :label="isStart ? $t('home.play.start') : $t('home.play.load')"
-		       :loading="loading"
-		       @click="isStart ? start() : load()"
-		       class="full-width q-mt-md"
-		       color="primary"
-		       ref="loadBtn"
-		       unelevated>
+			   :label="isStart ? $t('home.play.start') : $t('home.play.load')"
+			   :loading="loading"
+			   @click="isStart ? start() : load()"
+			   class="full-width q-mt-md"
+			   color="primary"
+			   ref="loadBtn"
+			   unelevated>
 			<template v-slot:loading>
 				<q-spinner-facebook/>
 			</template>
 		</q-btn>
 		<q-page-sticky :offset="[30, 30]" position="bottom-right"
-		               v-if="isStart && form.from === 'bestdori'">
+					   v-if="isStart && form.from === 'bestdori'">
 			<q-btn :icon="isFaved ? 'mdi-heart' : 'mdi-heart-outline'"
-			       @click="fav(isFaved ? 'del' : 'add')" color="orange-9" fab/>
+				   @click="fav(isFaved ? 'del' : 'add')" color="orange-9" fab/>
 		</q-page-sticky>
 	</div>
 </template>
@@ -213,8 +216,8 @@
 				let GameLoadConfig = {
 					mapSrc: '',
 					musicSrc: '',
-					backgroundSrc: 'statics/skin/bg.jpg',
-					skin: 'statics/skin',
+					backgroundSrc: 'skin/bg.jpg',
+					skin: 'skin',
 					songName: ''
 				};
 				try {
@@ -396,6 +399,9 @@
 					let text = difficultyText[k];
 					return { label: text, value: text.toLowerCase() };
 				});
+			},
+			playLink () {
+				return `https://player.banground.fun/?type=${this.form.bestdori.mapType}&id=${this.form.bestdori.id}&autoload=true`;
 			}
 		},
 		mounted () {

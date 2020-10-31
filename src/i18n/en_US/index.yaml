@@ -57,6 +57,7 @@ home:
         official: Official
         community: Community
       info:
+        shareLink: 'Share your friend with the link: '
         name: Song Name
         band: Band
         singer: Artists
@@ -77,6 +78,9 @@ home:
     start: Start
     load: Load Map Info
     loadFailed: Failed to load map info, please try again
+  share:
+    title: Share
+    desc: Share your local map with your friends or other devices to review it easily.
   convert:
     title: Convert
     from: Original Map Format

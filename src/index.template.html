@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><%= htmlWebpackPlugin.options.productName %></title>
+	<title><%= productName %></title>
 
 	<meta charset="utf-8">
 	<meta content="#2DAAE4" name="theme-color">
-	<meta content="<%= htmlWebpackPlugin.options.productDescription %>" name="description">
+	<meta content="<%= productDescription %>" name="description">
 	<meta content="telephone=no" name="format-detection">
 	<meta content="no" name="msapplication-tap-highlight">
 	<meta
-		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (htmlWebpackPlugin.options.ctx.mode.cordova || htmlWebpackPlugin.options.ctx.mode.capacitor) { %>, viewport-fit=cover<% } %>"
+		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (ctx.mode.cordova || ctx.mode.capacitor) { %>, viewport-fit=cover<% } %>"
 		name="viewport">
 
-	<link href="statics/app-logo-128x128.png" rel="icon" type="image/png">
-	<link href="statics/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-	<link href="statics/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-	<link href="statics/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
-	<link href="statics/icons/favicon.ico" rel="icon" type="image/ico">
+	<link href="app-logo-128x128.png" rel="icon" type="image/png">
+	<link href="icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+	<link href="icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+	<link href="icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+	<link href="favicon.ico" rel="icon" type="image/ico">
 </head>
 <body>
 <!-- DO NOT touch the following DIV -->

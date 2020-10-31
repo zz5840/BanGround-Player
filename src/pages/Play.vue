@@ -1,53 +1,69 @@
 <template>
-	<q-page>
-		<div ref="div"></div>
+	<q-page class="q-pt-md">
+		<q-tabs active-color="primary"
+				align="justify"
+				class="text-grey-7"
+				indicator-color="primary"
+				v-model="tab">
+			<q-tab :label="$t('home.play.title')"
+				   icon="mdi-music"
+				   name="play"/>
+			<q-tab label="Share"
+				   icon="mdi-share-variant"
+				   name="share"/>
+			<q-tab :label="$t('home.convert.title')"
+				   icon="mdi-file-swap"
+				   name="convert"/>
+			<q-tab :label="$t('home.space.title')"
+				   icon="mdi-keyboard-space"
+				   name="space"/>
+			<q-tab :label="$t('home.about.title')"
+				   icon="mdi-information" name="about"/>
+		</q-tabs>
+		<q-tab-panels
+			animated
+			style="background: transparent;"
+			transition-next="jump-up"
+			transition-prev="jump-up"
+			v-model="tab">
+			<q-tab-panel class="q-pa-sm" name="play">
+				<play/>
+			</q-tab-panel>
+			<q-tab-panel class="q-pa-sm" name="share">
+				<share/>
+			</q-tab-panel>
+			<q-tab-panel class="q-pa-sm" name="convert">
+				<convert/>
+			</q-tab-panel>
+			<q-tab-panel class="q-pa-sm" name="space">
+				<space/>
+			</q-tab-panel>
+			<q-tab-panel class="q-pa-sm" name="about">
+				<about/>
+			</q-tab-panel>
+		</q-tab-panels>
 	</q-page>
 </template>
 
 <script>
-	import * as BangGame from 'bangbangboom-game';
-	import { fullscreen } from 'src/lib/Utils';
-
-	let game = null;
-	let canvas = null;
+	import Play from 'components/Home/Play';
+	import Share from 'components/Home/Share';
+	import Convert from 'components/Home/Convert';
+	import Space from 'components/Home/Space';
+	import About from 'components/Home/About';
 
 	export default {
-		name: 'Page',
-		mounted () {
-			let GameLoadConfig = this.$store.state.GameLoadConfig;
-			let { game: GameConfig, ui } = this.$q.localStorage.getItem('settings');
-			if (ui.autoFullscreen) {
-				fullscreen(this);
+		name: 'PagePlay',
+		components: { Play, Share, Space, Convert, About },
+		computed: {
+			tab: {
+				get () {
+					return this.$store.state.tab;
+				},
+				set (val) {
+					this.$store.commit('updateTab', val);
+				}
 			}
-			if (!GameLoadConfig) return;
-			GameConfig.resolution = GameConfig.resolution ? 2 : 1;
-			let div = this.$refs.div;
-			canvas = document.createElement('canvas');
-			canvas.id = 'game';
-			canvas.style.height = '100%';
-			canvas.style.width = '100%';
-			div.appendChild(canvas);
-			game = new BangGame.Game(canvas, GameConfig, GameLoadConfig);
-			game.start();
-			game.ondestroyed = () => {
-				div.removeChild(canvas);
-				this.$router.go(-1);
-			};
-		},
-		beforeDestroy () {
-			game.destroy();
-			game.ondestroyed = null;
 		}
 	};
 </script>
-
-<style>
-	canvas#game {
-		position: fixed;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		z-index: 9999999;
-	}
-</style>
