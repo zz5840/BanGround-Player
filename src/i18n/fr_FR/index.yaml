@@ -1,101 +1,101 @@
 ---
 public:
-  radioOn: "On"
-  radioOff: "Off"
-  cancel: Cancel
+  radioOn: "Activé"
+  radioOff: "Désactivé"
+  cancel: Annuler
   ok: OK
   language: Language
-  inputValue: Please Input Value
+  inputValue: Veuillez insérer une valeur
   fullscreen:
-    title: Full Screen
-    succeeded: Please turn on Auto Rotate and hold the phone horizontally for the best experience
-    failed: Failed to enter full screen mode, please check the permission
-    unsupported: Your browser doesn't support fullscreen
+    title: Plein Ecran
+    succeeded: Veuillez activé Rotation Auto et tenez votre téléphone horizentalement pour une meilleur expérience
+    failed: Echec de rentrer en mode plein écran, veuillez vérifier la permission
+    unsupported: Votre navigateur ne supporte pas plein écran
   settings:
-    title: Settings
-    autoFullscreen: Auto Fullscreen
-    speed: Note Speed
-    noteScale: Note Size
+    title: Réglages
+    autoFullscreen: Auto Plein Ecran
+    speed: Vitesse de la note
+    noteScale: Taille de la note
     judgeOffset: Judge Offset
-    visualOffset: Visual Offset
-    barOpacity: Long Note Transparency
-    effectVolume: Note SE Volume
-    backgroundDim: Background Image Transparency
+    visualOffset: Offset Visuel
+    barOpacity: Transparence des longues notes
+    effectVolume: Volume SE de la note
+    backgroundDim: Transparence de l'image d'arrière-plan
     showSimLine: Dual Tap Line
     beatNote: Off-Beat Coloring
-    mirror: Mirror
+    mirror: Miroir
     laneEffect: Lane Effects
-    resolution: High Resolution
+    resolution: Haute Resolution
   guide:
-    title: Welcome
-    selectLanguage: It seems that it's you first time to visit the site, please select you preferred language. You can change it later by tapping the select-language button on the top right of the page.
-    changeSettings: Now, may be you need change some settings to make it fit your playing habits. Of course, you can change them later as well.
-    complete: Nice! You have done all the initial settings, enjoy yourself please!
-    next: Next
-    skip: Skip
+    title: Bienvenue
+    selectLanguage: Il parait que c'est la premiére fois que vous visitez notre site, je vous prie de choisir votre langue. Vous pouvez la modifier plus tard en clikant sur le button selection-de-langue en haut à droite de la page.
+    changeSettings: Maintenant, vous avez la possibilité de changer quelques réglages pour aller mieux avec votre style de jeu. Bien sure, vous pouvez également les changer plus tard.
+    complete: Bien! Vous avez maintenant tous les réglages nécessaires, amusez vous bien!
+    next: Suivant
+    skip: Passer
   favourite:
-    title: Favourite
-    history: History
-    empty: 'Your {name} is empty now'
-    faved: 'Song {name} has been add to favourite'
-    deleted: 'Song {name} has been delete from favourite'
-    slideRight: Slide left to delete from favourite
-    showLimit: Only recent 100 records will be shown
+    title: Favoris
+    history: Historique
+    empty: 'Votre nom {name} est vide maintenant'
+    faved: 'La chanson {name} est ajouter à vos favoris'
+    deleted: 'La chanson {name} est supprimer de vos favoris'
+    slideRight: Glisser vers la gauche pour supprimer de vos favoris
+    showLimit: Seulement les 100 records récents vont être exposé
   notification:
     title: Notification
-    all: Mark all as read
-    mark: Mark as read
+    all: Marquer tous comme lu
+    mark: Marquer comme lu
 home:
   play:
-    title: Play
-    mapSource: Map Source
+    title: Jouer
+    mapSource: Source de la Map
     bestdori:
       mapId: Map ID
-      songId: Song ID
+      songId: ID de la chanson
       type:
-        title: Map Type
-        official: Official
-        community: Community
+        title: Type de Map
+        official: Officiel
+        community: Communauté
       info:
-        name: Song Name
+        name: Nom de la chanson
         band: Band
         singer: Artists
-        difficulty: Difficulty
-        level: Level
+        difficulty: Difficulté
+        level: Niveau
         notes: Notes
-        author: Map Author
+        author: Créateur de la Map
     local:
-      title: Local
-      type: Map Type
-      mapFile: Map File
-      mapSource: Map Source Code
+      title: Locale
+      type: Type de Map
+      mapFile: Fichier de la Map
+      mapSource: Source Code de la Map
       mapCover: Map Cover
       songName:
-        title: Song Name
-        default: Test Map
-      musicFile: Music File
-    start: Start
-    load: Load Map Info
-    loadFailed: Failed to load map info, please try again
+        title: Nom de la chanson
+        default: Test de Map
+      musicFile: Fichier de musique
+    start: Commencer
+    load: Charger l'info de Map
+    loadFailed: Impossible de chargé l'info de Map, veuillez ressayer
   convert:
-    title: Convert
-    from: Original Map Format
+    title: Convertir
+    from: Map Format Originale
     to: Target Map Format
-    fileInput: Map File
-    noInput: Please select file or input map first
-    convertResult: Convert Result
-    succeeded: Chart has been successfully converted, please copy or download
-    download: Download
-    serious: Are you serious?
-    convert: Convert
+    fileInput: Fichier de Map
+    noInput: Veuillez selectionner un fichier ou insérer une map avant
+    convertResult: Convertion de Resultat
+    succeeded: Votre graphique a été converti avec succès, veuillez le copier ou télécharger
+    download: Telechargé
+    serious: Etes vous serieux?
+    convert: Convertir
     error:
-      multiTap: 'Find multi tap at {time}, please modify and try again because Bestdori doesn''t support it at present.'
-      laneInvalid: 'Error when converting slide: lane {pos} has been occupied at {time}.'
-      noStart: 'Error when converting slide: slide (or flick) doesn''t have a start note at {time}.'
+      multiTap: 'Trouver multi tap en {time},veuillez modifier ou ressayer parceque Bestodori ne le supporte pas en ce momentt.'
+      laneInvalid: 'Erreur lors de la conversion de la slide: lane {pos} est occupé en {time}.'
+      noStart: 'Erreur lors de la convertion de la slide: slide (ou flick) n''a pas de note de départ à {time}.'
   space:
     title: Calc
-    bpm: BPM Of First Part
-    offset: Offset Of First Part (s)
-    result: 'You can add {0} silence to the beginning of song or remove {1} silence from the beginning of music'
+    bpm: BPM pour la premiére partie
+    offset: Offset de la premiére partie (s)
+    result: 'Vous pouvez ajouter {0} silence au débute de la chanson ou supprimer {1} silence au debut de la musique'
   about:
-    title: About
+    title: Sur
