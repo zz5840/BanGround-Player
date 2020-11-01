@@ -1,31 +1,17 @@
 ---
 public:
-  radioOn: オン
-  radioOff: オフ
-  cancel: キャンセル
-  ok: OK
+  ui:
+    radioOn: "オン"
+    radioOff: "オフ"
+    cancel: キャンセル
+    ok: OK
+    dismiss: Dismiss
   language: 言語
-  inputValue: 数値を入力してください。
   fullscreen:
     title: フルスクリーン
     succeeded: ゲームを快適にプレイするためには、端末を横に回転してください。
     failed: フルスクリーンにできませんでした。端末の権限を確認してください。
     unsupported: ご利用のブラウザは全画面表示に対応していません。ブラウザをアップデートするか、他のブラウザを利用してください。
-  settings:
-    title: 設定
-    autoFullscreen: 自動フルスクリーン
-    speed: ノーツのスピード
-    noteScale: ノーツのサイズ
-    judgeOffset: 判定調節
-    visualOffset: 譜面調整(オフセット)
-    barOpacity: 長押しラインの濃さ
-    effectVolume: 音量(SE)
-    backgroundDim: 背景画像の透明度
-    showSimLine: 同時押しライン
-    beatNote: リズムサポート
-    mirror: ミラー
-    laneEffect: レーンエフェクト
-    resolution: 高画質
   guide:
     title: ようこそ
     selectLanguage: 言語を選択してください。なお、ページの右上にある言語設定⚙️で後からでも変更できます。
@@ -33,69 +19,90 @@ public:
     complete: "初期設定が全て終了しました!\nゲームをお楽しみください!"
     next: 次へ
     skip: スキップ
-  favourite:
-    title: お気に入り
-    history: 閲覧履歴
-    empty: 'まだ何もありません。'
-    faved: '{name} をお気に入りに登録しました。'
-    deleted: '{name} をお気に入りから削除しました。'
-    slideRight: お気に入りは左にスワイプすると消去できます。
-    showLimit: 履歴は100曲まで記録されます。
-  notification:
-    title: お知らせ
-    all: すべて既読にする
-    mark: 既読としてマーク
-home:
-  play:
-    title: プレイ
-    mapSource: 譜面のソース
-    bestdori:
-      mapId: 譜面ID
-      songId: 楽曲ID
-      type:
-        title: 譜面のタイプ
-        official: 本家
-        community: オリジナル
-      info:
-        name: タイトル
-        band: バンド
-        singer: アーティスト
-        difficulty: 難易度
-        level: 楽曲レベル
-        notes: ノーツ数
-        author: 譜面の製作者
-    local:
-      title: ローカル
-      type: 譜面のタイプ
-      mapFile: 譜面ファイル
-      mapSource: 譜面のソースコード
-      mapCover: 譜面カバー
-      songName:
-        title: 曲名
-        default: テスト譜面
-      musicFile: ミュージックファイル
-    start: プレイ
-    load: 譜面をロードする
-    loadFailed: 譜面のロードに失敗しました。もう一度お試しください。
-  convert:
-    title: 譜面を変換する
-    from: 変換前の譜面フォーマット
-    to: 変換後の譜面フォーマット
-    fileInput: 譜面ファイル
-    noInput: ファイルまたは譜面を選択してください。
-    convertResult: 変換結果
-    succeeded: 正常に変換できました。コピーもしくはダウンロードできます。
-    download: ダウンロード
-    serious: 冗談ですか？
-    convert: 変換
-    error:
-      multiTap: '{time} で複数のスライドを発見しました。これはBestdoriではサポートされていませんので、修正してください。'
-      laneInvalid: 'スライドの変換中にエラーが発生しました： {time}でレーン{pos}が占有されました。'
-      noStart: 'スライドの変換中にエラーが発生しました： {time}のスライドの開始点が見つかりません。'
-  space:
-    title: 計算機能
-    bpm: 最初の部分のBPM
-    offset: 最初の部分のオフセット
-    result: '曲の先頭に {0} 無音を追加する、もしくは音楽の先頭から {1} 無音を削除する'
-  about:
-    title: 本アプリについて
+play:
+  title: プレイ
+  mapSource: 譜面のソース
+  bestdori:
+    mapId: 譜面ID
+    songId: 楽曲ID
+    type:
+      title: 譜面のタイプ
+      official: 本家
+      community: オリジナル
+    info:
+      shareLink: 'Share your friend with the link: '
+      name: タイトル
+      band: バンド
+      singer: アーティスト
+      difficulty: 難易度
+      level: 楽曲レベル
+      notes: ノーツ数
+      author: 譜面の製作者
+  local:
+    title: ローカル
+    type: 譜面のタイプ
+    mapFile: 譜面ファイル
+    mapSource: 譜面のソースコード
+    mapCover: 譜面カバー
+    songName:
+      title: タイトル
+      default: テスト譜面
+    musicFile: ミュージックファイル
+  start: プレイ
+  load: 譜面をロードする
+  loadFailed: 譜面のロードに失敗しました。もう一度お試しください。
+share:
+  title: Share
+  desc: Share your local map with your friends or other devices to review it easily.
+convert:
+  title: 譜面を変換する
+  from: 変換前の譜面フォーマット
+  to: 変換後の譜面フォーマット
+  fileInput: 譜面ファイル
+  noInput: ファイルまたは譜面を選択してください。
+  convertResult: 変換結果
+  succeeded: 正常に変換できました。コピーもしくはダウンロードできます。
+  download: ダウンロード
+  serious: 冗談ですか？
+  convert: 譜面を変換する
+  error:
+    multiTap: '{time} で複数のスライドを発見しました。これはBestdoriではサポートされていませんので、修正してください。'
+    laneInvalid: 'スライドの変換中にエラーが発生しました： {time}でレーン{pos}が占有されました。'
+    noStart: 'スライドの変換中にエラーが発生しました： {time}のスライドの開始点が見つかりません。'
+space:
+  title: 計算機能
+  bpm: 最初の部分のBPM
+  offset: Offset Of First Part (seconds)
+  result: '曲の先頭に {0} 無音を追加する、もしくは音楽の先頭から {1} 無音を削除する'
+settings:
+  title: 設定
+  inputValue: 数値を入力してください。
+  autoFullscreen: 自動フルスクリーン
+  speed: ノーツのスピード
+  noteScale: ノーツのサイズ
+  judgeOffset: 判定調節
+  visualOffset: 譜面調整(オフセット)
+  barOpacity: 長押しラインの濃さ
+  effectVolume: 音量(SE)
+  backgroundDim: 背景画像の透明度
+  showSimLine: 同時押しライン
+  beatNote: リズムサポート
+  mirror: ミラー
+  laneEffect: レーンエフェクト
+  resolution: 高画質
+favorite:
+  title: Favorite
+  empty: 'Your Favorite is empty now'
+  faved: 'Song {name} has been add to favorite'
+  deleted: 'Song {name} has been delete from favorite'
+  slideRight: Slide left to delete from favorite
+history:
+  title: 閲覧履歴
+  showLimit: 履歴は100曲まで記録されます。
+  empty: 'Your History is empty now'
+announcement:
+  title: Announcements
+  all: すべて既読にする
+  mark: 既読としてマーク
+about:
+  title: 本アプリについて
