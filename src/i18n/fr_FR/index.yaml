@@ -1,7 +1,7 @@
 ---
 public:
-  radioOn: Activé
-  radioOff: Désactivé
+  radioOn: "Activé"
+  radioOff: "Désactivé"
   cancel: Annuler
   ok: OK
   language: Language
