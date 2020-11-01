@@ -1,31 +1,17 @@
 ---
 public:
-  radioOn: Activé
-  radioOff: Désactivé
-  cancel: Annuler
-  ok: OK
+  ui:
+    radioOn: "Activé"
+    radioOff: "Désactivé"
+    cancel: Annuler
+    ok: OK
+    dismiss: Dismiss
   language: Language
-  inputValue: Veuillez insérer une valeur
   fullscreen:
     title: Plein Ecran
     succeeded: Veuillez activé Rotation Auto et tenez votre téléphone horizentalement pour une meilleur expérience
     failed: Echec de rentrer en mode plein écran, veuillez vérifier la permission
     unsupported: Votre navigateur ne supporte pas plein écran
-  settings:
-    title: Réglages
-    autoFullscreen: Auto Plein Ecran
-    speed: Vitesse de la note
-    noteScale: Taille de la note
-    judgeOffset: Judge Offset
-    visualOffset: Offset Visuel
-    barOpacity: Transparence des longues notes
-    effectVolume: Volume SE de la note
-    backgroundDim: Transparence de l'image d'arrière-plan
-    showSimLine: Dual Tap Line
-    beatNote: Off-Beat Coloring
-    mirror: Miroir
-    laneEffect: Lane Effects
-    resolution: Haute Resolution
   guide:
     title: Bienvenue
     selectLanguage: Il parait que c'est la premiére fois que vous visitez notre site, je vous prie de choisir votre langue. Vous pouvez la modifier plus tard en clikant sur le button selection-de-langue en haut à droite de la page.
@@ -33,69 +19,90 @@ public:
     complete: Bien! Vous avez maintenant tous les réglages nécessaires, amusez vous bien!
     next: Suivant
     skip: Passer
-  favourite:
-    title: Favoris
-    history: Historique
-    empty: 'Votre nom {name} est vide maintenant'
-    faved: 'La chanson {name} est ajouter à vos favoris'
-    deleted: 'La chanson {name} est supprimer de vos favoris'
-    slideRight: Glisser vers la gauche pour supprimer de vos favoris
-    showLimit: Seulement les 100 records récents vont être exposé
-  notification:
-    title: Notification
-    all: Marquer tous comme lu
-    mark: Marquer comme lu
-home:
-  play:
-    title: Jouer
-    mapSource: Source de la Map
-    bestdori:
-      mapId: Map ID
-      songId: ID de la chanson
-      type:
-        title: Type de Map
-        official: Officiel
-        community: Communauté
-      info:
-        name: Nom de la chanson
-        band: Band
-        singer: Artists
-        difficulty: Difficulté
-        level: Niveau
-        notes: Notes
-        author: Créateur de la Map
-    local:
-      title: Locale
-      type: Type de Map
-      mapFile: Fichier de la Map
-      mapSource: Source Code de la Map
-      mapCover: Map Cover
-      songName:
-        title: Nom de la chanson
-        default: Test de Map
-      musicFile: Fichier de musique
-    start: Commencer
-    load: Charger l'info de Map
-    loadFailed: Impossible de chargé l'info de Map, veuillez ressayer
-  convert:
-    title: Convertir
-    from: Map Format Originale
-    to: Target Map Format
-    fileInput: Fichier de Map
-    noInput: Veuillez selectionner un fichier ou insérer une map avant
-    convertResult: Convertion de Resultat
-    succeeded: Votre graphique a été converti avec succès, veuillez le copier ou télécharger
-    download: Telechargé
-    serious: Etes vous serieux?
-    convert: Convertir
-    error:
-      multiTap: 'Trouver multi tap en {time},veuillez modifier ou ressayer parceque Bestodori ne le supporte pas en ce momentt.'
-      laneInvalid: 'Erreur lors de la conversion de la slide: lane {pos} est occupé en {time}.'
-      noStart: 'Erreur lors de la convertion de la slide: slide (ou flick) n''a pas de note de départ à {time}.'
-  space:
-    title: Calc
-    bpm: BPM pour la premiére partie
-    offset: Offset de la premiére partie (s)
-    result: 'Vous pouvez ajouter {0} silence au débute de la chanson ou supprimer {1} silence au debut de la musique'
-  about:
-    title: Sur
+play:
+  title: Jouer
+  mapSource: Source de la Map
+  bestdori:
+    mapId: Map ID
+    songId: ID de la chanson
+    type:
+      title: Type de Map
+      official: Officiel
+      community: Communauté
+    info:
+      shareLink: 'Share your friend with the link: '
+      name: Nom de la chanson
+      band: Band
+      singer: Artists
+      difficulty: Difficulté
+      level: Niveau
+      notes: Notes
+      author: Créateur de la Map
+  local:
+    title: Locale
+    type: Type de Map
+    mapFile: Fichier de la Map
+    mapSource: Source Code de la Map
+    mapCover: Map Cover
+    songName:
+      title: Nom de la chanson
+      default: Test de Map
+    musicFile: Fichier de musique
+  start: Commencer
+  load: Charger l'info de Map
+  loadFailed: Impossible de chargé l'info de Map, veuillez ressayer
+share:
+  title: Share
+  desc: Share your local map with your friends or other devices to review it easily.
+convert:
+  title: Convertir
+  from: Map Format Originale
+  to: Target Map Format
+  fileInput: Fichier de la Map
+  noInput: Veuillez selectionner un fichier ou insérer une map avant
+  convertResult: Convertion de Resultat
+  succeeded: Votre graphique a été converti avec succès, veuillez le copier ou télécharger
+  download: Telechargé
+  serious: Etes vous serieux?
+  convert: Convertir
+  error:
+    multiTap: 'Trouver multi tap en {time},veuillez modifier ou ressayer parceque Bestodori ne le supporte pas en ce momentt.'
+    laneInvalid: 'Erreur lors de la conversion de la slide: lane {pos} est occupé en {time}.'
+    noStart: 'Erreur lors de la convertion de la slide: slide (ou flick) n''a pas de note de départ à {time}.'
+space:
+  title: Calc
+  bpm: BPM pour la premiére partie
+  offset: Offset Of First Part (seconds)
+  result: 'Vous pouvez ajouter {0} silence au débute de la chanson ou supprimer {1} silence au debut de la musique'
+settings:
+  title: Réglages
+  inputValue: Veuillez insérer une valeur
+  autoFullscreen: Auto Plein Ecran
+  speed: Vitesse de la note
+  noteScale: Taille de la note
+  judgeOffset: Judge Offset
+  visualOffset: Offset Visuel
+  barOpacity: Transparence des longues notes
+  effectVolume: Volume SE de la note
+  backgroundDim: Transparence de l'image d'arrière-plan
+  showSimLine: Dual Tap Line
+  beatNote: Off-Beat Coloring
+  mirror: Miroir
+  laneEffect: Lane Effects
+  resolution: Haute Resolution
+favorite:
+  title: Favorite
+  empty: 'Your Favorite is empty now'
+  faved: 'Song {name} has been add to favorite'
+  deleted: 'Song {name} has been delete from favorite'
+  slideRight: Slide left to delete from favorite
+history:
+  title: Historique
+  showLimit: Seulement les 100 records récents vont être exposé
+  empty: 'Your History is empty now'
+announcement:
+  title: Announcements
+  all: Marquer tous comme lu
+  mark: Marquer comme lu
+about:
+  title: Sur
