@@ -1,31 +1,17 @@
 ---
 public:
-  radioOn: 開
-  radioOff: 關
-  cancel: 取消
-  ok: 確認
+  ui:
+    radioOn: "開"
+    radioOff: "關"
+    cancel: 取消
+    ok: 確認
+    dismiss: Dismiss
   language: 語言
-  inputValue: 請輸入數值
   fullscreen:
     title: 全螢幕
     succeeded: 翻轉螢幕以獲得最佳體驗
     failed: 進入全螢幕失敗，請檢查權限
     unsupported: 你的瀏覽器不支援全螢幕喔
-  settings:
-    title: 設定
-    autoFullscreen: 自動全螢幕
-    speed: 節奏圖示的速度
-    noteScale: 節奏圖示的大小
-    judgeOffset: 判定偏移
-    visualOffset: 視覺偏移
-    barOpacity: 長按按條透明度
-    effectVolume: 效果音音量
-    backgroundDim: 背景圖片透明度
-    showSimLine: 同時點擊線
-    beatNote: 節奏的視覺輔助
-    mirror: 鏡像
-    laneEffect: 軌道特效
-    resolution: 高解析度
   guide:
     title: 歡迎
     selectLanguage: 這是第一次進入遊戲，請選擇要在遊戲中使用的語言，稍後可以在右上角的選擇語言裡自由更改
@@ -33,69 +19,90 @@ public:
     complete: 設定完成，接下來請盡情享受吧
     next: 下一步
     skip: 跳過
-  favourite:
-    title: 我的最愛
-    history: 瀏覽紀錄
-    empty: '您暫時還未輸入{name}'
-    faved: '歌曲 {name} 已加入最愛'
-    deleted: '歌曲 {name} 已從最愛移除'
-    slideRight: 左滑可以刪除最愛哦
-    showLimit: 僅顯示最後100則紀錄
-  notification:
-    title: 通知
-    all: 全部已讀
-    mark: 標記為已讀
-home:
-  play:
-    title: 遊玩譜面
-    mapSource: 譜面來源
-    bestdori:
-      mapId: 譜面ID
-      songId: 歌曲ID
-      type:
-        title: 譜面類型
-        official: 官方
-        community: 社群
-      info:
-        name: 歌名
-        band: 樂隊
-        singer: 歌手
-        difficulty: 難度
-        level: 等級
-        notes: 物量
-        author: 譜面作者
-    local:
-      title: 此裝置
-      type: 譜面類型
-      mapFile: 歌曲文件
-      mapSource: 譜面代碼
-      mapCover: 封面
-      songName:
-        title: 歌名
-        default: 測試譜面
-      musicFile: 音樂文件
-    start: 開始
-    load: 載入歌曲資訊
-    loadFailed: 載入失敗，請重試
-  convert:
-    title: 轉換譜面
-    from: 原譜面格式
-    to: 輸出譜面格式
-    fileInput: 譜面文件
-    noInput: 未選擇任何譜面！
-    convertResult: 轉換結果
-    succeeded: 轉換成功，請複製或下載保存
-    download: 下載
-    serious: 你是沙雕嗎？
-    convert: 轉換
-    error:
-      multiTap: '在{time}發現多壓，由於目前Bestdori不支援多壓，請修改後再試一次'
-      laneInvalid: '滑條轉換錯誤，{time}處第{pos}道已被占用'
-      noStart: '滑條轉換錯誤，{time}處滑條（滑鍵）沒有起始拍點'
-  space:
-    title: 計算留白
-    bpm: 第一段BPM
-    offset: 第一段Offset（秒）
-    result: '請新增 {0} 空白到歌曲開頭或從歌曲開頭刪除 {1} 空白'
-  about:
-    title: 關於
+play:
+  title: 遊玩譜面
+  mapSource: 譜面來源
+  bestdori:
+    mapId: 譜面ID
+    songId: 歌曲ID
+    type:
+      title: 譜面類型
+      official: 官方
+      community: 社群
+    info:
+      shareLink: 'Share your friend with the link: '
+      name: 歌名
+      band: 樂隊
+      singer: 歌手
+      difficulty: 難度
+      level: 等級
+      notes: 物量
+      author: 譜面作者
+  local:
+    title: 此裝置
+    type: 譜面類型
+    mapFile: 歌曲文件
+    mapSource: 譜面代碼
+    mapCover: 封面
+    songName:
+      title: 歌名
+      default: 測試譜面
+    musicFile: 音樂文件
+  start: 開始
+  load: 載入歌曲資訊
+  loadFailed: 載入失敗，請重試
+share:
+  title: Share
+  desc: Share your local map with your friends or other devices to review it easily.
+convert:
+  title: 轉換譜面
+  from: 原譜面格式
+  to: 輸出譜面格式
+  fileInput: 歌曲文件
+  noInput: 未選擇任何譜面！
+  convertResult: 轉換結果
+  succeeded: 轉換成功，請複製或下載保存
+  download: 下載
+  serious: 你是沙雕嗎？
+  convert: 轉換譜面
+  error:
+    multiTap: '在{time}發現多壓，由於目前Bestdori不支援多壓，請修改後再試一次'
+    laneInvalid: '滑條轉換錯誤，{time}處第{pos}道已被占用'
+    noStart: '滑條轉換錯誤，{time}處滑條（滑鍵）沒有起始拍點'
+space:
+  title: 計算留白
+  bpm: 第一段BPM
+  offset: Offset Of First Part (seconds)
+  result: '請新增 {0} 空白到歌曲開頭或從歌曲開頭刪除 {1} 空白'
+settings:
+  title: 設定
+  inputValue: 請輸入數值
+  autoFullscreen: 自動全螢幕
+  speed: 節奏圖示的速度
+  noteScale: 節奏圖示的大小
+  judgeOffset: 判定偏移
+  visualOffset: 視覺偏移
+  barOpacity: 長按按條透明度
+  effectVolume: 效果音音量
+  backgroundDim: 背景圖片透明度
+  showSimLine: 同時點擊線
+  beatNote: 節奏的視覺輔助
+  mirror: 鏡像
+  laneEffect: 軌道特效
+  resolution: 高解析度
+favorite:
+  title: Favorite
+  empty: 'Your Favorite is empty now'
+  faved: 'Song {name} has been add to favorite'
+  deleted: 'Song {name} has been delete from favorite'
+  slideRight: Slide left to delete from favorite
+history:
+  title: 瀏覽紀錄
+  showLimit: 僅顯示最後100則紀錄
+  empty: 'Your History is empty now'
+announcement:
+  title: Announcements
+  all: 全部已讀
+  mark: 標記為已讀
+about:
+  title: 關於
