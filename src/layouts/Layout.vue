@@ -5,44 +5,43 @@
 				<q-btn dense flat round icon="mdi-menu" @click="toggleDrawer" />
 
 				<q-toolbar-title>
-					<span class="non-selectable" style="font-size: 16px;">BanGround Player</span>
+					<span class="non-selectable" style="font-size: 16px;"
+						>BanGround Player</span
+					>
 				</q-toolbar-title>
 				<template v-if="$q.screen.gt.xs">
-					<q-btn @click="fav" class="q-mr-xs" color="white" flat icon="mdi-heart" round/>
-					<q-btn @click="language" class="q-mr-xs" color="white" flat icon="mdi-translate" round/>
-					<q-btn @click="settings" class="q-mr-xs" color="white" flat icon="mdi-settings" round/>
-					<q-btn @click="notification" class="q-mr-xs" color="white" flat icon="mdi-bell" round/>
+					<q-btn
+						@click="language"
+						class="q-mr-xs"
+						color="white"
+						flat
+						icon="mdi-translate"
+						round
+					/>
 				</template>
-				<q-btn @click="fullscreen" color="white" flat icon="mdi-fullscreen" round/>
-				<q-btn color="white" flat icon="mdi-dots-vertical" round v-if="$q.screen.xs">
+				<q-btn
+					@click="fullscreen"
+					color="white"
+					flat
+					icon="mdi-fullscreen"
+					round
+				/>
+				<q-btn
+					color="white"
+					flat
+					icon="mdi-dots-vertical"
+					round
+					v-if="$q.screen.xs"
+				>
 					<q-popup-proxy :breakpoint="0">
 						<q-list>
-							<q-item @click="fav" clickable v-close-popup>
-								<q-item-section avatar>
-									<q-icon name="mdi-heart"/>
-								</q-item-section>
-								<q-item-section>{{ $t('public.favourite.title') }}</q-item-section>
-							</q-item>
-
 							<q-item @click="language" clickable v-close-popup>
 								<q-item-section avatar>
-									<q-icon name="mdi-translate"/>
+									<q-icon name="mdi-translate" />
 								</q-item-section>
-								<q-item-section>{{ $t('public.language') }}</q-item-section>
-							</q-item>
-
-							<q-item @click="settings" clickable v-close-popup>
-								<q-item-section avatar>
-									<q-icon name="mdi-settings"/>
-								</q-item-section>
-								<q-item-section>{{ $t('public.settings.title') }}</q-item-section>
-							</q-item>
-
-							<q-item @click="notification" clickable v-close-popup>
-								<q-item-section avatar>
-									<q-icon name="mdi-bell"/>
-								</q-item-section>
-								<q-item-section>{{ $t('public.notification.title') }}</q-item-section>
+								<q-item-section>{{
+									$t('public.language')
+								}}</q-item-section>
 							</q-item>
 						</q-list>
 					</q-popup-proxy>
@@ -50,12 +49,25 @@
 			</q-toolbar>
 		</q-header>
 
-		<q-drawer show-if-above v-model="showLeftDrawer" :mini="miniLeftDrawer" side="left" bordered class="left-drawer">
+		<q-drawer
+			show-if-above
+			v-model="showLeftDrawer"
+			:mini="miniLeftDrawer"
+			side="left"
+			bordered
+			class="left-drawer"
+		>
 			<q-scroll-area class="fit">
 				<q-list>
 					<template v-for="(item, index) in menuList">
-						<q-item :key="index" clickable :to="item.to" exact
-						        active-class="drawer-active text-primary" v-ripple>
+						<q-item
+							:key="index"
+							clickable
+							:to="item.to"
+							exact
+							active-class="drawer-active text-primary"
+							v-ripple
+						>
 							<q-item-section avatar>
 								<q-icon :name="item.icon" color="" />
 							</q-item-section>
@@ -63,43 +75,41 @@
 								{{ $t(item.name + '.title') }}
 							</q-item-section>
 						</q-item>
-						<q-separator :key="'sep' + index" />
+						<q-separator
+							:key="'sep' + index"
+							v-if="item.separator"
+						/>
 					</template>
 				</q-list>
-				</q-scroll-area>
+			</q-scroll-area>
 		</q-drawer>
 
-		<q-page-container class="q-px-sm" style="max-width: 1280px; margin: auto">
-			<router-view/>
+		<q-page-container style="max-height: 100vh; overflow-y: scroll">
+			<div style="max-width: 1280px; margin: auto" class="q-px-md">
+				<router-view />
+			</div>
 		</q-page-container>
 
-		<favourite v-model="showFav"/>
-		<notification v-model="showNotification"/>
-		<select-language v-model="showLanguage"/>
-		<settings v-model="showSettings"/>
-		<guide v-if="showGuide"/>
+		<select-language v-model="showLanguage" />
+		<guide v-if="showGuide" />
 	</q-layout>
 </template>
 
 <script>
 	import SelectLanguage from 'components/Public/SelectLanguage';
-	import Settings from 'components/Public/Settings';
 	import Guide from 'components/Public/Guide';
-	import Favourite from 'components/Public/Favourite';
-	import Notification from 'components/Public/Notification';
-	import { mapMutations, mapState } from 'vuex';
 	import { fullscreen } from 'src/lib/Utils';
 
 	export default {
 		name: 'Layout',
-		components: { SelectLanguage, Settings, Guide, Favourite, Notification },
-		data () {
+		components: {
+			SelectLanguage,
+			Guide
+		},
+		data() {
 			return {
 				showLanguage: false,
 				showGuide: false,
-				ifShowSettings: false,
-				showFav: false,
-				showNotification: false,
 				showLeftDrawer: this.$q.screen.gt.sm,
 				miniLeftDrawer: !this.$q.screen.gt.sm,
 				menuList: [
@@ -111,47 +121,54 @@
 					{
 						icon: 'mdi-share-variant',
 						name: 'share',
-						to: '/share'
+						to: '/share',
+						separator: true
 					},
 					{
 						icon: 'mdi-heart',
-						name: 'fav',
-						to: '/fav'
+						name: 'favorite',
+						to: '/favorite'
+					},
+					{
+						icon: 'mdi-history',
+						name: 'history',
+						to: '/history',
+						separator: true
+					},
+					{
+						icon: 'mdi-settings',
+						name: 'settings',
+						to: '/settings'
+					},
+					{
+						icon: 'mdi-bell',
+						name: 'announcement',
+						to: '/announcement'
+					},
+					{
+						icon: 'mdi-information',
+						name: 'about',
+						to: '/about'
 					}
 				]
 			};
 		},
 		methods: {
-			fav () {
-				this.showFav = true;
-			},
-			language () {
+			language() {
 				this.showLanguage = true;
 			},
-			fullscreen () {
+			fullscreen() {
 				fullscreen(this);
 			},
-			notification () {
-				this.showNotification = true;
-			},
-			toggleDrawer () {
+			toggleDrawer() {
 				if (this.$q.screen.gt.sm) {
 					this.miniLeftDrawer = !this.miniLeftDrawer;
 				} else {
 					this.showLeftDrawer = !this.showLeftDrawer;
 				}
-			},
-			...mapMutations({
-				settings: 'openSettings'
-			})
-		},
-		computed: {
-			showSettings: {
-				...mapState({ get: 'showSettings' }),
-				...mapMutations({ set: 'setSettings' })
 			}
 		},
-		beforeMount () {
+		beforeMount() {
 			let lang = this.$q.localStorage.getItem('lang');
 			if (!lang) {
 				this.showGuide = true;

@@ -1,11 +1,11 @@
 ---
 public:
   ui:
-   radioOn: "On"
-   radioOff: "Off"
-   cancel: Cancel
-   ok: OK
-   dismiss: Dismiss
+    radioOn: "On"
+    radioOff: "Off"
+    cancel: Cancel
+    ok: OK
+    dismiss: Dismiss
   language: Language
   fullscreen:
     title: Full Screen
@@ -90,16 +90,18 @@ settings:
   mirror: Mirror
   laneEffect: Lane Effects
   resolution: High Resolution
-favourite:
-  title: Favourite
-  history: History
-  empty: 'Your {name} is empty now'
-  faved: 'Song {name} has been add to favourite'
-  deleted: 'Song {name} has been delete from favourite'
-  slideRight: Slide left to delete from favourite
+favorite:
+  title: Favorite
+  empty: 'Your Favorite is empty now'
+  faved: 'Song {name} has been add to favorite'
+  deleted: 'Song {name} has been delete from favorite'
+  slideRight: Slide left to delete from favorite
+history:
+  title: History
   showLimit: Only recent 100 records will be shown
-notification:
-  title: Notification
+  empty: 'Your History is empty now'
+announcement:
+  title: Announcements
   all: Mark all as read
   mark: Mark as read
 about:
