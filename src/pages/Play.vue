@@ -29,9 +29,6 @@
 			<q-tab-panel class="q-pa-sm" name="play">
 				<play/>
 			</q-tab-panel>
-			<q-tab-panel class="q-pa-sm" name="share">
-				<share/>
-			</q-tab-panel>
 			<q-tab-panel class="q-pa-sm" name="convert">
 				<convert/>
 			</q-tab-panel>
@@ -47,14 +44,13 @@
 
 <script>
 	import Play from 'components/Home/Play';
-	import Share from 'components/Home/Share';
 	import Convert from 'components/Home/Convert';
 	import Space from 'components/Home/Space';
 	import About from 'components/Home/About';
 
 	export default {
 		name: 'PagePlay',
-		components: { Play, Share, Space, Convert, About },
+		components: { Play, Space, Convert, About },
 		computed: {
 			tab: {
 				get () {

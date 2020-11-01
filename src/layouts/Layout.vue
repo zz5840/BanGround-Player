@@ -1,7 +1,9 @@
 <template>
-	<q-layout view="lHh Lpr lFf">
-		<q-header elevated>
+	<q-layout view="hHh lpR lFf">
+		<q-header elevated class="bg-primary text-white">
 			<q-toolbar>
+				<q-btn dense flat round icon="mdi-menu" @click="toggleDrawer" />
+
 				<q-toolbar-title>
 					<span class="non-selectable" style="font-size: 16px;">BanGround Player</span>
 				</q-toolbar-title>
@@ -47,9 +49,30 @@
 				</q-btn>
 			</q-toolbar>
 		</q-header>
+
+		<q-drawer show-if-above v-model="showLeftDrawer" :mini="miniLeftDrawer" side="left" bordered class="left-drawer">
+			<q-scroll-area class="fit">
+				<q-list>
+					<template v-for="(item, index) in menuList">
+						<q-item :key="index" clickable :to="item.to" exact
+						        active-class="drawer-active text-primary" v-ripple>
+							<q-item-section avatar>
+								<q-icon :name="item.icon" color="" />
+							</q-item-section>
+							<q-item-section>
+								{{ $t(item.name + '.title') }}
+							</q-item-section>
+						</q-item>
+						<q-separator :key="'sep' + index" />
+					</template>
+				</q-list>
+				</q-scroll-area>
+		</q-drawer>
+
 		<q-page-container class="q-px-sm" style="max-width: 1280px; margin: auto">
 			<router-view/>
 		</q-page-container>
+
 		<favourite v-model="showFav"/>
 		<notification v-model="showNotification"/>
 		<select-language v-model="showLanguage"/>
@@ -76,7 +99,26 @@
 				showGuide: false,
 				ifShowSettings: false,
 				showFav: false,
-				showNotification: false
+				showNotification: false,
+				showLeftDrawer: this.$q.screen.gt.sm,
+				miniLeftDrawer: !this.$q.screen.gt.sm,
+				menuList: [
+					{
+						icon: 'mdi-music',
+						name: 'play',
+						to: '/'
+					},
+					{
+						icon: 'mdi-share-variant',
+						name: 'share',
+						to: '/share'
+					},
+					{
+						icon: 'mdi-heart',
+						name: 'fav',
+						to: '/fav'
+					}
+				]
 			};
 		},
 		methods: {
@@ -91,6 +133,13 @@
 			},
 			notification () {
 				this.showNotification = true;
+			},
+			toggleDrawer () {
+				if (this.$q.screen.gt.sm) {
+					this.miniLeftDrawer = !this.miniLeftDrawer;
+				} else {
+					this.showLeftDrawer = !this.showLeftDrawer;
+				}
 			},
 			...mapMutations({
 				settings: 'openSettings'
@@ -112,3 +161,14 @@
 		}
 	};
 </script>
+
+<style scoped>
+	.left-drawer .q-icon {
+		color: rgb(137, 137, 137);
+		transition: color 0.3s;
+	}
+
+	.drawer-active .q-icon {
+		color: inherit;
+	}
+</style>

@@ -90,6 +90,8 @@ module.exports = function (ctx) {
 					changeOrigin: true
 				}
 			},
+			// for cloud ide
+			sockPort: 443
 			// open: true // opens browser window automatically
 		},
 

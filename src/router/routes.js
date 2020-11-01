@@ -3,8 +3,8 @@ const routes = [
 		path: '/',
 		component: () => import('layouts/Layout.vue'),
 		children: [
-			{ path: '', alias: '/play' },
-			{ path: '/play', component: () => import('pages/Play.vue') }
+			{ path: '/', component: () => import('pages/Play.vue') },
+			{ path: '/share', component: () => import('pages/Share.vue') }
 			// { path: '/play', component: () => import('pages/Play.vue') }
 		]
 	}
