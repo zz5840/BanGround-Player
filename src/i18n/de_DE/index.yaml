@@ -1,31 +1,17 @@
 ---
 public:
-  radioOn: An
-  radioOff: Aus
-  cancel: Abbrechen
-  ok: Ok
+  ui:
+    radioOn: "An"
+    radioOff: "Aus"
+    cancel: Abbrechen
+    ok: Ok
+    dismiss: Dismiss
   language: Sprache
-  inputValue: Geben Sie bitte einen numerischen Wert ein
   fullscreen:
     title: Vollbildschirm
     succeeded: Bitte schalten Sie die automatische Drehung ein und halten Sie das Telefon waagerecht, um die beste Erfahrung zu erzielen.
     failed: Kann nicht in den Vollbildmodus wechseln, bitte überprüfen Sie die Berechtigung.
     unsupported: Ihr Browser unterstützt keine Vollbildansicht.
-  settings:
-    title: Einstellungen
-    autoFullscreen: Auto-Vollbild
-    speed: Notengeschwindigkeit
-    noteScale: Notengröße
-    judgeOffset: Richter Versatz
-    visualOffset: Visueller Versatz
-    barOpacity: Lange Notiz-Transparenz
-    effectVolume: Notentonlautstärke
-    backgroundDim: Hintergrund-Bildtransparenz
-    showSimLine: Doppelte Stichleitung
-    beatNote: Nicht auf Taktfärbung
-    mirror: Spiegel
-    laneEffect: Fahrbahneffekte
-    resolution: Hohe Auflösung
   guide:
     title: Willkommen
     selectLanguage: Es scheint, dass Sie die Website zum ersten Mal besuchen, bitte wählen Sie Ihre bevorzugte Sprache aus. Sie können sie später ändern, indem Sie auf die Schaltfläche "Sprache auswählen" oben rechts auf der Seite tippen.
@@ -33,69 +19,90 @@ public:
     complete: Nizza! Sie haben alle Grundeinstellungen vorgenommen, bitte genießen Sie!
     next: Nächste
     skip: Überspringen
-  favourite:
-    title: Favoriten
-    history: Logs ansehen
-    empty: 'Ihr {name} ist jetzt leer.'
-    faved: 'Lied {name} wurde zu den Favoriten hinzugefügt'
-    deleted: 'Lied {name} wurde aus den Favoriten gelöscht'
-    slideRight: Zum Löschen aus den Favoriten nach links schieben
-    showLimit: Es werden nur die letzten 100 Datensätze angezeigt
-  notification:
-    title: Benachrichtigungen
-    all: Alles als gelesen markieren
-    mark: Als gelesen markieren
-home:
-  play:
-    title: Spielen
-    mapSource: Kartenquelle
-    bestdori:
-      mapId: Karten-Id
-      songId: Lieder-Id
-      type:
-        title: Kartentyp
-        official: Offiziell
-        community: Gemeinschaft
-      info:
-        name: Titel
-        band: Gruppe
-        singer: Künstler
-        difficulty: Schwierigkeit
-        level: Level
-        notes: Noten
-        author: Mapper
-    local:
-      title: Lokal
-      type: Kartentyp
-      mapFile: Kartendatei
-      mapSource: Karten-Quellcode
-      mapCover: Kartenabdeckung
-      songName:
-        title: Titel
-        default: Testkarte
-      musicFile: Musikdatei
-    start: Starten
-    load: Karteninformationen laden
-    loadFailed: Karteninfo nicht geladen, bitte versuchen Sie es erneut
-  convert:
-    title: Konvertieren
-    from: Original-Kartenformat
-    to: Zielkarten-Format
-    fileInput: Kartendatei
-    noInput: Bitte wählen Sie zuerst eine Datei aus oder geben Sie eine Karte ein.
-    convertResult: Ergebnis konvertieren
-    succeeded: Das Diagramm wurde erfolgreich konvertiert, bitte kopieren oder herunterladen.
-    download: Herunterladen
-    serious: Ist das Ihr Ernst?
-    convert: Konvertiere
-    error:
-      multiTap: 'Multi-Tap finden Sie unter {time}, bitte modifizieren Sie es und versuchen Sie es noch einmal, da Bestdori es zur Zeit nicht unterstützt.'
-      laneInvalid: 'Fehler bei der Konvertierung des Dias: die Spur {pos} wurde zum Zeitpunkt {time} belegt.'
-      noStart: 'Fehler beim Konvertieren von Folie: Folie, oder Flick, hat keine Startnotiz bei {time}.'
-  space:
-    title: Rechner
-    bpm: BPM des ersten Teils
-    offset: Versatz des ersten Teils (der ersten Teile)
-    result: 'Sie können {0} Stille am Anfang des Liedes hinzufügen oder {1} Stille am Anfang der Musik entfernen.'
-  about:
-    title: Über
+play:
+  title: Spielen
+  mapSource: Kartenquelle
+  bestdori:
+    mapId: Karten-Id
+    songId: Lieder-Id
+    type:
+      title: Kartentyp
+      official: Offiziell
+      community: Gemeinschaft
+    info:
+      shareLink: 'Share your friend with the link: '
+      name: Titel
+      band: Gruppe
+      singer: Künstler
+      difficulty: Schwierigkeit
+      level: Level
+      notes: Noten
+      author: Mapper
+  local:
+    title: Lokal
+    type: Kartentyp
+    mapFile: Kartendatei
+    mapSource: Karten-Quellcode
+    mapCover: Kartenabdeckung
+    songName:
+      title: Titel
+      default: Testkarte
+    musicFile: Musikdatei
+  start: Starten
+  load: Karteninformationen laden
+  loadFailed: Karteninfo nicht geladen, bitte versuchen Sie es erneut
+share:
+  title: Share
+  desc: Share your local map with your friends or other devices to review it easily.
+convert:
+  title: Konvertieren
+  from: Original-Kartenformat
+  to: Zielkarten-Format
+  fileInput: Kartendatei
+  noInput: Bitte wählen Sie zuerst eine Datei aus oder geben Sie eine Karte ein.
+  convertResult: Ergebnis konvertieren
+  succeeded: Das Diagramm wurde erfolgreich konvertiert, bitte kopieren oder herunterladen.
+  download: Herunterladen
+  serious: Ist das Ihr Ernst?
+  convert: Konvertieren
+  error:
+    multiTap: 'Multi-Tap finden Sie unter {time}, bitte modifizieren Sie es und versuchen Sie es noch einmal, da Bestdori es zur Zeit nicht unterstützt.'
+    laneInvalid: 'Fehler bei der Konvertierung des Dias: die Spur {pos} wurde zum Zeitpunkt {time} belegt.'
+    noStart: 'Fehler beim Konvertieren von Folie: Folie, oder Flick, hat keine Startnotiz bei {time}.'
+space:
+  title: Rechner
+  bpm: BPM des ersten Teils
+  offset: Offset Of First Part (seconds)
+  result: 'Sie können {0} Stille am Anfang des Liedes hinzufügen oder {1} Stille am Anfang der Musik entfernen.'
+settings:
+  title: Einstellungen
+  inputValue: Geben Sie bitte einen numerischen Wert ein
+  autoFullscreen: Auto-Vollbild
+  speed: Notengeschwindigkeit
+  noteScale: Notengröße
+  judgeOffset: Richter Versatz
+  visualOffset: Visueller Versatz
+  barOpacity: Lange Notiz-Transparenz
+  effectVolume: Notentonlautstärke
+  backgroundDim: Hintergrund-Bildtransparenz
+  showSimLine: Doppelte Stichleitung
+  beatNote: Nicht auf Taktfärbung
+  mirror: Spiegel
+  laneEffect: Fahrbahneffekte
+  resolution: Hohe Auflösung
+favorite:
+  title: Favorite
+  empty: 'Your Favorite is empty now'
+  faved: 'Song {name} has been add to favorite'
+  deleted: 'Song {name} has been delete from favorite'
+  slideRight: Slide left to delete from favorite
+history:
+  title: Logs ansehen
+  showLimit: Es werden nur die letzten 100 Datensätze angezeigt
+  empty: 'Your History is empty now'
+announcement:
+  title: Announcements
+  all: Alles als gelesen markieren
+  mark: Als gelesen markieren
+about:
+  title: Über
