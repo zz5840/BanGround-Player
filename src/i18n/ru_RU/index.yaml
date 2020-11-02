@@ -54,26 +54,28 @@ play:
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.
-convert:
-  title: Конвертировать
-  from: Изначальный формат карты
-  to: Итоговый формат карты
-  fileInput: Файл карты
-  noInput: Пожалуйста, выберите файл или входную карту.
-  convertResult: Результат преобразовария
-  succeeded: Карта была успешно сконвертирована. Пожалуйста, скопируйте или скачайте.
-  download: Скачать
-  serious: Ты серьёзно?
-  convert: Конвертировать
-  error:
-    multiTap: 'Найден мульти тап на участке: {time}. Пожалуйста, отредактируйте карту ибо Bestdori не умеет с ними работать.'
-    laneInvalid: 'Ошибка при конвертировании слайдера: линия {pos} была занята на участке: {time}.'
-    noStart: 'Ошибка при конвертировании слайдера: слайдер (или флик) не имеет начальной ноты на участке: {time}.'
-space:
-  title: Калькулятор
-  bpm: BPM первой части
-  offset: Offset Of First Part (seconds)
-  result: 'Вы можете добавить {0} тишины в начало или убрать {1} из начала песни'
+tools:
+  title: Tools
+  convert:
+    title: Конвертировать
+    from: Изначальный формат карты
+    to: Итоговый формат карты
+    fileInput: Файл карты
+    noInput: Пожалуйста, выберите файл или входную карту.
+    convertResult: Результат преобразовария
+    succeeded: Карта была успешно сконвертирована. Пожалуйста, скопируйте или скачайте.
+    download: Скачать
+    serious: Ты серьёзно?
+    convert: Конвертировать
+    error:
+      multiTap: 'Найден мульти тап на участке: {time}. Пожалуйста, отредактируйте карту ибо Bestdori не умеет с ними работать.'
+      laneInvalid: 'Ошибка при конвертировании слайдера: линия {pos} была занята на участке: {time}.'
+      noStart: 'Ошибка при конвертировании слайдера: слайдер (или флик) не имеет начальной ноты на участке: {time}.'
+  calc:
+    title: Calculate
+    bpm: BPM первой части
+    offset: Offset Of First Part (seconds)
+    result: 'Вы можете добавить {0} тишины в начало или убрать {1} из начала песни'
 settings:
   title: Настройки
   inputValue: Введите значение
@@ -89,7 +91,12 @@ settings:
   beatNote: Окрас нот вне ритма
   mirror: Зеркало
   laneEffect: Эффекты полос
-  resolution: Высокое разрешение
+  resolution:
+    title: Resolution
+    low: Low
+    medium: Medium
+    high: High
+    ultimate: Ultimate
 favorite:
   title: Favorite
   empty: 'Your Favorite is empty now'
