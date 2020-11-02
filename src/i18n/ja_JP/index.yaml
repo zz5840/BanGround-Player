@@ -54,26 +54,28 @@ play:
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.
-convert:
-  title: 譜面を変換する
-  from: 変換前の譜面フォーマット
-  to: 変換後の譜面フォーマット
-  fileInput: 譜面ファイル
-  noInput: ファイルまたは譜面を選択してください。
-  convertResult: 変換結果
-  succeeded: 正常に変換できました。コピーもしくはダウンロードできます。
-  download: ダウンロード
-  serious: 冗談ですか？
-  convert: 譜面を変換する
-  error:
-    multiTap: '{time} で複数のスライドを発見しました。これはBestdoriではサポートされていませんので、修正してください。'
-    laneInvalid: 'スライドの変換中にエラーが発生しました： {time}でレーン{pos}が占有されました。'
-    noStart: 'スライドの変換中にエラーが発生しました： {time}のスライドの開始点が見つかりません。'
-space:
-  title: 計算機能
-  bpm: 最初の部分のBPM
-  offset: Offset Of First Part (seconds)
-  result: '曲の先頭に {0} 無音を追加する、もしくは音楽の先頭から {1} 無音を削除する'
+tools:
+  title: Tools
+  convert:
+    title: 譜面を変換する
+    from: 変換前の譜面フォーマット
+    to: 変換後の譜面フォーマット
+    fileInput: 譜面ファイル
+    noInput: ファイルまたは譜面を選択してください。
+    convertResult: 変換結果
+    succeeded: 正常に変換できました。コピーもしくはダウンロードできます。
+    download: ダウンロード
+    serious: 冗談ですか？
+    convert: 譜面を変換する
+    error:
+      multiTap: '{time} で複数のスライドを発見しました。これはBestdoriではサポートされていませんので、修正してください。'
+      laneInvalid: 'スライドの変換中にエラーが発生しました： {time}でレーン{pos}が占有されました。'
+      noStart: 'スライドの変換中にエラーが発生しました： {time}のスライドの開始点が見つかりません。'
+  calc:
+    title: Calculate
+    bpm: 最初の部分のBPM
+    offset: Offset Of First Part (seconds)
+    result: '曲の先頭に {0} 無音を追加する、もしくは音楽の先頭から {1} 無音を削除する'
 settings:
   title: 設定
   inputValue: 数値を入力してください。
@@ -89,7 +91,12 @@ settings:
   beatNote: リズムサポート
   mirror: ミラー
   laneEffect: レーンエフェクト
-  resolution: 高画質
+  resolution:
+    title: Resolution
+    low: Low
+    medium: Medium
+    high: High
+    ultimate: Ultimate
 favorite:
   title: Favorite
   empty: 'Your Favorite is empty now'
