@@ -54,26 +54,28 @@ play:
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.
-convert:
-  title: Konvertieren
-  from: Original-Kartenformat
-  to: Zielkarten-Format
-  fileInput: Kartendatei
-  noInput: Bitte wählen Sie zuerst eine Datei aus oder geben Sie eine Karte ein.
-  convertResult: Ergebnis konvertieren
-  succeeded: Das Diagramm wurde erfolgreich konvertiert, bitte kopieren oder herunterladen.
-  download: Herunterladen
-  serious: Ist das Ihr Ernst?
-  convert: Konvertieren
-  error:
-    multiTap: 'Multi-Tap finden Sie unter {time}, bitte modifizieren Sie es und versuchen Sie es noch einmal, da Bestdori es zur Zeit nicht unterstützt.'
-    laneInvalid: 'Fehler bei der Konvertierung des Dias: die Spur {pos} wurde zum Zeitpunkt {time} belegt.'
-    noStart: 'Fehler beim Konvertieren von Folie: Folie, oder Flick, hat keine Startnotiz bei {time}.'
-space:
-  title: Rechner
-  bpm: BPM des ersten Teils
-  offset: Offset Of First Part (seconds)
-  result: 'Sie können {0} Stille am Anfang des Liedes hinzufügen oder {1} Stille am Anfang der Musik entfernen.'
+tools:
+  title: Tools
+  convert:
+    title: Konvertieren
+    from: Original-Kartenformat
+    to: Zielkarten-Format
+    fileInput: Kartendatei
+    noInput: Bitte wählen Sie zuerst eine Datei aus oder geben Sie eine Karte ein.
+    convertResult: Ergebnis konvertieren
+    succeeded: Das Diagramm wurde erfolgreich konvertiert, bitte kopieren oder herunterladen.
+    download: Herunterladen
+    serious: Ist das Ihr Ernst?
+    convert: Konvertieren
+    error:
+      multiTap: 'Multi-Tap finden Sie unter {time}, bitte modifizieren Sie es und versuchen Sie es noch einmal, da Bestdori es zur Zeit nicht unterstützt.'
+      laneInvalid: 'Fehler bei der Konvertierung des Dias: die Spur {pos} wurde zum Zeitpunkt {time} belegt.'
+      noStart: 'Fehler beim Konvertieren von Folie: Folie, oder Flick, hat keine Startnotiz bei {time}.'
+  calc:
+    title: Calculate
+    bpm: BPM des ersten Teils
+    offset: Offset Of First Part (seconds)
+    result: 'Sie können {0} Stille am Anfang des Liedes hinzufügen oder {1} Stille am Anfang der Musik entfernen.'
 settings:
   title: Einstellungen
   inputValue: Geben Sie bitte einen numerischen Wert ein
@@ -89,7 +91,12 @@ settings:
   beatNote: Nicht auf Taktfärbung
   mirror: Spiegel
   laneEffect: Fahrbahneffekte
-  resolution: Hohe Auflösung
+  resolution:
+    title: Resolution
+    low: Low
+    medium: Medium
+    high: High
+    ultimate: Ultimate
 favorite:
   title: Favorite
   empty: 'Your Favorite is empty now'
