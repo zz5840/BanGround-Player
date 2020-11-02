@@ -5,7 +5,7 @@ public:
     radioOff: "关"
     cancel: 取消
     ok: 确认
-    dismiss: Dismiss
+    dismiss: 忽略
   language: 语言
   fullscreen:
     title: 全屏
@@ -30,7 +30,7 @@ play:
       official: 官方
       community: 社区
     info:
-      shareLink: 'Share your friend with the link: '
+      shareLink: '通过链接与您的好友分享：'
       name: 歌曲名
       band: 乐队
       singer: 歌手
@@ -52,8 +52,8 @@ play:
   load: 载入信息
   loadFailed: 载入失败，请重试
 share:
-  title: Share
-  desc: Share your local map with your friends or other devices to review it easily.
+  title: 分享
+  desc: 与您的朋友或其他设备分享您的本地谱面以轻松地查看它。
 convert:
   title: 转换谱面
   from: 源谱面格式
@@ -72,7 +72,7 @@ convert:
 space:
   title: 计算留白
   bpm: 第一段BPM
-  offset: Offset Of First Part (seconds)
+  offset: 第一段Offset（秒）
   result: '请添加 {0} 空白到歌曲开头或从歌曲开头删除 {1} 空白'
 settings:
   title: 设置
@@ -91,17 +91,17 @@ settings:
   laneEffect: 轨道特效
   resolution: 高分辨率
 favorite:
-  title: Favorite
-  empty: 'Your Favorite is empty now'
-  faved: 'Song {name} has been add to favorite'
-  deleted: 'Song {name} has been delete from favorite'
-  slideRight: Slide left to delete from favorite
+  title: 收藏夹
+  empty: '您的收藏夹还是空的哦'
+  faved: '歌曲 {name} 已收藏'
+  deleted: '歌曲 {name} 已取消收藏'
+  slideRight: 右滑可以取消收藏哦
 history:
   title: 浏览记录
   showLimit: 仅显示最近100条记录
-  empty: 'Your History is empty now'
+  empty: '您的历史记录还是空的哦'
 announcement:
-  title: Announcements
+  title: 公告
   all: 全部已读
   mark: 标记为已读
 about:
