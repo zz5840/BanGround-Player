@@ -173,11 +173,11 @@
 			/>
 		</q-item>
 		<q-item-label header>
-			{{ $t('settings.resolution') }}
+			{{ $t('settings.resolution.title') }}
 		</q-item-label>
 		<q-item dense>
 			<q-btn-toggle
-				:options="radioOptions"
+				:options="resolutionOptions"
 				class="select-switch-btn full-width"
 				no-caps
 				spread
@@ -211,7 +211,7 @@
 						beatNote: false,
 						mirror: false,
 						laneEffect: false,
-						resolution: false
+						resolution: 1
 					},
 					ui: {
 						autoFullscreen: false
@@ -228,6 +228,14 @@
 			}
 		},
 		computed: {
+			resolutionOptions() {
+				return [
+					{ label: this.$t('settings.resolution.low'), value: 0.75 },
+					{ label: this.$t('settings.resolution.medium'), value: 1 },
+					{ label: this.$t('settings.resolution.high'), value: 1.5 },
+					{ label: this.$t('settings.resolution.ultimate'), value: 2 }
+				];
+			},
 			radioOptions() {
 				return [
 					{ label: this.$t('public.ui.radioOff'), value: false },

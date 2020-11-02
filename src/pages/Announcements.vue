@@ -50,7 +50,7 @@
 	let converter = new showdown.Converter();
 
 	export default {
-		name: 'PageAnnouncement',
+		name: 'PageAnnouncements',
 		data: () => ({
 			announcements: null
 		}),

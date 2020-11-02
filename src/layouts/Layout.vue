@@ -60,7 +60,40 @@
 			<q-scroll-area class="fit">
 				<q-list>
 					<template v-for="(item, index) in menuList">
+						<q-expansion-item :key="index" v-if="item.children">
+							<template v-slot:header>
+								<q-item-section avatar>
+									<q-icon :name="item.icon" />
+								</q-item-section>
+								<q-item-section>
+									{{ $t(item.name + '.title') }}
+								</q-item-section>
+							</template>
+							<template v-for="(v, i) in item.children">
+								<q-item
+									:key="i"
+									clickable
+									:to="v.to"
+									exact
+									active-class="drawer-active text-primary"
+									style="padding-left: 28px"
+									v-ripple
+								>
+									<q-item-section avatar>
+										<q-icon :name="v.icon" />
+									</q-item-section>
+									<q-item-section>
+										{{ $t(`${item.name}.${v.name}.title`) }}
+									</q-item-section>
+								</q-item>
+								<q-separator
+									:key="'sep' + index + '-' + i"
+									v-if="v.separator"
+								/>
+							</template>
+						</q-expansion-item>
 						<q-item
+							v-else
 							:key="index"
 							clickable
 							:to="item.to"
@@ -69,7 +102,7 @@
 							v-ripple
 						>
 							<q-item-section avatar>
-								<q-icon :name="item.icon" color="" />
+								<q-icon :name="item.icon" />
 							</q-item-section>
 							<q-item-section>
 								{{ $t(item.name + '.title') }}
@@ -121,7 +154,24 @@
 					{
 						icon: 'mdi-share-variant',
 						name: 'share',
-						to: '/share',
+						to: '/share'
+					},
+					{
+						icon: 'mdi-tools',
+						name: 'tools',
+						to: '/tools',
+						children: [
+							{
+								icon: 'mdi-file-swap',
+								name: 'convert',
+								to: '/tools/convert'
+							},
+							{
+								icon: 'mdi-keyboard-space',
+								name: 'calc',
+								to: '/tools/calculate'
+							}
+						],
 						separator: true
 					},
 					{
@@ -143,7 +193,7 @@
 					{
 						icon: 'mdi-bell',
 						name: 'announcement',
-						to: '/announcement'
+						to: '/announcements'
 					},
 					{
 						icon: 'mdi-information',

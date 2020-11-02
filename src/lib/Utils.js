@@ -1,16 +1,16 @@
 import { LocalStorage } from 'quasar';
 import screenfull from 'screenfull';
 
-export function accurateFloat (num, precision = 15) {
+export function accurateFloat(num, precision = 15) {
 	return parseFloat(num.toPrecision(precision));
 }
 
-export function changeLanguage ($, lang) {
+export function changeLanguage($, lang) {
 	$.$i18n.locale = lang;
 	LocalStorage.set('lang', lang);
 }
 
-export async function fullscreen ($this) {
+export async function fullscreen($this) {
 	if (screenfull.isEnabled) {
 		if (!screenfull.isFullscreen) {
 			try {
@@ -37,7 +37,7 @@ export async function fullscreen ($this) {
  * @param {FileList} file
  * @param {string} type text/dataurl/arraybuffer
  */
-export function readFile (file, type = 'text') {
+export function readFile(file, type = 'text') {
 	return new Promise(resolve => {
 		const reader = new FileReader();
 		reader.onload = e => {
@@ -78,4 +78,13 @@ let difficultyText = {
 	4: 'Special'
 };
 
-export { languages, difficultyText };
+const COMMIT_ID = process.env.COMMIT_ID;
+
+const APP_VERSION = process.env.APP_VERSION;
+
+export {
+	languages,
+	difficultyText,
+	COMMIT_ID,
+	APP_VERSION
+};

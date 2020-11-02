@@ -1,5 +1,9 @@
 <template>
 	<q-page>
+		<div>
+
+		</div>
+		<!-- game canvas insert -->
 		<div ref="div"></div>
 	</q-page>
 </template>
@@ -20,7 +24,6 @@
 				fullscreen(this);
 			}
 			if (!GameLoadConfig) return;
-			GameConfig.resolution = GameConfig.resolution ? 1.3 : 0.7;
 			let div = this.$refs.div;
 			canvas = document.createElement('canvas');
 			canvas.id = 'game';

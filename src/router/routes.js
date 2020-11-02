@@ -5,10 +5,18 @@ const routes = [
 		children: [
 			{ path: '/', component: () => import('pages/Play.vue') },
 			{ path: '/share', component: () => import('pages/Share.vue') },
+			{
+				path: '/tools',
+				component: () => import('pages/Tools.vue'),
+				children: [
+					{ path: '/tools/convert', component: () => import('pages/Tools/Convert.vue') },
+					{ path: '/tools/calculate', component: () => import('pages/Tools/Calculate.vue') }
+				]
+			},
 			{ path: '/favorite', component: () => import('pages/Favorite.vue') },
 			{ path: '/history', component: () => import('pages/History.vue') },
 			{ path: '/settings', component: () => import('pages/Settings.vue') },
-			{ path: '/announcement', component: () => import('pages/Announcement.vue') },
+			{ path: '/announcements', component: () => import('pages/Announcements.vue') },
 			{ path: '/about', component: () => import('pages/About.vue') }
 			// { path: '/play', component: () => import('pages/Play.vue') }
 		]

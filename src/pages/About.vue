@@ -13,6 +13,19 @@
 			>
 		</p>
 		<p class="text-body2">
+			Version:
+			<a
+				:href="
+					`https://github.com/zz5840/BanGround-Player/tree/${
+						commit !== 'dev' ? commit : 'v2'
+					}`
+				"
+				target="_blank"
+				class="link"
+			>{{ version }}@{{ commit }}</a
+			>
+		</p>
+		<p class="text-body2">
 			Developed By
 			<a class="link" href="https://github.com/zz5840" target="_blank"
 				>QingFu(@zz5840)</a
@@ -37,16 +50,25 @@
 			>
 		</p>
 		<p class="text-body2">
-			Special Thanks to
+			Special thanks to
 			<a class="link" href="https://bestdori.com/" target="_blank"
 				>Bestdori!</a
-			> and all translators.
+			>
+			and all translators.
 		</p>
 	</q-page>
 </template>
 
 <script>
+	import { COMMIT_ID, APP_VERSION } from 'src/lib/Utils';
+
 	export default {
-		name: 'PageAbout'
+		name: 'PageAbout',
+		data() {
+			return {
+				version: APP_VERSION,
+				commit: COMMIT_ID
+			};
+		}
 	};
 </script>

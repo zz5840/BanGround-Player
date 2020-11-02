@@ -1,5 +1,6 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
+const webpack = require('webpack');
 
 module.exports = function (ctx) {
 	return {
@@ -58,6 +59,10 @@ module.exports = function (ctx) {
 			showProgress: true,
 			gzip: false,
 			analyze: false,
+			env: {
+				COMMIT_ID: process.env.COMMIT_ID || 'dev',
+				APP_VERSION: require('./package.json').version
+			},
 			// Options below are automatically set depending on the env, set them if you want to override
 			// preloadChunks: false,
 			// extractCSS: false,

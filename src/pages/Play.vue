@@ -4,7 +4,7 @@
 			<template v-slot:avatar>
 				<q-icon name="mdi-information" color="white" />
 			</template>
-			You are visiting BanGround Player v2 and it's still under early development now. And the current version if only for tranlation, so if you find bugs in the site, please DON'T report to me and wait for release version.
+			You are visiting BanGround Player v2 and it's still under early development now. And the current version is only for translation, so if you find bugs in the site, please DON'T report to me and wait for a stable release version.
 		</q-banner>
 		<!-- 谱面来源 -->
 		<q-field :label="$t('play.mapSource')" borderless stack-label>
