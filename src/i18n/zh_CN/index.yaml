@@ -55,7 +55,7 @@ share:
   title: 分享
   desc: 与您的朋友或其他设备分享您的本地谱面以轻松地查看它。
 tools:
-  title: Tools
+  title: 工具
   convert:
     title: 转换谱面
     from: 源谱面格式
@@ -72,9 +72,9 @@ tools:
       laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用'
       noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
   calc:
-    title: Calculate
+    title: 计算空白
     bpm: 第一段BPM
-    offset: Offset Of First Part (seconds)
+    offset: 第一段Offset（秒）
     result: '请添加 {0} 空白到歌曲开头或从歌曲开头删除 {1} 空白'
 settings:
   title: 设置
@@ -92,11 +92,11 @@ settings:
   mirror: 镜像
   laneEffect: 轨道特效
   resolution:
-    title: Resolution
-    low: Low
-    medium: Medium
-    high: High
-    ultimate: Ultimate
+    title: 分辨率
+    low: 低
+    medium: 中
+    high: 高
+    ultimate: 极致
 favorite:
   title: 收藏夹
   empty: '您的收藏夹还是空的哦'
