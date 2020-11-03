@@ -1,7 +1,7 @@
 ---
 public:
-  radioOn: Вкл.
-  radioOff: Выкл.
+  radioOn: "Вкл."
+  radioOff: "Выкл."
   cancel: Отмена
   ok: Ок
   language: Язык
