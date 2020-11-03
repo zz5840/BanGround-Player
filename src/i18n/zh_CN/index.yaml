@@ -51,6 +51,10 @@ play:
   start: 开始
   load: 载入信息
   loadFailed: 载入失败，请重试
+game:
+  nullRecords: There's no any records now.
+  back: Back To Home
+  recorded: You score was recorded, please view it at {link} page.
 share:
   title: 分享
   desc: 与您的朋友或其他设备分享您的本地谱面以轻松地查看它。
