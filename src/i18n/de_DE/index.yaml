@@ -1,7 +1,7 @@
 ---
 public:
-  radioOn: An
-  radioOff: Aus
+  radioOn: "An"
+  radioOff: "Aus"
   cancel: Abbrechen
   ok: Ok
   language: Sprache
