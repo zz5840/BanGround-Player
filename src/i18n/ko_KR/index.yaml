@@ -54,26 +54,28 @@ play:
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.
-convert:
-  title: 변환
-  from: 변환전 파일의 종류
-  to: 변환후 파일 종류
-  fileInput: 채보 파일
-  noInput: 채보 파일을 선택해주세요.
-  convertResult: 변환 결과
-  succeeded: 변환에 성공했습니다.
-  download: 다운로드
-  serious: 정말로요?
-  convert: 변환
-  error:
-    multiTap: '{time} 에서 중복의 노트를 발견했습니다. 이것은 Bestdori가 지원하지 않는 것이므로 수정해야합니다.'
-    laneInvalid: '슬라이드 변환중 문제가 발생했습니다 ：{time}의 라인 {pos}에서 문제발생.'
-    noStart: '슬라이드 변환중 문제가 발생했습니다 ：{time}의 슬라이드의 시작점이 존재하지 않습니다.'
-space:
-  title: 싱크 계산
-  bpm: 초기 BPM
-  offset: Offset Of First Part (seconds)
-  result: '곡(曲)의 시작부분에 {0} 만큼 공백을 추가하거나, {1} 만큼 공백을 줄일수있습니다.'
+tools:
+  title: Tools
+  convert:
+    title: 변환
+    from: 변환전 파일의 종류
+    to: 변환후 파일 종류
+    fileInput: 채보 파일
+    noInput: 채보 파일을 선택해주세요.
+    convertResult: 변환 결과
+    succeeded: 변환에 성공했습니다.
+    download: 다운로드
+    serious: 정말로요?
+    convert: 변환
+    error:
+      multiTap: '{time} 에서 중복의 노트를 발견했습니다. 이것은 Bestdori가 지원하지 않는 것이므로 수정해야합니다.'
+      laneInvalid: '슬라이드 변환중 문제가 발생했습니다 ：{time}의 라인 {pos}에서 문제발생.'
+      noStart: '슬라이드 변환중 문제가 발생했습니다 ：{time}의 슬라이드의 시작점이 존재하지 않습니다.'
+  calc:
+    title: Calculate
+    bpm: 초기 BPM
+    offset: Offset Of First Part (seconds)
+    result: '곡(曲)의 시작부분에 {0} 만큼 공백을 추가하거나, {1} 만큼 공백을 줄일수있습니다.'
 settings:
   title: 설정
   inputValue: 값을 입력해 주세요
@@ -89,7 +91,12 @@ settings:
   beatNote: 리듬 색각 서포트
   mirror: 반전
   laneEffect: 터치 이펙트
-  resolution: 고 해상도
+  resolution:
+    title: Resolution
+    low: Low
+    medium: Medium
+    high: High
+    ultimate: Ultimate
 favorite:
   title: Favorite
   empty: 'Your Favorite is empty now'

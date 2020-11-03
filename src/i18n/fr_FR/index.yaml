@@ -54,26 +54,28 @@ play:
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.
-convert:
-  title: Convertir
-  from: Map Format Originale
-  to: Target Map Format
-  fileInput: Fichier de la Map
-  noInput: Veuillez selectionner un fichier ou insérer une map avant
-  convertResult: Convertion de Resultat
-  succeeded: Votre graphique a été converti avec succès, veuillez le copier ou télécharger
-  download: Telechargé
-  serious: Etes vous serieux?
-  convert: Convertir
-  error:
-    multiTap: 'Trouver multi tap en {time},veuillez modifier ou ressayer parceque Bestodori ne le supporte pas en ce momentt.'
-    laneInvalid: 'Erreur lors de la conversion de la slide: lane {pos} est occupé en {time}.'
-    noStart: 'Erreur lors de la convertion de la slide: slide (ou flick) n''a pas de note de départ à {time}.'
-space:
-  title: Calc
-  bpm: BPM pour la premiére partie
-  offset: Offset Of First Part (seconds)
-  result: 'Vous pouvez ajouter {0} silence au débute de la chanson ou supprimer {1} silence au debut de la musique'
+tools:
+  title: Tools
+  convert:
+    title: Convertir
+    from: Map Format Originale
+    to: Target Map Format
+    fileInput: Fichier de la Map
+    noInput: Veuillez selectionner un fichier ou insérer une map avant
+    convertResult: Convertion de Resultat
+    succeeded: Votre graphique a été converti avec succès, veuillez le copier ou télécharger
+    download: Telechargé
+    serious: Etes vous serieux?
+    convert: Convertir
+    error:
+      multiTap: 'Trouver multi tap en {time},veuillez modifier ou ressayer parceque Bestodori ne le supporte pas en ce momentt.'
+      laneInvalid: 'Erreur lors de la conversion de la slide: lane {pos} est occupé en {time}.'
+      noStart: 'Erreur lors de la convertion de la slide: slide (ou flick) n''a pas de note de départ à {time}.'
+  calc:
+    title: Calculate
+    bpm: BPM pour la premiére partie
+    offset: Offset Of First Part (seconds)
+    result: 'Vous pouvez ajouter {0} silence au débute de la chanson ou supprimer {1} silence au debut de la musique'
 settings:
   title: Réglages
   inputValue: Veuillez insérer une valeur
@@ -89,7 +91,12 @@ settings:
   beatNote: Off-Beat Coloring
   mirror: Miroir
   laneEffect: Lane Effects
-  resolution: Haute Resolution
+  resolution:
+    title: Resolution
+    low: Low
+    medium: Medium
+    high: High
+    ultimate: Ultimate
 favorite:
   title: Favorite
   empty: 'Your Favorite is empty now'
