@@ -4,6 +4,7 @@ const routes = [
 		component: () => import('layouts/Layout.vue'),
 		children: [
 			{ path: '/', component: () => import('pages/Play.vue') },
+			{ path: '/game', component: () => import('pages/Game.vue') },
 			{ path: '/share', component: () => import('pages/Share.vue') },
 			{
 				path: '/tools',

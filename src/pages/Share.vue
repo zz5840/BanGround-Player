@@ -110,15 +110,15 @@
 					};
 				}),
 				form: {
-					type: 'bbb2',
+					type: null,
 					mapFile: null,
 					mapSourceCode: null,
 					music: null,
 					songName: null,
-					author: '',
+					author: null,
 					difficulty: null,
 					level: null,
-					artists: ''
+					artists: null
 				}
 			};
 		}
