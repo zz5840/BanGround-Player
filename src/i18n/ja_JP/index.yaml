@@ -51,6 +51,10 @@ play:
   start: プレイ
   load: 譜面をロードする
   loadFailed: 譜面のロードに失敗しました。もう一度お試しください。
+game:
+  nullRecords: There's no any records now.
+  back: Back To Home
+  recorded: You score was recorded, please view it at {link} page.
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.
