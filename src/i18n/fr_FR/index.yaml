@@ -51,6 +51,10 @@ play:
   start: Commencer
   load: Charger l'info de Map
   loadFailed: Impossible de chargé l'info de Map, veuillez ressayer
+game:
+  nullRecords: There's no any records now.
+  back: Back To Home
+  recorded: You score was recorded, please view it at {link} page.
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.

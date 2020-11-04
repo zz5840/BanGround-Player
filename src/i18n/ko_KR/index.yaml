@@ -51,6 +51,10 @@ play:
   start: 시작
   load: 불러오기
   loadFailed: 불러오기 오류. 다시 시도해주세요
+game:
+  nullRecords: There's no any records now.
+  back: Back To Home
+  recorded: You score was recorded, please view it at {link} page.
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.

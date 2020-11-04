@@ -51,6 +51,10 @@ play:
   start: 开始
   load: 载入信息
   loadFailed: 载入失败，请重试
+game:
+  nullRecords: 目前没有任何记录。
+  back: 回到首页
+  recorded: 您的分数已被记录，请在 {link} 页面查看。
 share:
   title: 分享
   desc: 与您的朋友或其他设备分享您的本地谱面以轻松地查看它。
