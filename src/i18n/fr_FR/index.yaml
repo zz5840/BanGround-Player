@@ -1,8 +1,8 @@
 ---
 public:
   ui:
-    radioOn: "Activé"
-    radioOff: "Désactivé"
+    radioOn: 'Activé'
+    radioOff: 'Désactivé'
     cancel: Annuler
     ok: OK
     dismiss: Dismiss
@@ -55,6 +55,9 @@ game:
   nullRecords: There's no any records now.
   back: Back To Home
   recorded: You score was recorded, please view it at {link} page.
+records:
+  title: Records
+  score: Score
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.
@@ -72,9 +75,9 @@ tools:
     serious: Etes vous serieux?
     convert: Convertir
     error:
-      multiTap: 'Trouver multi tap en {time},veuillez modifier ou ressayer parceque Bestodori ne le supporte pas en ce momentt.'
+      multiTap: "Trouver multi tap en {time},veuillez modifier ou ressayer parceque Bestodori ne le supporte pas en ce momentt."
       laneInvalid: 'Erreur lors de la conversion de la slide: lane {pos} est occupé en {time}.'
-      noStart: 'Erreur lors de la convertion de la slide: slide (ou flick) n''a pas de note de départ à {time}.'
+      noStart: "Erreur lors de la convertion de la slide: slide (ou flick) n'a pas de note de départ à {time}."
   calc:
     title: Calculate
     bpm: BPM pour la premiére partie
