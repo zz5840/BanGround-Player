@@ -1,119 +1,122 @@
 ---
 public:
-  ui:
-    radioOn: "On"
-    radioOff: "Off"
-    cancel: Cancel
-    ok: OK
-    dismiss: Dismiss
-  language: Language
-  fullscreen:
-    title: Full Screen
-    succeeded: Please turn on Auto Rotate and hold the phone horizontally for the best experience
-    failed: Failed to enter full screen mode, please check the permission
-    unsupported: Your browser doesn't support fullscreen
-  guide:
-    title: Welcome
-    selectLanguage: It seems that it's you first time to visit the site, please select you preferred language. You can change it later by tapping the select-language button on the top right of the page.
-    changeSettings: Now, may be you need change some settings to make it fit your playing habits. Of course, you can change them later as well.
-    complete: Nice! You have done all the initial settings, enjoy yourself please!
-    next: Next
-    skip: Skip
+    ui:
+        radioOn: 'On'
+        radioOff: 'Off'
+        cancel: Cancel
+        ok: OK
+        dismiss: Dismiss
+    language: Language
+    fullscreen:
+        title: Full Screen
+        succeeded: Please turn on Auto Rotate and hold the phone horizontally for the best experience
+        failed: Failed to enter full screen mode, please check the permission
+        unsupported: Your browser doesn't support fullscreen
+    guide:
+        title: Welcome
+        selectLanguage: It seems that it's you first time to visit the site, please select you preferred language. You can change it later by tapping the select-language button on the top right of the page.
+        changeSettings: Now, may be you need change some settings to make it fit your playing habits. Of course, you can change them later as well.
+        complete: Nice! You have done all the initial settings, enjoy yourself please!
+        next: Next
+        skip: Skip
 play:
-  title: Play
-  mapSource: Map Source
-  bestdori:
-    mapId: Map ID
-    songId: Song ID
-    type:
-      title: Map Type
-      official: Official
-      community: Community
-    info:
-      shareLink: 'Share your friend with the link: '
-      name: Song Name
-      band: Band
-      singer: Artists
-      difficulty: Difficulty
-      level: Level
-      notes: Notes
-      author: Map Author
-  local:
-    title: Local
-    type: Map Type
-    mapFile: Map File
-    mapSource: Map Source Code
-    mapCover: Map Cover
-    songName:
-      title: Song Name
-      default: Test Map
-    musicFile: Music File
-  start: Start
-  load: Load Map Info
-  loadFailed: Failed to load map info, please try again
+    title: Play
+    mapSource: Map Source
+    bestdori:
+        mapId: Map ID
+        songId: Song ID
+        type:
+            title: Map Type
+            official: Official
+            community: Community
+        info:
+            shareLink: 'Share your friend with the link: '
+            name: Song Name
+            band: Band
+            singer: Artists
+            difficulty: Difficulty
+            level: Level
+            notes: Notes
+            author: Map Author
+    local:
+        title: Local
+        type: Map Type
+        mapFile: Map File
+        mapSource: Map Source Code
+        mapCover: Map Cover
+        songName:
+            title: Song Name
+            default: Test Map
+        musicFile: Music File
+    start: Start
+    load: Load Map Info
+    loadFailed: Failed to load map info, please try again
 game:
-  nullRecords: There's no any records now.
-  back: Back To Home
-  recorded: You score was recorded, please view it at {link} page.
+    nullRecords: There's no any records now.
+    back: Back To Home
+    recorded: You score was recorded, please view it at {link} page.
+records:
+    title: Records
+    score: Score
 share:
-  title: Share
-  desc: Share your local map with your friends or other devices to review it easily.
+    title: Share
+    desc: Share your local map with your friends or other devices to review it easily.
 tools:
-  title: Tools
-  convert:
-    title: Convert
-    from: Original Map Format
-    to: Target Map Format
-    fileInput: Map File
-    noInput: Please select file or input map first
-    convertResult: Convert Result
-    succeeded: Chart has been successfully converted, please copy or download
-    download: Download
-    serious: Are you serious?
-    convert: Convert
-    error:
-      multiTap: 'Find multi tap at {time}, please modify and try again because Bestdori doesn''t support it at present.'
-      laneInvalid: 'Error when converting slide: lane {pos} has been occupied at {time}.'
-      noStart: 'Error when converting slide: slide (or flick) doesn''t have a start note at {time}.'
-  calc:
-    title: Calculate
-    bpm: BPM Of First Part
-    offset: Offset Of First Part (seconds)
-    result: 'You can add {0} silence to the beginning of song or remove {1} silence from the beginning of music'
+    title: Tools
+    convert:
+        title: Convert
+        from: Original Map Format
+        to: Target Map Format
+        fileInput: Map File
+        noInput: Please select file or input map first
+        convertResult: Convert Result
+        succeeded: Chart has been successfully converted, please copy or download
+        download: Download
+        serious: Are you serious?
+        convert: Convert
+        error:
+            multiTap: "Find multi tap at {time}, please modify and try again because Bestdori doesn't support it at present."
+            laneInvalid: 'Error when converting slide: lane {pos} has been occupied at {time}.'
+            noStart: "Error when converting slide: slide (or flick) doesn't have a start note at {time}."
+    calc:
+        title: Calculate
+        bpm: BPM Of First Part
+        offset: Offset Of First Part (seconds)
+        result: 'You can add {0} silence to the beginning of song or remove {1} silence from the beginning of music'
 settings:
-  title: Settings
-  inputValue: Please Input Value
-  autoFullscreen: Auto Fullscreen
-  speed: Note Speed
-  noteScale: Note Size
-  judgeOffset: Judge Offset
-  visualOffset: Visual Offset
-  barOpacity: Long Note Transparency
-  effectVolume: Note SE Volume
-  backgroundDim: Background Image Transparency
-  showSimLine: Dual Tap Line
-  beatNote: Off-Beat Coloring
-  mirror: Mirror
-  laneEffect: Lane Effects
-  resolution:
-    title: Resolution
-    low: Low
-    medium: Medium
-    high: High
-    ultimate: Ultimate
+    title: Settings
+    inputValue: Please Input Value
+    autoFullscreen: Auto Fullscreen
+    speed: Note Speed
+    noteScale: Note Size
+    judgeOffset: Judge Offset
+    visualOffset: Visual Offset
+    barOpacity: Long Note Transparency
+    effectVolume: Note SE Volume
+    backgroundDim: Background Image Transparency
+    showSimLine: Dual Tap Line
+    beatNote: Off-Beat Coloring
+    mirror: Mirror
+    laneEffect: Lane Effects
+    resolution:
+        title: Resolution
+        low: Low
+        medium: Medium
+        high: High
+        ultimate: Ultimate
 favorite:
-  title: Favorite
-  empty: 'Your Favorite is empty now'
-  faved: 'Song {name} has been add to favorite'
-  deleted: 'Song {name} has been delete from favorite'
-  slideRight: Slide left to delete from favorite
+    title: Favorite
+    empty: 'Your Favorite is empty now'
+    faved: 'Song {name} has been add to favorite'
+    deleted: 'Song {name} has been delete from favorite'
+    slideRight: Slide left to delete from favorite
 history:
-  title: History
-  showLimit: Only recent 100 records will be shown
-  empty: 'Your History is empty now'
+    title: History
+    showLimit: Only recent 100 records will be shown
+    empty: 'Your History is empty now'
 announcement:
-  title: Announcements
-  all: Mark all as read
-  mark: Mark as read
+    title: Announcements
+    all: Mark all as read
+    mark: Mark as read
 about:
-  title: About
+    title: About

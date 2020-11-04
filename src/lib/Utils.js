@@ -78,6 +78,12 @@ let difficultyText = {
 	4: 'Special'
 };
 
+let recordTypeText = {
+	0: 'Clear',
+	1: 'Full Combo',
+	2: 'All Perfect'
+};
+
 const COMMIT_ID = process.env.COMMIT_ID;
 
 const APP_VERSION = process.env.APP_VERSION;
@@ -85,6 +91,7 @@ const APP_VERSION = process.env.APP_VERSION;
 export {
 	languages,
 	difficultyText,
+	recordTypeText,
 	COMMIT_ID,
 	APP_VERSION
 };

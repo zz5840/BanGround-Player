@@ -175,6 +175,11 @@
 						separator: true
 					},
 					{
+						icon: 'mdi-format-list-bulleted',
+						name: 'records',
+						to: '/records'
+					},
+					{
 						icon: 'mdi-heart',
 						name: 'favorite',
 						to: '/favorite'

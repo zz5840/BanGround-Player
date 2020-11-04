@@ -14,6 +14,7 @@ const routes = [
 					{ path: '/tools/calculate', component: () => import('pages/Tools/Calculate.vue') }
 				]
 			},
+			{ path: '/records', component: () => import('pages/Records.vue') },
 			{ path: '/favorite', component: () => import('pages/Favorite.vue') },
 			{ path: '/history', component: () => import('pages/History.vue') },
 			{ path: '/settings', component: () => import('pages/Settings.vue') },

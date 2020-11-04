@@ -12,56 +12,11 @@
 					$t('records.title')
 				}}</router-link>
 			</i18n>
-			<q-markup-table v-for="(v, i) in records" :key="i">
-				<tbody v-if="$q.screen.sm">
-					<tr>
-						<th>Perfect</th>
-						<th>Great</th>
-						<th>Good</th>
-						<th>Bad</th>
-						<th>Miss</th>
-						<th>Max Combo</th>
-						<th rowspan="2">Full Combo <br />All Perfect</th>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>1</td>
-					</tr>
-				</tbody>
-				<tbody v-else>
-					<tr>
-						<td class="text-bold">Perfect</td>
-						<td>1</td>
-					</tr>
-					<tr>
-						<td class="text-bold">Great</td>
-						<td>1</td>
-					</tr>
-					<tr>
-						<td class="text-bold">Good</td>
-						<td>1</td>
-					</tr>
-					<tr>
-						<td class="text-bold">Bad</td>
-						<td>1</td>
-					</tr>
-					<tr>
-						<td class="text-bold">Miss</td>
-						<td>1</td>
-					</tr>
-					<tr>
-						<td class="text-bold">Max Combo</td>
-						<td>1</td>
-					</tr>
-					<tr>
-						<td colspan="2">Full Combo</td>
-					</tr>
-				</tbody>
-			</q-markup-table>
+			<record-item
+				v-for="(v, i) in records"
+				:key="i"
+				:data="v"
+			></record-item>
 		</div>
 		<q-btn
 			:label="$t('game.back')"
@@ -75,6 +30,7 @@
 
 <script>
 	import * as BangGame from 'bangbangboom-game';
+	import RecordItem from 'components/Records/RecordItem.vue';
 	import { fullscreen } from 'src/lib/Utils';
 
 	let game = null;
@@ -82,9 +38,21 @@
 
 	export default {
 		name: 'PageGame',
+		components: { RecordItem },
 		data() {
 			return {
-				records: [1]
+				records: [
+					{
+						perfect: 114,
+						great: 0,
+						good: 0,
+						bad: 0,
+						miss: 514,
+						maxCombo: 10,
+						score: 19198,
+						type: 0
+					}
+				]
 			};
 		},
 		methods: {
@@ -112,7 +80,6 @@
 			game.start();
 			game.ondestroyed = () => {
 				div.removeChild(canvas);
-				this.$router.go(-1);
 			};
 		},
 		beforeDestroy() {
