@@ -109,7 +109,7 @@ favorite:
   empty: '您的收藏夹还是空的哦'
   faved: '歌曲 {name} 已收藏'
   deleted: '歌曲 {name} 已取消收藏'
-  slideRight: 右滑可以取消收藏哦
+  slideRight: 左滑可以取消收藏哦
 history:
   title: 浏览记录
   showLimit: 仅显示最近100条记录
