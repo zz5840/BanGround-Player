@@ -53,8 +53,8 @@ play:
   loadFailed: 载入失败，请重试
 game:
   nullRecords: 目前没有任何记录。
+  viewAll: View All Records
   back: 回到首页
-  recorded: 您的分数已被记录，请在 {link} 页面查看。
 records:
   title: 记录
   score: 得分
