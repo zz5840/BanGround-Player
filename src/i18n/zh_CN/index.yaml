@@ -1,8 +1,8 @@
 ---
 public:
   ui:
-    radioOn: "开"
-    radioOff: "关"
+    radioOn: '开'
+    radioOff: '关'
     cancel: 取消
     ok: 确认
     dismiss: 忽略
@@ -55,6 +55,9 @@ game:
   nullRecords: 目前没有任何记录。
   back: 回到首页
   recorded: 您的分数已被记录，请在 {link} 页面查看。
+records:
+  title: 记录
+  score: 得分
 share:
   title: 分享
   desc: 与您的朋友或其他设备分享您的本地谱面以轻松地查看它。
@@ -72,9 +75,9 @@ tools:
     serious: 你是沙雕吗？
     convert: 转换谱面
     error:
-      multiTap: '在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。'
+      multiTap: "在{time}处发现多押，由于目前Bestdori未支持多押，请修改后再次尝试。"
       laneInvalid: '滑条转换出错：{time}处轨道{pos}已被占用'
-      noStart: '滑条转换出错：{time}处滑条（滑键）没有起始note'
+      noStart: "滑条转换出错：{time}处滑条（滑键）没有起始note"
   calc:
     title: 计算空白
     bpm: 第一段BPM
@@ -106,7 +109,7 @@ favorite:
   empty: '您的收藏夹还是空的哦'
   faved: '歌曲 {name} 已收藏'
   deleted: '歌曲 {name} 已取消收藏'
-  slideRight: 右滑可以取消收藏哦
+  slideRight: 左滑可以取消收藏哦
 history:
   title: 浏览记录
   showLimit: 仅显示最近100条记录
