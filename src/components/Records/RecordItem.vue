@@ -1,6 +1,6 @@
 <template>
-	<q-markup-table>
-		<tbody v-if="$q.screen.sm">
+	<q-markup-table flat style="bg-transparent">
+		<tbody v-if="$q.screen.sm" class="text-center">
 			<tr>
 				<th>Perfect</th>
 				<th>Great</th>
@@ -9,9 +9,6 @@
 				<th>Miss</th>
 				<th>Max Combo</th>
 				<th>{{ $t('records.score') }}</th>
-				<td rowspan="2" class="text-bold">
-					{{ recordTypeText[data.type] }}
-				</td>
 			</tr>
 			<tr>
 				<td>{{ data.perfect }}</td>
@@ -21,6 +18,11 @@
 				<td>{{ data.miss }}</td>
 				<td>{{ data.maxCombo }}</td>
 				<td>{{ data.score }}</td>
+			</tr>
+			<tr>
+				<td colspan="7" class="text-bold text-center">
+					{{ recordTypeText[data.type] }}
+				</td>
 			</tr>
 		</tbody>
 		<tbody v-else>
@@ -53,7 +55,7 @@
 				<td>{{ data.score }}</td>
 			</tr>
 			<tr>
-				<td class="text-bold" colspan="2">
+				<td class="text-bold text-center" colspan="2">
 					{{ recordTypeText[data.type] }}
 				</td>
 			</tr>

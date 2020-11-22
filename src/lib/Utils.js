@@ -1,35 +1,34 @@
 import { LocalStorage } from 'quasar';
 import screenfull from 'screenfull';
+import { i18n } from 'boot/i18n';
 
 export function accurateFloat(num, precision = 15) {
 	return parseFloat(num.toPrecision(precision));
 }
 
-export function changeLanguage($, lang) {
-	$.$i18n.locale = lang;
+export function changeLanguage(lang) {
+	i18n.locale = lang;
 	LocalStorage.set('lang', lang);
 }
 
-export async function fullscreen($this) {
+export async function toggleFullscreen() {
 	if (screenfull.isEnabled) {
 		if (!screenfull.isFullscreen) {
-			try {
-				await screenfull.request();
-				$this.$q.notify({
-					message: $this.$t('public.fullscreen.succeeded')
-				});
-			} catch {
-				$this.$q.notify({
-					message: $this.$t('public.fullscreen.failed')
-				});
-			}
+			return fullscreen();
 		} else {
 			await screenfull.exit();
 		}
 	} else {
-		$this.$q.notify({
-			message: $this.$t('public.fullscreen.unsupported')
-		});
+		return 'unsupported';
+	}
+}
+
+export async function fullscreen() {
+	try {
+		await screenfull.request();
+		return 'succeeded';
+	} catch {
+		return 'failed';
 	}
 }
 
@@ -79,7 +78,7 @@ let difficultyText = {
 };
 
 let recordTypeText = {
-	0: 'Clear',
+	0: 'Cleared',
 	1: 'Full Combo',
 	2: 'All Perfect'
 };

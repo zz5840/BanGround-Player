@@ -2,6 +2,19 @@
 body
 	background: $grey-1;
 
+// TODO change colors
+$colors = {
+	easy: #8eb4fd,
+	normal: #a6f692,
+	hard: #fbdf8c,
+	expert: #ff898b,
+	special: #f383cb
+};
+
+for diff, color in $colors
+	.bg-{diff}
+		background-color: color;
+
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {
 	width 4px

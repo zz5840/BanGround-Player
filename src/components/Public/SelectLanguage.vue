@@ -1,6 +1,11 @@
 <template>
 	<q-dialog position="bottom" v-model="dialog">
-		<q-list bordered class="rounded-borders bg-white" padding style="min-width: 350px">
+		<q-list
+			bordered
+			class="rounded-borders bg-white"
+			padding
+			style="min-width: 350px"
+		>
 			<q-item-label header>{{ $t('public.language') }}</q-item-label>
 			<q-item
 				:key="i"
@@ -8,7 +13,8 @@
 				clickable
 				v-for="(item, i) in list"
 				v-model="lang"
-				v-ripple>
+				v-ripple
+			>
 				<q-item-section>{{ item.label }}</q-item-section>
 			</q-item>
 		</q-list>
@@ -35,17 +41,17 @@
 			lang: 'en'
 		}),
 		methods: {
-			changeLanguage (val) {
-				changeLanguage(this, val);
+			changeLanguage(val) {
+				changeLanguage(val);
 				this.dialog = false;
 			}
 		},
 		computed: {
 			dialog: {
-				get () {
+				get() {
 					return this.show;
 				},
-				set (val) {
+				set(val) {
 					this.$emit('change', val);
 				}
 			}
@@ -53,6 +59,4 @@
 	};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
