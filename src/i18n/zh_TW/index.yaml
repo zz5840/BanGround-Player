@@ -1,8 +1,8 @@
 ---
 public:
   ui:
-    radioOn: "開"
-    radioOff: "關"
+    radioOn: '開'
+    radioOff: '關'
     cancel: 取消
     ok: 確認
     dismiss: Dismiss
@@ -53,8 +53,11 @@ play:
   loadFailed: 載入失敗，請重試
 game:
   nullRecords: There's no any records now.
+  viewAll: View All Records
   back: Back To Home
-  recorded: You score was recorded, please view it at {link} page.
+records:
+  title: Records
+  score: Score
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.
@@ -72,9 +75,9 @@ tools:
     serious: 你是沙雕嗎？
     convert: 轉換譜面
     error:
-      multiTap: '在{time}發現多壓，由於目前Bestdori不支援多壓，請修改後再試一次'
+      multiTap: "在{time}發現多壓，由於目前Bestdori不支援多壓，請修改後再試一次"
       laneInvalid: '滑條轉換錯誤，{time}處第{pos}道已被占用'
-      noStart: '滑條轉換錯誤，{time}處滑條（滑鍵）沒有起始拍點'
+      noStart: "滑條轉換錯誤，{time}處滑條（滑鍵）沒有起始拍點"
   calc:
     title: Calculate
     bpm: 第一段BPM
