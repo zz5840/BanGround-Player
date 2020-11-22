@@ -1,8 +1,8 @@
 ---
 public:
   ui:
-    radioOn: "An"
-    radioOff: "Aus"
+    radioOn: 'An'
+    radioOff: 'Aus'
     cancel: Abbrechen
     ok: Ok
     dismiss: Dismiss
@@ -53,8 +53,11 @@ play:
   loadFailed: Karteninfo nicht geladen, bitte versuchen Sie es erneut
 game:
   nullRecords: There's no any records now.
+  viewAll: View All Records
   back: Back To Home
-  recorded: You score was recorded, please view it at {link} page.
+records:
+  title: Records
+  score: Score
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.
@@ -72,9 +75,9 @@ tools:
     serious: Ist das Ihr Ernst?
     convert: Konvertieren
     error:
-      multiTap: 'Multi-Tap finden Sie unter {time}, bitte modifizieren Sie es und versuchen Sie es noch einmal, da Bestdori es zur Zeit nicht unterstützt.'
+      multiTap: "Multi-Tap finden Sie unter {time}, bitte modifizieren Sie es und versuchen Sie es noch einmal, da Bestdori es zur Zeit nicht unterstützt."
       laneInvalid: 'Fehler bei der Konvertierung des Dias: die Spur {pos} wurde zum Zeitpunkt {time} belegt.'
-      noStart: 'Fehler beim Konvertieren von Folie: Folie, oder Flick, hat keine Startnotiz bei {time}.'
+      noStart: "Fehler beim Konvertieren von Folie: Folie, oder Flick, hat keine Startnotiz bei {time}."
   calc:
     title: Calculate
     bpm: BPM des ersten Teils
