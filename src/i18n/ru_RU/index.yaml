@@ -1,8 +1,8 @@
 ---
 public:
   ui:
-    radioOn: "Вкл."
-    radioOff: "Выкл."
+    radioOn: 'Вкл.'
+    radioOff: 'Выкл.'
     cancel: Отмена
     ok: Ок
     dismiss: Dismiss
@@ -53,8 +53,11 @@ play:
   loadFailed: Не удалось загрузить данные карты. Пожалуйста, попробуйте ещё раз.
 game:
   nullRecords: There's no any records now.
+  viewAll: View All Records
   back: Back To Home
-  recorded: You score was recorded, please view it at {link} page.
+records:
+  title: Records
+  score: Score
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.
@@ -72,9 +75,9 @@ tools:
     serious: Ты серьёзно?
     convert: Конвертировать
     error:
-      multiTap: 'Найден мульти тап на участке: {time}. Пожалуйста, отредактируйте карту ибо Bestdori не умеет с ними работать.'
+      multiTap: "Найден мульти тап на участке: {time}. Пожалуйста, отредактируйте карту ибо Bestdori не умеет с ними работать."
       laneInvalid: 'Ошибка при конвертировании слайдера: линия {pos} была занята на участке: {time}.'
-      noStart: 'Ошибка при конвертировании слайдера: слайдер (или флик) не имеет начальной ноты на участке: {time}.'
+      noStart: "Ошибка при конвертировании слайдера: слайдер (или флик) не имеет начальной ноты на участке: {time}."
   calc:
     title: Calculate
     bpm: BPM первой части
