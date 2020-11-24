@@ -53,7 +53,7 @@ play:
   loadFailed: 载入失败，请重试
 game:
   nullRecords: 目前没有任何记录。
-  viewAll: View All Records
+  viewAll: 查看所有记录
   back: 回到首页
 records:
   title: 记录
