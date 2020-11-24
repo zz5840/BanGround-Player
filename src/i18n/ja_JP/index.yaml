@@ -1,8 +1,8 @@
 ---
 public:
   ui:
-    radioOn: "オン"
-    radioOff: "オフ"
+    radioOn: 'オン'
+    radioOff: 'オフ'
     cancel: キャンセル
     ok: OK
     dismiss: Dismiss
@@ -53,8 +53,11 @@ play:
   loadFailed: 譜面のロードに失敗しました。もう一度お試しください。
 game:
   nullRecords: There's no any records now.
+  viewAll: View All Records
   back: Back To Home
-  recorded: You score was recorded, please view it at {link} page.
+records:
+  title: Records
+  score: Score
 share:
   title: Share
   desc: Share your local map with your friends or other devices to review it easily.
@@ -72,9 +75,9 @@ tools:
     serious: 冗談ですか？
     convert: 譜面を変換する
     error:
-      multiTap: '{time} で複数のスライドを発見しました。これはBestdoriではサポートされていませんので、修正してください。'
+      multiTap: "{time} で複数のスライドを発見しました。これはBestdoriではサポートされていませんので、修正してください。"
       laneInvalid: 'スライドの変換中にエラーが発生しました： {time}でレーン{pos}が占有されました。'
-      noStart: 'スライドの変換中にエラーが発生しました： {time}のスライドの開始点が見つかりません。'
+      noStart: "スライドの変換中にエラーが発生しました： {time}のスライドの開始点が見つかりません。"
   calc:
     title: Calculate
     bpm: 最初の部分のBPM
