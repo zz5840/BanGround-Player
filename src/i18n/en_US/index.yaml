@@ -53,8 +53,8 @@ play:
     loadFailed: Failed to load map info, please try again
 game:
     nullRecords: There's no any records now.
+    viewAll: View All Records
     back: Back To Home
-    recorded: You score was recorded, please view it at {link} page.
 records:
     title: Records
     score: Score

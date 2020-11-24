@@ -1,28 +1,44 @@
 <template>
-	<q-page class="q-pt-md q-pb-lg text-center">
-		<p class="text-h6">Song Name</p>
-		<p class="text-subtitle2">Artists</p>
-		<p>Expert 26</p>
-		<p v-if="records.length === 0">
+	<q-page class="q-pt-md q-pb-lg">
+		<q-card class="q-mb-md">
+			<q-card-section horizontal>
+				<q-img
+					src="https://via.placeholder.com/107"
+					style="width: 107px;"
+				/>
+
+				<q-card-section style="max-width: calc(100% - 107px)">
+					<p class="text-h6 q-my-none ellipsis">Song Name</p>
+					<p class="text-subtitle2 q-my-none ellipsis">Artists</p>
+					<p class="q-my-none">
+						<q-badge color="expert">Expert 26</q-badge>
+					</p>
+				</q-card-section>
+			</q-card-section>
+		</q-card>
+		<p class="text-center" v-if="records.length === 0">
 			{{ $t('game.nullRecords') }}
 		</p>
-		<div class="q-mb-md" v-else>
-			<i18n tag="p" path="game.recorded">
-				<router-link place="link" to="records" class="link">{{
-					$t('records.title')
-				}}</router-link>
-			</i18n>
+		<div class="q-mb-md text-center" v-else>
+			<div class="q-mb-md">
+				<q-btn
+					:label="$t('game.back')"
+					color="primary"
+					to="/"
+					class="q-mr-md"
+				/>
+				<q-btn
+					:label="$t('game.viewAll')"
+					color="primary"
+					to="records"
+				/>
+			</div>
 			<record-item
 				v-for="(v, i) in records"
 				:key="i"
 				:data="v"
 			></record-item>
 		</div>
-		<q-btn
-			:label="$t('game.back')"
-			color="primary"
-			@click="$router.push('/')"
-		/>
 		<!-- game canvas insert -->
 		<div ref="div"></div>
 	</q-page>
