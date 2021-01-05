@@ -11,7 +11,7 @@
 	},
 	"dependencies": {
 		"@quasar/extras": "^1.5.0",
-		"axios": "^0.19.2",
+		"axios": "^0.21.1",
 		"bangbangboom-game": "https://github.com/K024/bangbangboom-game.git",
 		"file-saver": "^2.0.2",
 		"json-loader": "^0.5.7",
