@@ -1,9 +1,9 @@
 ---
 public:
-  radioOn: "オン"
-  radioOff: "オフ"
+  radioOn: "入"
+  radioOff: "切"
   cancel: キャンセル
-  ok: OK
+  ok: はい
   language: 言語
   inputValue: 数値を入力してください。
   fullscreen:
