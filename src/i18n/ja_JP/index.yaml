@@ -2,40 +2,40 @@
 public:
   radioOn: "入"
   radioOff: "切"
-  cancel: キャンセル
-  ok: はい
+  cancel: 取り消し
+  ok: OK
   language: 言語
-  inputValue: 数値を入力してください。
+  inputValue: 値を入力してください。
   fullscreen:
-    title: フルスクリーン
-    succeeded: ゲームを快適にプレイするためには、端末を横に回転してください。
-    failed: フルスクリーンにできませんでした。端末の権限を確認してください。
-    unsupported: ご利用のブラウザは全画面表示に対応していません。ブラウザをアップデートするか、他のブラウザを利用してください。
+    title: 全画面
+    succeeded: ゲームを快適にプレイするには、スマートフォンを横に回転させることをおすすめします。
+    failed: 全画面表示ができませんでした。端末の設定を確認してください。
+    unsupported: 申し訳ございません。ご利用中のブラウザは全画面表示に対応していません。ブラウザをアップデートするか、他のブラウザを利用してください。
   settings:
     title: 設定
-    autoFullscreen: 自動フルスクリーン
-    speed: ノーツのスピード
-    noteScale: ノーツのサイズ
-    judgeOffset: 判定調節
-    visualOffset: 譜面調整(オフセット)
-    barOpacity: 長押しラインの濃さ
-    effectVolume: 音量(SE)
-    backgroundDim: 背景画像の透明度
-    showSimLine: 同時押しライン
-    beatNote: リズムサポート
+    autoFullscreen: 全画面自動切り替え
+    speed: ノーツスピード
+    noteScale: ノーツの大きさ
+    judgeOffset: 判定位置調節
+    visualOffset: 譜面調整
+    barOpacity: ロングノーツの透明度
+    effectVolume: 効果音の音量
+    backgroundDim: 背景の透明度
+    showSimLine: 同時押しのライン
+    beatNote: オフビートの色
     mirror: ミラー
-    laneEffect: レーンエフェクト
+    laneEffect: レーンのエフェクト
     resolution: 高画質
   guide:
     title: ようこそ
-    selectLanguage: 言語を選択してください。なお、ページの右上にある言語設定⚙️で後からでも変更できます。
-    changeSettings: ゲームを開始する前に、ライブの設定ができます。すぐにプレイしたい場合はスキップして後から変更することも可能です。
-    complete: "初期設定が全て終了しました!\nゲームをお楽しみください!"
+    selectLanguage: このサイトに初めてお越しの場合、言語を選択してください。なお、ページの右上にある言語設定からいつでも変更できます。
+    changeSettings: ここではライブの設定が可能です。後から変更することもできます。
+    complete: "これで全ての初期設定が終わりました。\nそれではお楽しみください！"
     next: 次へ
     skip: スキップ
   favourite:
     title: お気に入り
-    history: 閲覧履歴
+    history: 履歴
     empty: 'まだ何もありません。'
     faved: '{name} をお気に入りに登録しました。'
     deleted: '{name} をお気に入りから削除しました。'
@@ -63,39 +63,39 @@ home:
         difficulty: 難易度
         level: 楽曲レベル
         notes: ノーツ数
-        author: 譜面の製作者
+        author: 譜面製作者
     local:
       title: ローカル
-      type: 譜面のタイプ
+      type: 譜面タイプ
       mapFile: 譜面ファイル
       mapSource: 譜面のソースコード
       mapCover: 譜面カバー
       songName:
         title: 曲名
         default: テスト譜面
-      musicFile: ミュージックファイル
-    start: プレイ
-    load: 譜面をロードする
-    loadFailed: 譜面のロードに失敗しました。もう一度お試しください。
+      musicFile: 音楽ファイル
+    start: スタート
+    load: 譜面情報をロード
+    loadFailed: 譜面の読み込みに失敗しました。もう一度試してください。
   convert:
-    title: 譜面を変換する
+    title: 変換
     from: 変換前の譜面フォーマット
     to: 変換後の譜面フォーマット
     fileInput: 譜面ファイル
-    noInput: ファイルまたは譜面を選択してください。
+    noInput: ファイルを選択または譜面を読み込んでください。
     convertResult: 変換結果
     succeeded: 正常に変換できました。コピーもしくはダウンロードできます。
     download: ダウンロード
-    serious: 冗談ですか？
+    serious: 本気ですか？
     convert: 変換
     error:
-      multiTap: '{time} で複数のスライドを発見しました。これはBestdoriではサポートされていませんので、修正してください。'
-      laneInvalid: 'スライドの変換中にエラーが発生しました： {time}でレーン{pos}が占有されました。'
-      noStart: 'スライドの変換中にエラーが発生しました： {time}のスライドの開始点が見つかりません。'
+      multiTap: '{time} で複数のスライドがありました。Bestdoriでは対応していません。修正してもう一度試してください。'
+      laneInvalid: 'スライド変換中にエラーが発生しました。 {time} でレーン{pos} が占有しています。'
+      noStart: 'スライド変換中にエラーが発生しました。 {time} にスライド(またはフリック) の開始点がありません。'
   space:
-    title: 計算機能
+    title: 計算
     bpm: 最初の部分のBPM
     offset: 最初の部分のオフセット
-    result: '曲の先頭に {0} 無音を追加する、もしくは音楽の先頭から {1} 無音を削除する'
+    result: '曲の最初に {0} 無音を追加、または音楽の最初から {1} 無音を削除することができます'
   about:
-    title: 本アプリについて
+    title: このアプリについて
