@@ -4,7 +4,7 @@ public:
     radioOn: 'オン'
     radioOff: 'オフ'
     cancel: キャンセル
-    ok: OK
+    ok: はい
     dismiss: Dismiss
   language: 言語
   fullscreen:
