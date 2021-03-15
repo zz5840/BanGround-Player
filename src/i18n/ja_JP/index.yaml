@@ -5,10 +5,10 @@ public:
     radioOff: 'オフ'
     cancel: キャンセル
     ok: OK
-    dismiss: Dismiss
+    dismiss: 変更を破棄
   language: 言語
   fullscreen:
-    title: フルスクリーン
+    title: 全画面
     succeeded: ゲームを快適にプレイするためには、端末を横に回転してください。
     failed: フルスクリーンにできませんでした。端末の権限を確認してください。
     unsupported: ご利用のブラウザは全画面表示に対応していません。ブラウザをアップデートするか、他のブラウザを利用してください。
@@ -30,7 +30,7 @@ play:
       official: 本家
       community: オリジナル
     info:
-      shareLink: 'Share your friend with the link: '
+      shareLink: '友達に共有する： '
       name: タイトル
       band: バンド
       singer: アーティスト
@@ -52,37 +52,37 @@ play:
   load: 譜面をロードする
   loadFailed: 譜面のロードに失敗しました。もう一度お試しください。
 game:
-  nullRecords: There's no any records now.
-  viewAll: View All Records
-  back: Back To Home
+  nullRecords: 記録はありません
+  viewAll: 全ての記録を表示
+  back: ホームに戻る
 records:
-  title: Records
-  score: Score
+  title: 記録
+  score: スコア
 share:
-  title: Share
-  desc: Share your local map with your friends or other devices to review it easily.
+  title: 共有
+  desc: ローカル譜面を友達や他のデバイスに共有すると、簡単に確認できます。
 tools:
-  title: Tools
+  title: ツール
   convert:
-    title: 譜面を変換する
+    title: 変換
     from: 変換前の譜面フォーマット
     to: 変換後の譜面フォーマット
     fileInput: 譜面ファイル
-    noInput: ファイルまたは譜面を選択してください。
+    noInput: ファイルを選択または譜面を読み込んでください。
     convertResult: 変換結果
     succeeded: 正常に変換できました。コピーもしくはダウンロードできます。
     download: ダウンロード
-    serious: 冗談ですか？
-    convert: 譜面を変換する
+    serious: 本気ですか？
+    convert: 変換
     error:
-      multiTap: "{time} で複数のスライドを発見しました。これはBestdoriではサポートされていませんので、修正してください。"
-      laneInvalid: 'スライドの変換中にエラーが発生しました： {time}でレーン{pos}が占有されました。'
-      noStart: "スライドの変換中にエラーが発生しました： {time}のスライドの開始点が見つかりません。"
+      multiTap: "{time} で複数のスライドがありました。Bestdoriでは対応していません。修正してもう一度試してください。"
+      laneInvalid: 'スライド変換中にエラーが発生しました。 {time} でレーン{pos} が占有しています。'
+      noStart: "スライド変換中にエラーが発生しました。 {time} にスライド(またはフリック) の開始点がありません。"
   calc:
-    title: Calculate
+    title: 計算
     bpm: 最初の部分のBPM
     offset: Offset Of First Part (seconds)
-    result: '曲の先頭に {0} 無音を追加する、もしくは音楽の先頭から {1} 無音を削除する'
+    result: '曲の最初に {0} 無音を追加、または音楽の最初から {1} 無音を削除することができます'
 settings:
   title: 設定
   inputValue: 数値を入力してください。
@@ -99,23 +99,23 @@ settings:
   mirror: ミラー
   laneEffect: レーンエフェクト
   resolution:
-    title: Resolution
-    low: Low
-    medium: Medium
-    high: High
-    ultimate: Ultimate
+    title: 解決策
+    low: 低
+    medium: 中
+    high: 高
+    ultimate: 超
 favorite:
-  title: Favorite
-  empty: 'Your Favorite is empty now'
-  faved: 'Song {name} has been add to favorite'
-  deleted: 'Song {name} has been delete from favorite'
-  slideRight: Slide left to delete from favorite
+  title: お気に入り
+  empty: 'まだお気に入りは追加されていません'
+  faved: '{name} をお気に入りに登録しました。'
+  deleted: '{name} をお気に入りから外しました'
+  slideRight: 左にスワイプするとお気に入りから解除できます。
 history:
   title: 閲覧履歴
   showLimit: 履歴は100曲まで記録されます。
-  empty: 'Your History is empty now'
+  empty: '履歴はありません'
 announcement:
-  title: Announcements
+  title: お知らせ
   all: すべて既読にする
   mark: 既読としてマーク
 about:
