@@ -47,7 +47,7 @@ public:
     mark: 既読としてマーク
 home:
   play:
-    title: プレイ
+    title: プレイする
     mapSource: 譜面のソース
     bestdori:
       mapId: 譜面ID
